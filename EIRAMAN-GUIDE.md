@@ -1,0 +1,480 @@
+<!--
+SPDX-FileCopyrightText: 2026 Paolo Ungari and contributors
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
+# The Eiraman Guide
+
+**Version 1.0-rc · November 2026 · Release candidate**
+
+**Attribution.** The Eiraman Guide by Paolo Ungari and contributors.
+
+**Status.** Release candidate, not yet in force. The Author ratified its editorial choices on 25 November 2026; they are listed in `AUTHOR-RATIFICATION.md`.
+
+## 0. About this Guide
+
+**Purpose.** This Guide defines Eiraman and states what makes an application conformant, including the practices the community keeps (§7.1, §9.1, §14). Values, templates and tools belong to the Extended Framework, the Tools and the Cases.
+
+**Normative language.** The key words MUST, MUST NOT, SHOULD, SHOULD NOT and MAY are to be interpreted as described in RFC 2119 and RFC 8174 when, and only when, they appear in all capitals. Every normative rule of this Guide carries one of these key words. An application conforms to Eiraman only if it respects every MUST and MUST NOT. A project that departs from a SHOULD or SHOULD NOT MUST record the reason in its mandate. Text without these key words defines terms, describes how the method works or explains it.
+
+**Values and Guidance.** This Guide describes each mechanism without its value: it states no thresholds, counts, deadlines or sizes. The project mandate MUST set the values its mechanisms need and record them. The Extended Framework publishes indicative starting values, called Guidance.
+
+**Implementation.** Implementation choices belong to the tool that runs the method, not to this Guide. A tool MAY make them freely within the rules of this Guide.
+
+**Community-maintained sections.** Sections so marked are kept by the working groups named in their note; the Author accepts changes to them by RFC, without rewriting them, and MAY return a proposal, with written reasons, only when it conflicts with another part of this Guide. They are as normative as the rest of the Guide.
+
+**Licence.** This Guide is licensed under the Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0), <https://creativecommons.org/licenses/by-sa/4.0/>. Attribution: "The Eiraman Guide by Paolo Ungari and contributors".
+
+## 1. Eiraman definition
+
+**Definition.** Eiraman is a management method for governed vibe coding: AI-built software directed by a Human Manager. The human does not read the code. A business person governs the work as a manager, through a mandate, principles and delegation. A system of AI agents executes the work, checks itself through competition and independent verification, and handles operational exceptions. Every release can be reconstructed from evidence and costs.
+
+**Planning and many models.** Eiraman replaces step-by-step human approval with planning done up front and with a multi-model mode: within the same project, several models work independently as AI Coordinator, executors and reviewers.
+
+Eiraman has three components.
+
+**Method.** The roles, delegation, work cycle, architectural conventions, proofs of completion and adoption levels defined in this Guide. Each project MUST record the version of the method it adopts.
+
+**Development Environment.** The environment in which the method runs. It hosts the AI Coordinator, executions, logs and verification tools, and it enforces Deny (§5, §11). The AI Coordinator configures and runs it on behalf of the business owner. Calls to external services depend on the project's delegation.
+
+**Local and external boundary.** State, logs, repository and secrets MUST stay inside the Development Environment. Only the prompts and data sent to the engines and connectors that the mandate authorises MAY leave it.
+
+**Projects.** The applications built with the method. Their development tests the method and helps refine it (§15). An application can incorporate parts of the method.
+
+## 2. Eiraman theory
+
+**Why Eiraman exists.** *Human-in-the-loop* control, where a person approves each AI step, *human-on-the-loop* control, where a person monitors and steps in on exceptions, and human code review help little where there is no development team. They have two limits. Point checks multiply until approving them is like accepting a software licence: nobody reads them. And they confine AI to helping developers, instead of putting it at the service of business users. Vibe coding, building software by instructing AI in natural language, sharpens both limits. Governed vibe coding keeps its speed and adds the governance it lacks: a business person directs the work as a Human Manager, and the AI system answers with evidence.
+
+**Management applied to AI.** Eiraman applies traditional management to AI. Agents are governed the way a manager governs an organisation: mandate, delegation, roles and teams, planning, risk management, reviews and retrospectives. Hence the founding principle, **Human as a Manager**. Every rule transposes a known management practice, adapted to what changes when the one executing is an agent:
+- *Management by objectives* becomes the mandate, the Vision and executable, measured success and stop criteria.
+- *Delegation* becomes 3D escalation, decided on reversibility; silence is never consent.
+- *Organisation and seniority* become AI Squads, Role Profiles, Digital Seniority and Unit Cost, recomposed at every retrospective.
+- *Scrum and Scrum of Scrums* become one team per Work Package under an AI Scrum Master and the AI Coordinator, bounded by cost, context and quotas rather than human timeboxes.
+- *Design Thinking* becomes Discovery across models, with guardrails in place of the judgement agents lack.
+- *Composable architecture* becomes a fixed order of construction that prevents AI patchworks.
+- *Scope and risk management* become versioned Principles and Decisions, a Risk Log and adoption levels that limit risk up front.
+- *Quality control* becomes closure on evidence, independent verifiers and competition, affordable because agents do not tire.
+- *Management reporting* becomes the cycle review, bad news first and a completeness check against the records, because an agent's summary can flatter.
+
+**Two differences between people and machines** drive every adaptation.
+- *Machines lack the limits of human interaction.* Limits such as team size or Sprint length depend no longer on human capacity but on cost, context window and provider quotas.
+- *Agents lack a person's contextual judgement.* They follow instructions literally and do not notice when they drift out of scope. Open activities such as brainstorming need tighter boundaries than with a human team: defined roles and behaviours, rounds, convergence criteria, permitted data.
+
+## 3. Context principles
+
+Three principles bound every rule of the method.
+
+- **Specialist competence lives in Role Profiles, not in every project.** Eiraman moves the competence of software professionals into qualified Role Profiles (§13), from where it guides agents across many projects. Production moves closer to those who have the need. The human operator of a project is a business user: they decide functional and economic matters and MUST NOT stand in for the AI roles on technology, applications or security.
+- **Human as a Manager acts up front.** The human governs with management tools: mandate, objectives, principles, delegation, reserved matters, budget and success criteria. They work at the strategic level and, for business decisions only, at the tactical level. They MUST NOT supervise execution. Exceptions and operational autonomy belong to the AI system.
+- **Some uses are excluded.** The method MUST NOT be applied to AI systems that applicable law prohibits or classes as high-risk, nor to the other out-of-scope cases of §14.
+
+## 4. Accountabilities
+
+**Human Manager.** The business person who governs the project and owns the product's direction. The Human Manager:
+- MUST describe the users and the process;
+- MUST approve the Vision, Principles, success criteria, mandate, spending, project class and adoption-level upgrades;
+- MUST decide Do escalations, approve the next governance cycle and accept or reject the result;
+- MAY authorise linking an account or folder through the platform's native consent;
+- MUST receive technical decisions translated into functions, costs, time and impact on users and data, never in technical form.
+
+**AI Coordinator.** The agent that runs the project, under its own qualified Role Profile. The AI Coordinator:
+- MUST acquire only the authorised repository, configure engines and tools, assign credentials within the permissions granted, and check availability and budget;
+- MUST prepare Waves, assign Work Packages, validate results and conformity, update the plan and run retrospectives;
+- MUST manage start-up, diagnosis, suspension, resumption, release within the mandate, and restore.
+
+**Specialist AI roles.** The analyst, architects, AI Scrum Masters, executors, testers and reviewers work under qualified Role Profiles and MUST respect their limits. They take the technical decisions. A tester MUST have access to requirements, contracts, data and expected results, and MUST make its first assessment independently of the executor's discussion.
+
+**Process reviewer.** An independent agent that MUST run on a model different from the AI Coordinator's. It MUST sample closed Waves and check that due escalations reached the Human Manager (§5) and that closures are backed by evidence (§9).
+
+**Maintainers.** The maintainers of the Extended Framework, organised in working groups under the project governance, MUST qualify Role Profiles, document templates and the gate checklist. They MUST work outside the projects that use them.
+
+**Internal accountability.** Everyone MUST answer for what they decide. The Human Manager answers for decisions within their remit and for using the method within the qualified scope. The AI Coordinator and the AI roles answer in an operational sense, not a legal one: every closure MUST have evidence and every error MUST become a retrospective case. Maintainers answer for the conformity of profiles to their sources at the time of qualification, not for individual projects.
+
+**Liability towards third parties** lies with the owner: the individual at adoption level 0, the organisation at levels 1 and 2. At levels 1 and 2 the Human Manager MUST act under a formal mandate from the organisation; without it the project stays at level 0. The owner exercises this responsibility through mandate, class and acceptance, and demonstrates due diligence with the evidence the method produces (§12).
+
+## 5. 3D escalation: Deny, Delegate, Do
+
+**Deny.** The environment, not the agent, MUST block an action that the mandate forbids or that lies outside the adoption level, and MUST record why. The AI Coordinator MUST look for an authorised alternative; if there is none, it MUST suspend the affected work.
+
+**Delegate.** AI roles MAY decide two-way doors on their own: reversible decisions with a known cost, within budget, such as engine, retry, fix or restore. Every such choice MUST stay linked to its Work Package.
+
+**Do.** The following MUST go to the Human Manager:
+- one-way doors;
+- the mandate's reserved matters: impact on Vision, Principles or success criteria, personal data, third parties, new suppliers, spending above the threshold the mandate sets;
+- changes to a Decision;
+- new access;
+- changes of project class and adoption-level upgrades. Downgrades are automatic (§14.2).
+
+**In doubt, one-way.** When reversibility is in doubt, the decision MUST be treated as a one-way door.
+
+**Content of a Do.** A Do MUST present, in functional and economic terms, the impact, the options, a recommendation, the evidence, a deadline and what happens if there is no answer.
+
+**Changing a Decision.** A Do that changes a Decision MUST include a SWOT analysis. After the choice, execution returns to the AI Coordinator.
+
+**Rules against under-escalation.**
+- **E1 · Reserved matters.** The mandate MUST list reserved matters alongside delegation. What reaches the Human Manager MUST be the business impact of the reserved matter, translated into functions, costs, time and impact on users and data; the technical choice stays with the AI roles. Reserved matters prevail over K7 (§6).
+- **E2 · Reversibility.** Reversibility MUST be the criterion that separates Delegate from Do.
+- **E3 · Micro-decisions.** Every non-trivial choice MUST be recorded as a micro-decision, with the alternative, the estimated reversibility, the cost of rollback and the reserved matters considered.
+- **E4 · Classifier.** Whether a decision goes to the Human Manager MUST be decided by a classifier running on a model different from the AI Coordinator's. If the two disagree, the decision MUST go up.
+- **E5 · Drift budget.** Deviations from plan, class changes included, MUST add up in a drift budget cumulated over the project and reported every governance cycle. Beyond the threshold the mandate sets, a mandate review MUST be triggered.
+- **E6 · Measurement.** The process reviewer MUST measure under-escalation (reserved decisions not brought to the Human Manager, over all reserved decisions) and over-escalation (Do escalations that fell within delegation, over all Do escalations).
+- **E6 · Calibration.** In the first project of every new adoption, the Human Manager MUST review once a sample of autonomous decisions, to calibrate the process reviewer. The mandate sets the sample size.
+
+**Silence never approves a Do.** Silence MUST NOT be taken as approval. Until there is an answer, the affected Work Package MUST stay suspended, while independent work continues. At the deadline the Human Manager MUST receive a reminder. When the reminder's deadline also passes, the package MUST leave the Wave and the cycle review MUST report it as a missing decision. The irreversible option MUST NOT be executed without an answer.
+
+**Urgent containment.** The mandate MUST list pre-authorised, reversible containment actions, such as restore, credential revocation or suspending a function. The AI Coordinator MUST execute them at once and open an urgent Do. Any action not on the list MUST follow the ordinary Do rule. The mandate sets the deadlines for ordinary and urgent Do escalations.
+
+## 6. Competition and independent verification
+
+**Rationale.** Agents have no group harmony to preserve, so competition between candidates is sustainable when the cost justifies it. This is why the roles of controller and project manager can be given to AI.
+
+**Generate and select.** The benefit of competition comes from generating several candidates and selecting the best, not from agents trying harder. It depends on the diversity of the candidates and on the reliability of the selector.
+
+**Rules for competitive mechanisms.**
+- **K1 · Reliable selector.** A competitive mechanism MUST be opened only with a reliable selector: tests, measurable criteria, or a rubric fixed in advance and assessed by a judge running on a model different from the competitors', with the order of candidates alternated. All candidates MUST start from the same point.
+- **K2 · Diversity.** The diversity of the candidates (model, supplier or strategy) MUST be recorded.
+- **K3 · Number of candidates.** The mandate MUST set the default number of candidates. Several candidates SHOULD be reserved for highly variable generative packages or for packages where errors are costly, and they MUST stay within the spending cap.
+- **K4 · Learn from the losers.** After selection, the criticism raised by the losing candidates MUST be applied to the winner, through the reviewer.
+- **K5 · Hidden criteria.** Part of the evaluation criteria MUST NOT be shown to the candidates, and judges MUST rotate.
+- **K6 · Measure the mechanism.** The winning margin, judge–human agreement (calibrated on a sample of human judgements of candidates) and cost per accepted increment against a single executor MUST be measured. If the mechanism does not beat a single executor on a type of package, that type MUST return to a single executor.
+- **K7 · Lowest rollback cost.** With strongly diverging proposals on a two-way door, the option with the lowest rollback cost MUST be adopted. If the budget allows, a short test that discriminates between the options MUST be run first.
+- **K8 · High divergence.** Such cases MUST be flagged as high divergence. The process reviewer MUST examine all of them and give them priority in the calibration sample (E6).
+- **K9 · Recurring divergence.** If divergence recurs on the same theme, the AI Coordinator MUST propose a mandate review as a Do, translated into functions, costs, time and impact on users and data. If the theme cannot be put in those terms, it stays with the AI roles under K7 and K8.
+
+**Independence of verification.** For each verification the level of independence achieved MUST be recorded: separate context, different model, different supplier, or a person. Each verification MUST reach at least the minimum level that the risk class of the Work Package sets. Verification SHOULD use models of different origin where possible, so that comparisons are effective.
+
+**Security and personal data.** At every adoption level, verification of Work Packages that touch security or personal data SHOULD use at least a model different from the executor's. The level of independence achieved MUST be recorded in every case.
+
+**Seniority of the verifier.** An independent reviewer or tester MUST work at least at the Digital Seniority level of the executor it verifies (§7).
+
+## 7. AI Squads and Digital Seniority
+
+**Role tiers.** AI roles are organised in a pyramid of tiers. Each tier has defined tasks and competences, so that every role is given an agent with a suitable model.
+- *High tier:* AI Coordinator, functional analyst, architects: personas with a human professional profile, tied to business objectives. Each MUST start from a qualified Role Profile; the project mandate MAY give it the project and domain context but MUST NOT alter the profile's rules and limits.
+- *Middle tier:* AI Scrum Masters and reviewers, who coordinate and verify against the AI Coordinator's templates and criteria.
+- *Low tier:* executors and unit testers, highly automated and following basic collaboration rules.
+
+**Unit Cost.** AI is not free. Every Role Profile MUST declare a Unit Cost, used to estimate and report the project's cost.
+
+**Digital Seniority.** In an organisation every person works at the level of experience the task requires; Eiraman applies the same rule to agents. An agent's Digital Seniority is the combination of engine and reasoning level with which the AI Coordinator activates it, for example a small engine with low reasoning for repetitive work.
+
+| SD level | Name | When it is used |
+|---|---|---|
+| SD1 | Junior | Repetitive tasks with an outcome a deterministic check can verify |
+| SD2 | Professional | Routine work on a clear specification |
+| SD3 | Senior | Local design choices, diagnosis, review of others' work |
+| SD4 | Lead | Architecture, security, effects hard to undo, Do records, judging between candidates |
+| SD5 | Principal | New or high-impact problems, by exception and with a recorded reason |
+
+The mapping from SD levels to the engines and tool settings of each provider is not part of this Guide. It is kept, versioned, in the Tools.
+
+**Agentic Scrum.** Agents work by Scrum principles, adapted to collaboration between AIs.
+- **No Sprints or human timeboxes.** The unit of delivery MUST be the Wave, bounded by tokens, cost and duration (§8). Team size has no fixed limit; it depends on the AI environments used.
+- **One team per Work Package.** The AI Coordinator MUST form one team for each Work Package, with the roles and competences the package needs.
+- **One AI Scrum Master per team.** It MUST coordinate the team's agents, keep the Log Tracker of the package and deliver to the AI Coordinator an activity report on the template the AI Coordinator specifies.
+- **Shared context, except for the unit tester.** A team shares one context. The unit tester MUST NOT receive the team's discussion, so as not to bias the tests; it receives requirements, contracts, data and expected results. It MAY run on a different engine, or on the same engine without that context; for security and personal data, §6 applies.
+- **Competing teams.** The same Work Package MAY be assigned to several competing teams, with different engines or compositions, under rules K1–K9 and with the default number of candidates of K3.
+
+**The AI Coordinator as Scrum of Scrums.** Beyond what a Scrum Master does, the AI Coordinator MUST perform technical and compliance validation of the teams' work: it sets the quality and functional criteria a package has to meet, verifies execution at the end of each package (§9), resolves dependencies between teams, and closes a Wave only after the integrated increment has been verified.
+
+**Retrospective.** At the end of each cycle the AI Coordinator MUST analyse the Scrum Masters' reports. It optimises the composition of the teams, for example by raising a role's seniority or changing its model, and reviews operational decisions.
+
+**Tolerance.** Improvements that save cost without reducing quality, or that reduce it within the mandate's tolerance, MAY be applied without the Human Manager. Any change to an approved Decision MUST go to the Human Manager as a Do with a SWOT analysis (§5).
+
+**Flexible Decisions.** Re-forming AI Squads costs little, so approved Decisions can change more readily than with human teams. The cost of change and rework MUST be estimated and shown in the Do.
+
+### 7.1 Digital Seniority catalogue
+
+> **Community-maintained section.** Changes are proposed by the responsible working groups (DevSecOps & Tooling, for the Digital Seniority map; FinOps, for Unit Cost; Test & Quality, for requalification after model changes) and accepted by the Author via RFC without rewriting; the Author MAY return a proposal, with written reasons, only for a conflict with another part of this Guide.
+
+**Catalogue.** Every Role Profile MUST list the tasks and deliverables the AI Coordinator can assign to it, each with its minimum SD level and the matching configuration for each admitted tool. The correspondence between SD levels and configurations MUST be kept in a single map of the profile registry and re-verified at every model change.
+
+**Fallback.** A task outside the catalogue MUST run at the fallback level that the mandate sets. The AI Coordinator MUST record the task and propose adding it to the catalogue (§15).
+
+**Team participation.** An agent MUST join a team at the highest SD level required by the tasks it performs in the Work Package.
+
+**Promotion and reduction.** When an agent has failed for lack of capability as many times as the mandate allows, the AI Coordinator MUST raise it to the next SD level and record the change. Promotion uses the attempts allowed by the Work Package record (§9); when they are exhausted, the AI Coordinator MUST open a decision point. In the retrospective the AI Coordinator MAY lower the level of a task when evidence shows unchanged quality at lower cost. That reduction is a two-way door within the mandate's tolerance; beyond it, it is a Do.
+
+**Cost per level.** Unit Cost MUST be calibrated per SD level, and every run MUST record the effective level, engine and reasoning (§11).
+
+## 8. Lifecycle and events
+
+**Five phases, one set of rules.** All five phases MUST be executed by the AI system in Waves, under the same rules: 3D escalation, competition, closure on evidence and cost recording. The Human Manager steps in only at each phase's decision points.
+
+**Phases and decisions.** Each phase MUST end with the decisions of the Human Manager listed below; work that needs them MUST NOT proceed without them.
+- *Discovery* yields the problem, benefit, discarded alternatives, a draft Vision and the class set by the applicability gate (§14). The Human Manager approves Vision, mandate and class, or relaunches exploration.
+- *Proof of concept* runs a repeatable feasibility test and identifies the resources and access needed. It becomes a Do only if the outcome is negative or needs new access or spending.
+- *Design and planning* yields the architectural views, contracts, backlog, Work Packages, profiles, cost estimate, test criteria and proposed Principles and Decisions. The Human Manager approves the proposed Principles, the proposed Decisions with business impact and the budget. The Principles are then frozen for that version.
+- *Scale* delivers increments closed on evidence. The Human Manager acts through the governance cycle and Do escalations.
+- *Acceptance and operation* covers acceptance testing, release, manuals and service management. The Human Manager accepts or rejects the result and decides Do escalations on operations.
+
+**Parallelism.** In every phase the degree of parallelism MUST stay within capacity and budget.
+
+**Discovery as Design Thinking between models.** Left free, AI engines gather information well but tend to diverge, so Discovery follows Design Thinking with precise roles and boundaries.
+
+**Divergence.** Several models, with defined roles and behaviours, independently generate hypotheses, problems, benefits and principles for the Vision. Divergence MUST run within guardrails: a maximum number of rounds set by the mandate, permitted sources and data, and criteria for discarding a hypothesis.
+
+**Gates.** At predefined gates the Human Manager MAY give new inputs, which start a new round of divergence.
+
+**Convergence.** A single model, in the role of functional analyst, MUST gather the contributions, relate them to user evidence and produce the draft Vision and a first version of Scope Management: Vision, Principles, success criteria and open points. The Human Manager MUST then approve the Vision or relaunch the exploration.
+
+**Wave.** The unit of technical delivery in every phase, at the pace of the AI. A Wave MUST have a spending cap and a maximum duration; whichever is reached first applies. At the early-warning threshold that the mandate sets, the AI Coordinator MUST flag the Wave. At the Deny threshold that the mandate sets, the environment MUST Deny new work, and the Wave closes with a checkpoint. Waves follow one another automatically within mandate and budget. A Wave MUST close only after the integrated increment is verified.
+
+**Governance cycle.** The Human Manager's unit of decision, on a calendar cadence. It MUST close with a single management review that contains: deliveries and acceptances; spending and cost per accepted increment; the state of the drift budget (E5); the number of high-divergence cases (K8) and the recurring themes (K9); open Do escalations; and a proposal for the next cycle.
+
+**Expired cycle.** If a cycle expires before the next one is approved, running Waves finish the active Work Package and MUST NOT open new ones.
+
+**Escalation load.** An indicator of the governance cycle, read together with under-escalation. It MUST NOT block a due Do. Ordinary Do escalations and K9 escalations count toward it; urgent Do escalations, counted separately, and decisions planned by the phases do not. Non-urgent Do escalations MUST be grouped in the cycle review, except those that block the critical path.
+
+**Declared and observed values.** The cycle review MUST show the declared value of the cycle's indicators next to the observed one. A declared value MUST NOT change except at a cycle review. The mandate sets cadence and reference values.
+
+### 8.1 Phase playbooks
+
+The playbooks describe how the AI system usually works; the rules are those of §8.
+
+**Who works in each phase.**
+- *Discovery:* the AI Coordinator, the analyst and explorer agents on different models; divergence, then convergence by the analyst.
+- *Proof of concept:* the AI Coordinator, analyst, architect, executors and testers, who make the uncertainty explicit; alternative tests of the same technical question when the selector is measurable (K1).
+- *Design and planning:* the analyst, application and infrastructure architects, AI Scrum Master and AI Coordinator, who produce business, application, data and technology views; alternative architectures assessed against a rubric fixed in advance.
+- *Scale:* the AI Coordinator and AI teams with their AI Scrum Masters, testers and reviewers; K1–K9 on generative packages.
+- *Acceptance and operation:* the AI Coordinator, testers and operations roles; alternative diagnoses of an incident.
+
+**Proof of concept and MVP.** The functional analyst validates feasibility, in theory or by asking the AI Coordinator for small trial Work Packages. It also validates the compute and access the project needs, for example whether a local engine can process a document of the expected size within the expected time and cost.
+
+**Design and planning.** The functional analyst works first with the application architect, then with the infrastructure architects and the AI Scrum Master. Together they produce the architectural design, the Product Backlog and its workstreams, the cost estimate of the AI component, and an initial performance estimate that tests later update in the Performance Analysis. The design follows the architectural guidelines of the vendors or open-source communities of the chosen technologies, and the architects carry these competences in their profiles.
+
+## 9. Commitments and artifacts
+
+**Two results, accepted separately.** Acceptance of the software and acceptance of the deliverable the software produces MUST remain separate. For example, when an increment adds a quality check to a document generator, a document the check rejects can be the successful proof of the increment, while generated documents go through their own review.
+
+**Vision.** The Vision becomes binding when the mandate is approved. A change to the Vision MUST open a new project.
+
+**Principles.** Principles MUST be frozen per version at the end of planning. If a Principle changes during installation, the AI Coordinator MUST mark the version as failed, record the installed state and manage the restore or the transition to a new version.
+
+**Success criteria.** The success criteria of a version and of the project MUST be based on KPIs measurable in the test procedures.
+
+**Decisions.** A Decision MUST NOT violate a Principle. Decisions are linked: changing one can require re-examining the linked ones.
+
+**Decision record.** Each Decision MUST have an identifier, owner, status, rationale, linked Principles and dependencies. A new Decision MUST refer to the one it replaces and to the packages to re-examine. A saving that changes a Decision MUST go to the Human Manager, even when it is within the quality tolerance.
+
+**Open points.** Each open point MUST state which Wave it blocks and the criterion for closing it.
+
+**Stop criteria.** The mandate MUST contain the project's stop criteria, such as spending, a run of Waves without an accepted increment, or a negative proof of concept.
+
+**Product Backlog.** The Product Backlog holds the workstreams the teams can carry out. Each workstream MUST be labelled with its component and priority (§10) and linked to the Decisions and open points it depends on.
+
+**Work Package record.** A Work Package record MUST hold at least: project and Wave, identifier and starting revision; success criteria and exclusions; Principles, Decisions and dependencies; profiles and their versions; budget and attempts allowed; expected result and verifier; resumption procedure.
+
+**Final account.** The final account of a Work Package MUST include all candidates, the discarded ones too.
+
+**Definition of ready.** Functional criteria MUST be written in Given/When/Then form. Non-functional criteria MUST refer to the characteristics of ISO/IEC 25010. A Work Package MUST NOT be declared ready until its criteria are executable.
+
+**Definition of done.** The AI Coordinator MUST close a Work Package only when the mandatory checks on the identified candidate have passed and the evidence is identifiable. A change to the candidate MUST reopen the affected checks.
+
+**Dissent or missing proof.** The package MUST stay open. With a clear requirement, the test MUST be repeated or another verifier assigned. With an ambiguous requirement, a decision point MUST be opened. Outcome, dissent and the rationale for closure MUST be recorded.
+
+**Deterministic anchors.** At every release, static analysis, dependency and licence analysis, and secret scanning MUST be run. AI roles interpret their results and MUST NOT replace them.
+
+**Log Tracker.** The general log of all activities, used by the AI Coordinator to follow progress and as the basis of the completeness check (§12). It is not designed for people.
+
+**High Level Architectural View.** A concise view with a drawing, within the length limit the mandate sets, in non-specialist terms and derived from the architecture document: points of contact with people; where data lives and its data classes; external services and AI engines, local ones distinguished from external; the main flows and boundaries, that is what leaves the organisation and who can access it. The AI Coordinator MUST update it whenever a part is created, changes or disappears. A change that adds an external service or moves data outside the organisation MUST go to the Human Manager as a Do.
+
+**Shape of control artifacts.** Each project and each Human Manager decide the shape of the dashboards, views and documents they use for control, and MUST record the choice as a project decision. The minimum content required by this Guide and by the adoption level MUST NOT be reduced.
+
+**Project record.** The project record MUST identify: the application, its users, deliverables, repository and revision; the Eiraman version used, the class and the adoption level; the Eiraman components built into the product, and any adaptations; and the success criteria.
+
+**Two links.** The AI Coordinator MUST keep two separate links: between a Work Package and the software release, and between a run of the product and the deliverable it generated. For each adopted Eiraman component, where it runs and which version is in use MUST be recorded.
+
+### 9.1 Test practices
+
+> **Community-maintained section.** Changes are proposed by the responsible working groups (Test & Quality; DevSecOps & Tooling; Security, for security testing) and accepted by the Author via RFC without rewriting; the Author MAY return a proposal, with written reasons, only for a conflict with another part of this Guide.
+
+**Test levels.** Component, integration, system and acceptance. Unit tests are component tests; scripted and simulated-user functional tests are integration and system tests; acceptance testing is the acceptance level.
+
+**DevSecOps practices.** Work follows DevSecOps practices where they apply: a Git history of the application and its versions, with messages written to be read by people too; Security by Design, with static analysis and, at level 2, penetration testing (§14.1); and heavily automated tests run by dedicated agents.
+
+**Test types.**
+- *Unit tests* run at the end of each Work Package and are performed by the independent AI tester. They also check the security and performance components, and they update the Security Risk Posture and the Performance Analysis.
+- *Scripted functional tests:* an agent runs the test script, records the logs and checks completion or failure. Gross errors that touch neither quality nor Decisions are fixed by the agent on its own, as a two-way door.
+- *Simulated-user functional tests:* an agent simulates a typical user and uses the application as a person would. They cost more, so they run in stable environments.
+- *Acceptance testing:* a person performs the business task while the AI assists, recording observations and missing information. The Human Manager decides on acceptance.
+
+**Who supervises tests.** The person MAY watch functional tests, but their progress MUST NOT depend on the person. Acceptance testing is supervised by the AI: the person executes and the AI records.
+
+## 10. Composable architecture
+
+**Order of construction.** An application is broken down into components tied to functions, developed independently in Work Packages. With AI the key point is the order of construction: adding pieces is easy, and without a catalogue and an order the result is a patchwork. Components MUST be built in the priority below.
+
+**Backbone.** The core components needed for the core deliverable. The Backbone MUST be built before all other components, and it covers, in minimal form, all the main paths of the core deliverable.
+
+**Brain.** The application's logic, more and more often made of internal or external AI engines. Brain tasks MUST be catalogued as trusted or untrusted. The catalogue decides which tasks are delegated to engines and which stay under deterministic control or require a Do (§11).
+
+**Limbs and Senses.** The interfaces through which the application communicates with users and other systems. They rest on Backbone and Brain. They MUST be developed early in essential form, within the first usable path, and in advanced form only once the previous components are stable.
+
+**Hairs.** The most peripheral functions, which can be added or cut at any time, even for small specific tasks. They come last in priority. Before a Hair is removed, the core MUST pass regression.
+
+**Component contract.** Each component MUST declare its contract, data, dependencies and integration test and, if it is peripheral, a check of behaviour when it is removed. The first usable path runs through Backbone and Brain and includes the essential interfaces.
+
+## 11. Environment, execution and agent security
+
+**Project opening.** The AI Coordinator MUST resolve the versions of method and profiles, check the repository and available capabilities, configure runners and connectors, and test the authorisations needed. Access that requires the account holder MUST go through a narrowly scoped request to that holder. The environment MUST enforce tool constraints and keep secrets in the platform's credential store.
+
+**Executions.** Each execution MUST have an identifier, persisted state, input version, checkpoint, budget and attempt limit.
+
+**Resumption.** After an interruption, the AI Coordinator MUST reconcile the state with the effects already produced before restarting. If the AI Coordinator is unavailable, the runtime MUST preserve the work and prevent new uncontrolled operations. On restart, the AI Coordinator MUST check the last delivery, then resume or restore the previous version.
+
+**Security Risk Posture.** Every project MUST keep a Security Risk Posture, following Security by Design. It classifies the application by needs, context and data processed, and lists the security and compliance requirements, the personal data and their handling, the security perimeters, open ports and services, and the security specification of each component.
+
+**Agents section.** The Security Risk Posture MUST include an Agents section. For each role it lists the permitted tools, network destinations, readable data and irreversible actions; irreversible actions MUST always go to a Do. Recognised references for agent security, such as the OWASP guidance on large language model and agentic applications, inform this section.
+
+**Untrusted tasks.** Brain tasks catalogued as untrusted (§10) MUST NOT be delegated to an engine without a deterministic check of the result. If the action is irreversible, it MUST go to a Do.
+
+**Hostile-input test.** Every project MUST run a negative test: an input carrying a hostile instruction MUST produce a recorded Deny.
+
+**Run traceability.** Each run MUST record the profile hash, the exact model identifier, the effective configuration and the Unit Cost. The product MUST include a software bill of materials (SBOM). The aim is traceability, since the output of a language model cannot be reproduced deterministically.
+
+**Data classes per provider.** The mandate MUST contain a table of data classes per provider: which providers are allowed for each class of data, taking retention and training use into account.
+
+**Delegation of data.** Delegation MUST consider separately the origin of the data, the role's permissions, the permitted destinations and reversibility.
+
+## 12. Writing for the Human Manager
+
+**Three layers of documentation.** Project documentation MUST be kept in three layers, each with its reader and verifier:
+- *Strategic.* For the Human Manager, who approves: Vision, Principles, success criteria, mandate. Verified by the Human Manager.
+- *Managerial.* For the Human Manager, who reads and decides by exception: project record, milestone plan, High Level Architectural View, decision records, business risks, dashboard, cycle review, acceptance outcome, cost report, security and performance summaries. Verified by an AI reviewer.
+- *Operational.* For the agents: architecture, backlog, Work Packages and staffing, Log Tracker, detailed registers, test evidence. Verified by the AI system.
+
+**Writing rules.** The rules below apply to every document for the Human Manager.
+- **Business language.** A document MUST use business language.
+- **Four questions first.** A document MUST open with what has changed, what is being asked, by when, and what happens if there is no answer.
+- **Changes first.** What changed since the last reading MUST come first.
+- **Length limits.** Each decision record MUST stay within the length limit that the mandate sets.
+- **Outcomes, not procedures.** A document MUST report outcomes, not procedures.
+- **Evidence.** Every verifiable statement MUST be linked to evidence, and the AI reviewer MUST check the link.
+- **Comprehension test.** An agent with the Human Manager profile MUST test each document for comprehension. The Human Manager calibrates that agent once, on a set of documents whose size the mandate sets.
+- **Bad news first.** Failed tests, open risks, dissent, rejections and missing decisions MUST come before good news.
+- **Completeness check.** The document MUST be compared with the operational registers. An omission MUST block its delivery.
+- **Third-party evidence pack.** On request, for a single release, the AI Coordinator MUST produce a pack containing the mandate, class and adoption level, profiles and versions, checks and outcomes, independent verifications, accepted risks and acceptance. At level 2 the pack MUST be ready at every release.
+- **Qualified templates.** Each document type MUST have a versioned template qualified by the maintainers. The templates are in the Extended Framework.
+
+**Cost report.** The cost report MUST show development costs and running costs of the application separately.
+
+**Percentages.** Progress expressed as a percentage MUST state its denominator.
+
+## 13. Role Profiles
+
+**Minimum content.** A conformant Role Profile MUST contain at least:
+- purpose, responsibilities, permitted and forbidden actions, and communication contract;
+- normative sources, each with a precise reference to the clause from which a rule derives;
+- the mandatory deterministic tools and how to interpret their results;
+- a qualification suite with known-answer cases;
+- declared limits: if a Work Package falls within them, the project leaves the scope of the method;
+- curator and reviewer, and the date and expiry of the qualification.
+
+Further content, such as enabled engines, the task catalogue by Digital Seniority level (§7.1) and the Unit Cost per engine, is specified in the Extended Framework.
+
+**Publication.** First a language model MUST run a pre-assessment: the qualification suite, consistency with the sources, format, and a search for anomalous instructions. The model MAY reject a profile but MUST NOT approve it. A domain expert reviewer then publishes the profile as a signed version. Maintenance rules, including four eyes and domain reviewers, are set by the project governance and the Extended Framework.
+
+## 14. Applicability: classes, levels and the gate
+
+> **Community-maintained section.** This section, with §14.1 and §14.2, is proposed by the responsible working groups (Security, with Privacy and Legal & Compliance; Adoption & Evidence, for the evidence behind thresholds) and changes are accepted by the Author via RFC without rewriting; the Author MAY return a proposal, with written reasons, only for a conflict with another part of this Guide.
+
+**Principle.** Specialist competence lives in qualified Role Profiles, not in specialists present in every project. The risk that the business owner cannot assess is therefore limited from the start. Every adoption of Eiraman MUST have a qualified adoption level and every project MUST have a class. A project MUST NOT run if its class exceeds the qualified level of the adopter. Whoever uses the method for themselves stays at level 0. To move up, an adopter MUST meet the requirements of the next level and demonstrate them with evidence.
+
+**Deliverables.** Classes also apply to the deliverables a product generates. For example, a level 0 adoption MUST NOT use a document generator to produce documents for customers, which are class 2.
+
+**Project classes.** Every project MUST be assigned one of the following classes.
+
+| Class | Users | Data | Exposure | Examples |
+|---|---|---|---|---|
+| 0 | Only the adopter | No personal data of others | Local or none | Personal tools, document generators for own use |
+| 1 | Colleagues in the same organisation | Ordinary personal data of colleagues | Internal network or cloud with corporate identity | Departmental applications |
+| 2 | Customers, suppliers or an authenticated public | Ordinary personal data of third parties, limited volumes | Internet with authentication | Portals, self-service, documents for customers |
+
+**Out of scope at any level.** The method MUST NOT be applied to projects that involve:
+- special categories of personal data or data on criminal offences;
+- children's data;
+- large-scale processing of personal data;
+- processing for which a data protection impact assessment is mandatory;
+- automated decisions with legal or similarly significant effects on people;
+- payments handled in the product's own code;
+- AI systems that applicable law prohibits or classes as high-risk;
+- an owner subject to network and information security obligations as an essential or important entity;
+- installable distributed software or connected devices subject to product cybersecurity regulation, until dedicated requirements exist;
+- activities under sector-specific regulation;
+- physical safety.
+
+The Extended Framework maps these categories to the law of each jurisdiction, starting with the European Union.
+
+**Applicability gate.** An AI compliance role MUST assign the class, using a versioned checklist qualified by the maintainers. The gate MUST run when the project opens, at every Wave and at every change of mandate. If an exclusion criterion is triggered, or the case is in doubt, the project MUST be treated as out of scope and the business owner informed.
+
+**Legal advice.** The checklist MUST NOT be used as a substitute for legal advice.
+
+### 14.1 Requirements per adoption level
+
+**Cumulative requirements.** Each level MUST meet its own requirements and those of every level below it. Requirements cover the method, the organisation and the evidence. The Extended Framework gives indicative values for their thresholds and periods and maps their legal references to each jurisdiction.
+
+**Level 0 · Method.** A personal-use adoption MUST use qualified base Role Profiles and run the deterministic anchors at every release (§9). Its documents for the Human Manager MUST include the project record, the decision records, the governance cycle review and an installation and user manual.
+
+**Level 0 · Organisation.** The adopter MUST be the owner of the project and of what it produces, and answers for both (§4).
+
+**Level 0 · Evidence.** An adoption MAY start at level 0 without prior evidence.
+
+**Level 1 · Method.** To move up from level 0 to internal-team use, the adoption MUST add:
+- security and privacy profiles qualified for class 1;
+- authentication only through the corporate identity;
+- a backup and restore test before release;
+- rules on log content and retention;
+- a data protection impact screening at every change of processing;
+- a breach-notification procedure within the deadline of applicable law, written for the Human Manager;
+- for the Human Manager, a management summary of the Security Risk Posture, a record of processing for the controller and an Executive Description.
+
+**Level 1 · Organisation.** The owning organisation MUST be identified. The Human Manager MUST act under a formal mandate from it (§4). Corporate IT policies MUST be a binding input of the mandate. A data protection officer MUST be designated where the organisation is required to have one.
+
+**Level 1 · Evidence.** Experience at level 0 MUST show measured results: under-escalation within the threshold, after calibration (E6); detection of a deliberately vulnerable test suite at least at the threshold the maintainers set; no critical finding open at release.
+
+**Level 2 · Method.** To move up from level 1 to use by external users, the adoption MUST add:
+- selected and verified requirements of a recognised application security verification standard;
+- dynamic scanning at every release;
+- authentication and payments only through certified providers;
+- operation with service level objectives, incident management and blameless postmortems, which feed the retrospective;
+- a policy for updating dependencies and fixing vulnerabilities that blocks the release whenever the product is offered in a commercial activity;
+- for the Human Manager, a penetration test summary and the Performance Analysis;
+- the third-party evidence pack ready at every release (§12).
+
+**Error budget.** In operation at level 2, when the error budget is exhausted the environment MUST Deny non-corrective releases.
+
+**Level 2 · Organisation.** An external penetration test, bought as a service, MUST run at the first release and then periodically; the AI Coordinator prepares its scope and authorisation and the Human Manager decides its cost. Contracts with the suppliers that process data MUST meet data protection law.
+
+**Level 2 · Evidence.** Operation at level 1 MUST have lasted a defined period without serious incidents, and the penetration test of the first class 2 release MUST have passed.
+
+**Release documents.** At every level each release MUST ship an installation and user manual, plus an Executive Description and a Performance Analysis where the level requires them, all verified at that release. The documents each level requires are the minimum set for the writing rules of §12.
+
+### 14.2 Moving between levels and classes
+
+**Moving up.** Moving up a level is a one-way door and MUST therefore go to the Human Manager as a Do. The AI Coordinator MUST present a management dossier with the requirements met, the evidence, the recurring costs and the residual risks. An independent reviewer MUST check the evidence before the Do.
+
+**Automatic downgrade.** If a requirement lapses, for example a suspended profile, an expired penetration test or an open serious incident, the environment MUST apply a Deny. Only corrective releases MAY run until the requirement is restored or the project returns to the permitted class.
+
+**Class change.** A change of class MUST always go to the Human Manager as a Do and counts towards the drift budget (E5). If the new class exceeds the level, the Human Manager MUST choose one of three options: reduce the scope, hand the critical component to a certified provider, or take that project out of the method.
+
+## 15. Conformance, partial application and feedback
+
+**Conformance.** The tool that puts the method into practice is one implementation of it. It MUST respect the normative rules and MUST NOT add rules of its own and present them as Eiraman. An application conforms only if it respects all the normative rules of this Guide.
+
+**Partial application.** A product that incorporates only parts of the method MUST publish a declaration of partial conformity, listing the rules applied and those not applied. It MUST NOT present itself as Eiraman-conformant without this qualification.
+
+**Incorporable components.** Every Eiraman component that can be incorporated into a product MUST declare its contract, regression tests, version and the rules it implements.
+
+**Feedback into the method.** Projects make the method mature in three steps.
+- **Observation.** The retrospective MUST link a reproducible case, the rule applied, the outcome and the cost. The AI Coordinator MUST identify whether the cause lies in data, application, environment or method.
+- **Proposal.** A specific fix stays in the application backlog. A reusable rule or component MUST come with a contract, a test, its limits and its impact on existing projects, and MUST be proposed to the method as a Request for Comments (RFC). A change to a project's Principles or Decisions MUST follow the approvals of §5.
+- **Adoption.** An approved change MUST be versioned, with compatibility notes, a regression test and the list of projects adopting it. The project that prompted it MUST keep a reference to the change. Another project MAY adopt only the relevant component.
+
+**Changing the method.** This Guide MUST change only through an RFC, decided by the Author with written reasons. Community-maintained sections are proposed by their working groups and accepted by the Author via RFC without rewriting; the Author MAY return a proposal, with written reasons, only when it conflicts with another part of this Guide. The Extended Framework, Role Profiles and Tools are governed by the community under the project governance. A community decision that would change the text of this Guide MUST also have an accepted Guide RFC.
+
+## 16. End note
+
+**Version history.** Version 1.0 supersedes the Italian specification 0.3, which remains the historical source and is kept, non-normative, in `history/`. Version 1.0 is the first in canonical English under an open licence; it separates this Guide from the Extended Framework and opens part of it to community maintenance. Version 0.3 restored AI Squads, Design Thinking between models and composable architecture, and added Digital Seniority. Version 0.2 revised accountabilities, levels, escalation, competition and conformance. The full history is in `HISTORY.md`.
+
+**Acknowledgements.** Eiraman draws on established management and engineering practice. The Scrum Guide is the work of Ken Schwaber and Jeff Sutherland. TOGAF® is a registered trademark of The Open Group. Sources for the rules of this Guide are listed in the body of knowledge of the Extended Framework.

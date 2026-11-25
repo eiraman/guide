@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2026 Paolo Ungari and contributors
+# SPDX-License-Identifier: Apache-2.0
+#
+# Markdown link check. Broken links block the pull request. Links to repositories of the
+# organisation that do not exist yet are listed in .lycheeignore until publication.
+name: links
+
+on:
+  pull_request:
+    paths: ["**/*.md", ".lycheeignore", ".github/workflows/links.yml"]
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 5 * * 1"   # weekly, to catch links that rot outside pull requests
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Markdown links
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          lycheeVersion: v0.24.2
+          args: --no-progress --max-retries 3 './**/*.md'
+          fail: true
+          jobSummary: true
