@@ -45,7 +45,7 @@ The proposed text is in `EIRAMAN-GUIDE.md` at version 1.0.0-rc.2. Changes by sec
 | §3 Context principles | "Three principles" becomes "Four principles"; new principle **Context Consistency and Independence** | Modified line; new paragraph |
 | §4 Accountabilities | New paragraphs **AI Reviewer** (with the reports to the AI Coordinator and, for critical or unaccepted deviations, to the Human Manager in the Manager View, Do-S08) and **Suggestions of the AI Reviewer**. **Process reviewer** is unchanged | New paragraphs |
 | §7 AI Squads and Digital Seniority | New item **A new agent for every Work Package**, with the Work Package handover abstract; **Shared context, except for the unit tester** now scopes the shared context to one Work Package; new paragraphs **Agent blinding**, **Hard blinding**, **Soft blinding** (context RACI) | New paragraphs; modified line |
-| §8 Lifecycle and events | New paragraphs **Discovery at every start**, **Discovery group**, **Business Analyst and User Personas**, **Discovery executors and reviewers** (the Discovery reviewers are the reviewer profiles of the governance domains the project touches, security and privacy always present, Do-S09), **Discovery report**, **Design and planning as a Work Package**; **Convergence** moves from the functional analyst to the Design Thinking Facilitator. **Divergence**, **Gates** and **Phases and decisions** are unchanged | New paragraphs; replaced rule |
+| §8 Lifecycle and events | **Phases and decisions**: Discovery yields the first draft of Scope Management, Design and planning refines its Principles and Decisions; the Human Manager's approvals are unchanged. New paragraphs **Discovery at every start**, **Discovery group**, **Business Analyst and User Personas**, **Discovery executors and reviewers** (the Discovery reviewers are the reviewer profiles of the governance domains the project touches, security and privacy always present, Do-S09), **Discovery report**, **Design and planning as a Work Package**; **Convergence** moves from the functional analyst to the Design Thinking Facilitator. **Divergence** and **Gates** are unchanged | Modified lines; new paragraphs; replaced rule |
 | §8.1 Phase playbooks | **Who works in each phase**: Discovery and Design and planning items updated; new paragraphs **Roles in the Discovery group** and **Discovery procedure** (step by step, descriptive; the obligations are in §8) | Modified lines; new paragraphs |
 | §9 Commitments and artifacts | **Work Package record** adds the context RACI and the Work Package handover abstract | Modified line |
 | §9.1 Test practices | **Test types**: simulated-user functional tests are run by the User Personas. **Who supervises tests** (PA-8) is unchanged | Modified line |
@@ -84,9 +84,9 @@ Reconciles the shared team context with a new agent for every Work Package. The 
 
 > Old: **Convergence.** A single model, in the role of functional analyst, MUST gather the contributions, relate them to user evidence and produce the draft Vision and a first version of Scope Management: Vision, Principles, success criteria and open points. The Human Manager MUST then approve the Vision or relaunch the exploration.
 >
-> New: **Convergence.** The Design Thinking Facilitator MUST lead convergence; the functional analyst takes part as a member of the group. The Facilitator MUST submit the same prompt to every executor of the group, record the answers, restate them as Principles, Decisions and open points, and iterate until consensus within the maximum number of rounds that the mandate sets; it MUST then submit the result to the Discovery reviewers. Convergence MUST gather the contributions, relate them to user evidence and produce the draft Vision, the success criteria and the first draft of Scope Management. The Human Manager MUST then approve the Vision and the Principles, or relaunch the exploration.
+> New: **Convergence.** The Design Thinking Facilitator MUST lead convergence; the functional analyst takes part as a member of the group. The Facilitator MUST submit the same prompt to every executor of the group, record the answers, restate them as Principles, Decisions and open points, and iterate until consensus within the maximum number of rounds that the mandate sets; it MUST then submit the result to the Discovery reviewers. Convergence MUST gather the contributions, relate them to user evidence and produce the draft Vision and the first draft of Scope Management. The Human Manager MUST then approve the Vision or relaunch the exploration.
 
-What is replaced: convergence by "a single model, in the role of functional analyst". What is kept: gathering the contributions, relating them to user evidence, the draft Vision, the success criteria, the open points and the Human Manager's approval of the Vision. What is broadened: Decisions enter the first draft of Scope Management, and the Human Manager approves the Principles together with the Vision (as §4 already requires). The maximum number of rounds stays a value of the mandate (PA-2).
+What is replaced: convergence by "a single model, in the role of functional analyst". What is kept: gathering the contributions, relating them to user evidence, the draft Vision, the first draft of Scope Management with Vision, Principles, success criteria and open points, and the Human Manager's approval of the Vision at the end of Discovery, as in rc.1. What is broadened: Decisions enter the first draft of Scope Management (§8 Discovery at every start). The Principles are approved and frozen at the end of Design and planning, as before (Phases and decisions). The maximum number of rounds stays a value of the mandate (PA-2).
 
 **5. §8.1, Who works in each phase, Discovery item.**
 
@@ -120,6 +120,22 @@ Broadened: two items added, none removed.
 
 Do-S03: the agent that simulates the user is a User Persona. **Who supervises tests** keeps the PA-8 wording: the person MAY watch functional tests, but their progress MUST NOT depend on the person.
 
+**9. §8, Phases and decisions, Discovery item.**
+
+> Old: - *Discovery* yields the problem, benefit, discarded alternatives, a draft Vision and the class set by the applicability gate (§14). The Human Manager approves Vision, mandate and class, or relaunches exploration.
+>
+> New: - *Discovery* yields the problem, benefit, discarded alternatives, a draft Vision, the first draft of Scope Management and the class set by the applicability gate (§14). The Human Manager approves Vision, mandate and class, or relaunches exploration.
+
+Descriptive addition: Discovery's deliverable is named as in §8 Discovery at every start. The approvals are unchanged.
+
+**10. §8, Phases and decisions, Design and planning item.**
+
+> Old: - *Design and planning* yields the architectural views, contracts, backlog, Work Packages, profiles, cost estimate, test criteria and proposed Principles and Decisions. The Human Manager approves the proposed Principles, the proposed Decisions with business impact and the budget. The Principles are then frozen for that version.
+>
+> New: - *Design and planning* yields the architectural views, contracts, backlog, Work Packages, profiles, cost estimate, test criteria and proposed Principles and Decisions, refined from the first draft of Scope Management. The Human Manager approves the proposed Principles, the proposed Decisions with business impact and the budget. The Principles are then frozen for that version.
+
+Descriptive addition: Design and planning refines the Principles and Decisions of the first draft. The approvals and the freezing of the Principles are unchanged (specification 0.3, §5).
+
 ### Removed lines in the other files of the release
 
 These lines carry no rule; they are listed so that the scope review can map every removed line.
@@ -135,7 +151,7 @@ These lines carry no rule; they are listed so that the scope review can map ever
 
 ## Reversibility
 
-A change to the Guide text is a one-way door (GOVERNANCE §6.2). The new obligations are additions: removing them later would be MAJOR under VERSIONING §2.1. While the Guide is a release candidate, not in force, rolling back costs a new candidate that restores the rc.1 text of the eight lines above and drops the new paragraphs; projects that already applied the new roles would keep them as project practice. The Role Profiles released with this RFC (AI Reviewer, Business Analyst and User Persona templates) would be suspended, not deleted.
+A change to the Guide text is a one-way door (GOVERNANCE §6.2). The new obligations are additions: removing them later would be MAJOR under VERSIONING §2.1. While the Guide is a release candidate, not in force, rolling back costs a new candidate that restores the rc.1 text of the ten lines above and drops the new paragraphs; projects that already applied the new roles would keep them as project practice. The Role Profiles released with this RFC (AI Reviewer, Business Analyst and User Persona templates) would be suspended, not deleted.
 
 ## Impact
 
@@ -143,7 +159,8 @@ A change to the Guide text is a one-way door (GOVERNANCE §6.2). The new obligat
 - **Role Profiles.** New: AI Reviewer; Business Analyst and User Persona templates. Updated: Design Thinking Facilitator, AI Coordinator (blinding, context RACI, handover abstracts, Design and planning as a Work Package), functional analyst, simulated user. Released separately, in `role-profiles` 0.2.0 (package DT-PROFILES).
 - **Tools.** A tool that enforces hard blinding has to restrict files, tools, data and retrieval per role. The traceability check gains the RFC rows.
 - **Translations.** None published yet.
-- **Version.** Obligations are added or broadened and none is removed or reversed: MINOR under VERSIONING §2.1. The Guide is a pre-release of 1.0.0, so the candidate number goes from rc.1 to rc.2.
+- **Version.** Obligations are added or broadened, and one rule is replaced: convergence passes from a single model as functional analyst to the Design Thinking Facilitator (Rules replaced, item 4). The Guide is a pre-release of 1.0.0, not in force, so the change is released as the next candidate, rc.2.
+- **Verification note.** The "Count check" of `TRACEABILITY.md` now declares that key words in the boxed community-maintained notes, the §0 note on community-maintained sections and §15 Changing the method are not counted, since they carry RFC-process rules with no coverage row. It documents how the check counts; it is not a rule change (D-VER-1).
 
 ## Alternatives
 

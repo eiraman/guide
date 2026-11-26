@@ -229,6 +229,7 @@ Paragraphs added or changed by [RFC 0001](rfcs/0001-context-blinding-discovery.m
 | RFC0001-18 | §8.1 Phase playbooks | Discovery procedure (RFC 0001, D) |
 | RFC0001-19 | §9 Commitments and artifacts | Work Package record (RFC 0001, N; changes R108: context RACI and handover abstract) |
 | RFC0001-20 | §9.1 Test practices | Test types (RFC 0001, D; changes R115: simulated-user tests by User Personas; R116 unchanged) |
+| RFC0001-21 | §8 Lifecycle and events | Phases and decisions (RFC 0001, N; changes R090a and R101a: first draft of Scope Management, refined in Design and planning; approvals unchanged) |
 
 ## Count check
 
@@ -239,6 +240,6 @@ Paragraphs added or changed by [RFC 0001](rfcs/0001-context-blinding-discovery.m
 - Rows mapped more than once: **0**
 - Normative (N) G rows whose paragraph lacks an RFC 2119 key word in capitals: **0** (158 N rows)
 - Paragraphs with a key word that carry no normative row: **0**, besides the community-maintained notes and the paragraph Changing the method of §15, which carry RFC-process rules with no coverage row
-- Rows added by RFC 0001: **20** (15 normative, 5 descriptive); every normative one has a key word in capitals
+- Rows added by RFC 0001: **21** (16 normative, 5 descriptive); every normative one has a key word in capitals
 
 Result: **PASS**. G rows in the coverage table equal rows mapped (189 = 189), and every RFC row maps to a paragraph of the Guide. The check is run by a script that reads the coverage table, this table and the Guide, finds each paragraph by its label, and tests the key words.

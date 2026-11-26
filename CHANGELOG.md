@@ -20,7 +20,9 @@ proposed by the Steward on behalf of the working groups not yet formed, from cha
 the Human Manager's decisions Do-S03 to Do-S06. The Author accepted RFC 0001 on 26 November 2026, before
 the end of its comment period (Do-S07, a recorded deviation), and decided its open points (Do-S08,
 Do-S09).
-Obligations are added or broadened and none is removed or reversed (MINOR, VERSIONING §2.1).
+Obligations are added or broadened, and one rule is replaced: convergence passes from a single model as
+functional analyst to the Design Thinking Facilitator (see RFC 0001, "Rules replaced"). The Guide is not in
+force, so the change is released as the next candidate.
 
 ### Added
 
@@ -54,8 +56,12 @@ Obligations are added or broadened and none is removed or reversed (MINOR, VERSI
 ### Changed
 
 - **§8, Convergence**: led by the Design Thinking Facilitator instead of a single model as functional
-  analyst; the first draft of Scope Management holds Principles, Decisions and open points; the Human
-  Manager approves the Vision and the Principles. Replaced rule, listed in RFC 0001.
+  analyst. Replaced rule, listed in RFC 0001. The first draft of Scope Management holds Vision,
+  Principles, Decisions, success criteria and open points; the Human Manager approves the Vision at the
+  end of Discovery, as in 1.0.0-rc.1.
+- **§8, Phases and decisions**: Discovery yields the first draft of Scope Management; Design and planning
+  refines its Principles and Decisions. The approvals, and the freezing of the Principles at the end of
+  planning, are unchanged.
 - **§7, Shared context, except for the unit tester**: a team shares one context within a Work Package.
   The unit tester rule is unchanged.
 - **§8.1, Who works in each phase**: Discovery by the Discovery group; Design and planning by the team of a
@@ -66,12 +72,17 @@ Obligations are added or broadened and none is removed or reversed (MINOR, VERSI
   supervises tests" keeps the PA-8 wording.
 - **§3**: "Three principles" becomes "Four principles". Title block, `README.md` and row R002 of
   `TRACEABILITY.md`: version 1.0.0-rc.2.
-- `TRACEABILITY.md`: twenty rows marked "RFC 0001" for the new or changed paragraphs; all earlier rows kept.
+- `TRACEABILITY.md`: twenty-one rows marked "RFC 0001" for the new or changed paragraphs; all earlier rows kept.
 - `rfcs/README.md`: RFC 0001 in the index, accepted.
+- **Verification note (D-VER-1).** The "Count check" of `TRACEABILITY.md` declares that key words in the
+  boxed community-maintained notes, the §0 note on community-maintained sections and §15 Changing the
+  method are not counted, since they carry RFC-process rules with no coverage row. It documents how the
+  traceability check counts; no rule changes.
 
 ### Removed
 
-- No rule. The eight Guide lines that changed are quoted, old and new, in RFC 0001, "Rules replaced".
+- No rule without a replacement. The ten Guide lines that changed are quoted, old and new, in RFC 0001,
+  "Rules replaced"; the only replaced rule is the convergence rule.
 
 ### Fixed
 

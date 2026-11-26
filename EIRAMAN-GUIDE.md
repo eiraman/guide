@@ -217,9 +217,9 @@ The mapping from SD levels to the engines and tool settings of each provider is 
 **Five phases, one set of rules.** All five phases MUST be executed by the AI system in Waves, under the same rules: 3D escalation, competition, closure on evidence and cost recording. The Human Manager steps in only at each phase's decision points.
 
 **Phases and decisions.** Each phase MUST end with the decisions of the Human Manager listed below; work that needs them MUST NOT proceed without them.
-- *Discovery* yields the problem, benefit, discarded alternatives, a draft Vision and the class set by the applicability gate (§14). The Human Manager approves Vision, mandate and class, or relaunches exploration.
+- *Discovery* yields the problem, benefit, discarded alternatives, a draft Vision, the first draft of Scope Management and the class set by the applicability gate (§14). The Human Manager approves Vision, mandate and class, or relaunches exploration.
 - *Proof of concept* runs a repeatable feasibility test and identifies the resources and access needed. It becomes a Do only if the outcome is negative or needs new access or spending.
-- *Design and planning* yields the architectural views, contracts, backlog, Work Packages, profiles, cost estimate, test criteria and proposed Principles and Decisions. The Human Manager approves the proposed Principles, the proposed Decisions with business impact and the budget. The Principles are then frozen for that version.
+- *Design and planning* yields the architectural views, contracts, backlog, Work Packages, profiles, cost estimate, test criteria and proposed Principles and Decisions, refined from the first draft of Scope Management. The Human Manager approves the proposed Principles, the proposed Decisions with business impact and the budget. The Principles are then frozen for that version.
 - *Scale* delivers increments closed on evidence. The Human Manager acts through the governance cycle and Do escalations.
 - *Acceptance and operation* covers acceptance testing, release, manuals and service management. The Human Manager accepts or rejects the result and decides Do escalations on operations.
 
@@ -227,7 +227,7 @@ The mapping from SD levels to the engines and tool settings of each provider is 
 
 **Discovery as Design Thinking between models.** Left free, AI engines gather information well but tend to diverge, so Discovery follows Design Thinking with precise roles and boundaries.
 
-**Discovery at every start.** Discovery MUST run at the start of every project and MUST be tracked in the activity tree of the plan. Its deliverable is the first draft of Scope Management: Principles, Decisions and open points.
+**Discovery at every start.** Discovery MUST run at the start of every project and MUST be tracked in the activity tree of the plan. Its deliverable is the first draft of Scope Management: Vision, Principles, Decisions, success criteria and open points.
 
 **Discovery group.** For Discovery the AI Coordinator MUST form a Discovery group, which is not an AI Squad: each of its members MUST work in an independent context. The group MUST include at least the Design Thinking Facilitator, the functional analyst, the Business Analyst, the UX-UI designer, the User Personas and, where the project has them, the platform and technology architects (§8.1).
 
@@ -239,11 +239,11 @@ The mapping from SD levels to the engines and tool settings of each provider is 
 
 **Gates.** At predefined gates the Human Manager MAY give new inputs, which start a new round of divergence.
 
-**Convergence.** The Design Thinking Facilitator MUST lead convergence; the functional analyst takes part as a member of the group. The Facilitator MUST submit the same prompt to every executor of the group, record the answers, restate them as Principles, Decisions and open points, and iterate until consensus within the maximum number of rounds that the mandate sets; it MUST then submit the result to the Discovery reviewers. Convergence MUST gather the contributions, relate them to user evidence and produce the draft Vision, the success criteria and the first draft of Scope Management. The Human Manager MUST then approve the Vision and the Principles, or relaunch the exploration.
+**Convergence.** The Design Thinking Facilitator MUST lead convergence; the functional analyst takes part as a member of the group. The Facilitator MUST submit the same prompt to every executor of the group, record the answers, restate them as Principles, Decisions and open points, and iterate until consensus within the maximum number of rounds that the mandate sets; it MUST then submit the result to the Discovery reviewers. Convergence MUST gather the contributions, relate them to user evidence and produce the draft Vision and the first draft of Scope Management. The Human Manager MUST then approve the Vision or relaunch the exploration.
 
 **Discovery report.** At the end of Discovery the Design Thinking Facilitator MUST produce a report for the Human Manager with the initial and the final position of each AI of the group.
 
-**Design and planning as a Work Package.** Design and planning MUST run as a dedicated Work Package, which the AI Coordinator assigns and MUST NOT perform. It produces the first Product Backlog and the architectural documents.
+**Design and planning as a Work Package.** Design and planning MUST run as a dedicated Work Package, which the AI Coordinator assigns and MUST NOT perform. It refines the Principles and Decisions of the first draft of Scope Management and produces the first Product Backlog and the architectural documents.
 
 **Wave.** The unit of technical delivery in every phase, at the pace of the AI. A Wave MUST have a spending cap and a maximum duration; whichever is reached first applies. At the early-warning threshold that the mandate sets, the AI Coordinator MUST flag the Wave. At the Deny threshold that the mandate sets, the environment MUST Deny new work, and the Wave closes with a checkpoint. Waves follow one another automatically within mandate and budget. A Wave MUST close only after the integrated increment is verified.
 
@@ -278,7 +278,7 @@ The playbooks describe how the AI system usually works; the rules are those of �
 - *Same prompt.* It submits the same prompt to all the executors of the group, each in its own context.
 - *Record.* It records the answers.
 - *Reconcile.* It checks whether the answers reconcile fully or partially.
-- *Restate.* It issues a new prompt that states the Principles, immutable cornerstones everyone agrees on; the Decisions, which can change on new specifications or evidence; and the open points, deferred to design, to a mock-up (MOC) or to a proof of concept (POC), or needing a Do of the Human Manager.
+- *Restate.* It issues a new prompt that states the Principles, cornerstones everyone agrees on, which Design and planning refines and which freeze at the end of planning; the Decisions, which can change on new specifications or evidence; and the open points, deferred to design, to a mock-up (MOC) or to a proof of concept (POC), or needing a Do of the Human Manager.
 - *Iterate.* It repeats the rounds until consensus, within the maximum number of rounds that the mandate sets.
 - *Review.* It submits the result to the Discovery reviewers, each of whom judges only its own domain.
 - *Report.* It writes the report for the Human Manager, with the initial and the final position of each AI.
