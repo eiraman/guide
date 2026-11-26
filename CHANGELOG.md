@@ -13,28 +13,95 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [Unreleased]
 
+## [1.0.0-rc.3] - 2026-11-26
+
+Third release candidate. Not yet in force. It implements [RFC 0003](rfcs/0003-critical-review-corrections.md),
+proposed by the Steward, also on behalf of the working groups not yet formed, from change request CR-009 and
+the Human Manager's decisions D0 to D10 on the findings of the critical review of specification 0.3, with the
+later decisions recorded in CR-009. The Author accepted RFC 0003 on 26 November 2026 (Do-S19), before the end
+of its comment period and for the community-maintained sections §7.1, §9.1 and §14 with §14.1: two recorded
+deviations.
+Obligations are added or broadened, and two rules are replaced (see RFC 0003, "Rules replaced"). Replacing
+a rule would be a MAJOR change for a version in force (VERSIONING §2.1); the Guide is not in force, so the
+change is released as the next candidate. The release also carries RFC 0002, which does
+not change the Guide text, and the CI fix that waited under `[Unreleased]`.
+
 ### Added
 
+- **§2, two transpositions**: internal control and segregation of duties; bills of materials and
+  supply-chain traceability. The list has eleven items.
+- **§5, Do**: changes that add an external service or move data outside the organisation are in the general
+  list (MUST), as already required by §9 High Level Architectural View, which now refers to §5.
+- **§5, E6 Measurement** (MUST): under-escalation and over-escalation are estimates over a sample, reported
+  with the number of decisions examined and their confidence interval; a threshold is met only if the
+  unfavourable bound stays within it. This makes the evidence for level 1 (§14.1) stricter.
+- **§6, K6** (MUST): the mandate sets the type of package, the minimum number of packages and the minimum
+  margin over a single executor.
+- **§7, Hard blinding** (MUST broadened): it applies to the Discovery judge too.
+- **§7.1, Catalogue** (descriptive): the map is the maintainers' assessment; untested configurations are
+  marked.
+- **§7.1, Fallback** (MUST broadened): the cycle review reports the share of tasks run outside the catalogue.
+- **§7.1, Team participation** (MAY): tasks of different levels may go to different agents, when the saving
+  exceeds the cost of handing over the context.
+- **§7.1, Promotion and reduction** (MUST): a task outside the catalogue is promoted at the first failure
+  for lack of capability; "unchanged quality" means no increase in defects after closure or in rework.
+- **§8, Convergence** (MUST): Discovery convergence follows K1. Criteria are fixed before divergence; after
+  the Discovery reviewers a judge on a model different from those of the group, distinct from the reviewers
+  and under hard blinding, assesses the result before it reaches the Human Manager. When no such model is
+  available the choice goes to the Human Manager as a Do. Amends the convergence of RFC 0001.
+- **§8, Governance cycle** (MUST broadened): the management review reports the governance share, that is the
+  cost of governance roles, the applicability gate and managerial documents over the total cost of the
+  cycle, and the share of tasks run outside the catalogue.
+- **§8.1, Discovery procedure** (descriptive): step Judge.
+- **§9, Risk Log and Manager View** (descriptive): new paragraphs that define the two terms.
+- **§9.1, Test levels** (descriptive): security and performance testing is proportionate to the risk. The
+  sentence was in specification 0.2 and had been dropped without a changelog entry.
+- **§10, Brain** (MUST): the mandate sets the criteria by which a Brain task is trusted or untrusted, and
+  the role that applies them.
+- **§11, Run traceability** (MUST broadened): each run records the role of the agent, labelled as
+  governance or production.
+- **§14.1, Operational documents** (MUST): at every level, the Product Backlog, the Work Package records,
+  the run records and, for each team, the staffing plan and the Log Tracker.
+- `rfcs/0003-critical-review-corrections.md`, accepted (Do-S19), and its row in `rfcs/README.md`.
 - `rfcs/0002-governo-family.md` (CR-007): regularises the Role Profile family `governo/`, created in Wave
   DT-01 without an RFC and without a family group (Do-S16). Three alternatives are kept for the record; the
   Author, who is also the Steward in Stage 1, accepted alternative B on 2026-11-26 (Do-S18): a new working
   group "Governance & Assurance" owns the family, and the reviewers of record of each domain co-review its
   reviewer profile. Accepted before the end of the thirty-day comment period, a recorded deviation as for
   RFC 0001. The implementation (community, role-profiles, site) is left to a separate release wave.
-  The RFC does not change the Guide text, so the Guide version stays 1.0.0-rc.2 (VERSIONING §1: the
-  version source is the Guide title block).
+  The RFC does not change the Guide text.
 - `rfcs/README.md`: RFC 0002 in the index.
+- `HISTORY.md`: table of the changes from 0.2 to 0.3 that the narrative did not list.
+
+### Changed
+
+- **§9.1, scripted functional tests**: **replaced rule**. The test agent MUST NOT fix on its own either the
+  candidate or its own test script; it reports every error to the AI Coordinator, which assigns the fix
+  (MUST NOT, MUST, MAY). The sentence that let the agent fix gross errors on its own is removed.
+- **§10, Backbone**: **replaced rule**. The first usable path runs through the Backbone in minimal form,
+  together with the Brain and the essential interfaces; the Backbone is then completed before the other
+  components are extended (MUST). "Built before all other components" is removed. Component contract refers
+  to it.
+- **§5, E5 Drift budget** (MUST broadened): expressed in spending and in time; class changes are also
+  reported as an item of their own.
+- **§7, Retrospective**: a model can be changed only among those the Role Profile enables and the mandate
+  admits; operational decisions are the micro-decisions that touch neither approved Decisions nor reserved
+  matters.
+- **§8, Gates**: the AI Coordinator sets the gates and communicates them at the start of Discovery.
+- **§14.1, Level 0 and Level 1 · Method** (MUST broadened): at level 0 the documents for the Human Manager
+  include the milestone plan within the project record, the business risks within the cycle review, the High
+  Level Architectural View and the progress dashboard; at level 1 the milestone plan and the business risks
+  of the Risk Log become documents of their own.
+- **§1 and §14**: "business owner" becomes "Human Manager" in three places.
+- Title block, `README.md` and row R002 of `TRACEABILITY.md`: version 1.0.0-rc.3.
+- `TRACEABILITY.md`: thirty rows marked "RFC 0003" for the new or changed paragraphs; all earlier rows kept.
 
 ### Fixed
 
 - CI, `compliance.yml`: the local-path check removes http(s) URLs from the matched lines and matches
   again, so a path segment inside a URL (such as `/home/` in an official ISO URL) is no longer flagged.
-  The block is the one of `role-profiles` v0.4.1 (the whole workflow file is now identical to that one). Change Requests CR-005 and CR-006 of the
-  method project.
-
-This change is not a Guide release: the Guide version is the one in the title block of `EIRAMAN-GUIDE.md`,
-and a workflow change leaves the Guide text unchanged (VERSIONING §1, notes). It stays under `[Unreleased]`,
-no tag is planned for it, and it is released with the next Guide version.
+  The block is the one of `role-profiles` v0.4.1 (the whole workflow file is now identical to that one).
+  Change Requests CR-005 and CR-006 of the method project.
 
 ## [1.0.0-rc.2] - 2026-11-26
 
@@ -181,6 +248,7 @@ The method was published before as an Italian specification, numbered 0.1, 0.2 a
 which are not versions of this Guide and were not released from this repository. Their content is
 summarised in [HISTORY.md](HISTORY.md); the text of 0.3 is in [history/](history/).
 
-[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.2...main
+[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.3...main
+[1.0.0-rc.3]: https://github.com/eiraman/guide/compare/v1.0.0-rc.2...v1.0.0-rc.3
 [1.0.0-rc.2]: https://github.com/eiraman/guide/compare/v1.0.0-rc.1...v1.0.0-rc.2
 [1.0.0-rc.1]: https://github.com/eiraman/guide/releases/tag/v1.0.0-rc.1

@@ -14,7 +14,7 @@ From 1.0.0-rc.2, paragraphs added or changed by an RFC have their own rows, list
 | Row | Guide section | Paragraph |
 |---|---|---|
 | R001 | Title block | The Eiraman Guide |
-| R002 | Title block | Version 1.0.0-rc.2 |
+| R002 | Title block | Version 1.0.0-rc.3 |
 | R003 | Title block | Status |
 | R004 | §0 About this Guide | Normative language |
 | R005 | §0 About this Guide | Values and Guidance |
@@ -231,6 +231,43 @@ Paragraphs added or changed by [RFC 0001](rfcs/0001-context-blinding-discovery.m
 | RFC0001-20 | §9.1 Test practices | Test types (RFC 0001, D; changes R115: simulated-user tests by User Personas; R116 unchanged) |
 | RFC0001-21 | §8 Lifecycle and events | Phases and decisions (RFC 0001, N; changes R090a and R101a: first draft of Scope Management, refined in Design and planning; approvals unchanged) |
 
+## Rows added by RFC 0003
+
+Paragraphs added or changed by [RFC 0003](rfcs/0003-critical-review-corrections.md) in 1.0.0-rc.3. The coverage rows and the rows of RFC 0001 stay as they are. Where a paragraph already has a row of RFC 0001, the note names it; the row RFC0003-20 supersedes the note of RFC0001-20, since Test types now carries key words. The coverage rows of the other paragraphs are not named here.
+
+| Row | Guide section | Paragraph |
+|---|---|---|
+| RFC0003-01 | §2 Eiraman theory | Management applied to AI (RFC 0003, D; changes R011: the list has eleven transpositions) |
+| RFC0003-02 | §5 3D escalation: Deny, Delegate, Do | Do (RFC 0003, N; new item on external services and data leaving the organisation) |
+| RFC0003-03 | §5 3D escalation: Deny, Delegate, Do | E5 · Drift budget (RFC 0003, N; unit of the budget, class changes as an item of their own) |
+| RFC0003-04 | §5 3D escalation: Deny, Delegate, Do | E6 · Measurement (RFC 0003, N; estimates reported with sample and confidence interval) |
+| RFC0003-05 | §6 Competition and independent verification | K6 · Measure the mechanism (RFC 0003, N; values the mandate sets) |
+| RFC0003-06 | §7 AI Squads and Digital Seniority | Retrospective (RFC 0003, N; limits on model changes and operational decisions) |
+| RFC0003-07 | §7 AI Squads and Digital Seniority | Hard blinding (RFC 0003, N; changes RFC0001-07: the Discovery judge) |
+| RFC0003-08 | §7.1 Digital Seniority catalogue | Catalogue (RFC 0003, N; the map as the maintainers' assessment) |
+| RFC0003-09 | §7.1 Digital Seniority catalogue | Fallback (RFC 0003, N; share of tasks outside the catalogue reported) |
+| RFC0003-10 | §7.1 Digital Seniority catalogue | Team participation (RFC 0003, N; tasks of different levels to different agents) |
+| RFC0003-11 | §7.1 Digital Seniority catalogue | Promotion and reduction (RFC 0003, N; promotion at the first failure outside the catalogue; unchanged quality defined) |
+| RFC0003-12 | §8 Lifecycle and events | Gates (RFC 0003, N; set by the AI Coordinator) |
+| RFC0003-13 | §8 Lifecycle and events | Convergence (RFC 0003, N; changes RFC0001-13: K1 judge after the Discovery reviewers) |
+| RFC0003-14 | §8 Lifecycle and events | Governance cycle (RFC 0003, N; governance share and share of tasks outside the catalogue) |
+| RFC0003-15 | §8.1 Phase playbooks | Discovery procedure (RFC 0003, D; changes RFC0001-18: step Judge) |
+| RFC0003-16 | §9 Commitments and artifacts | Risk Log (RFC 0003, D; new paragraph) |
+| RFC0003-17 | §9 Commitments and artifacts | Manager View (RFC 0003, D; new paragraph) |
+| RFC0003-18 | §9 Commitments and artifacts | High Level Architectural View (RFC 0003, N; reference to §5) |
+| RFC0003-19 | §9.1 Test practices | Test levels (RFC 0003, D; security and performance testing proportionate to the risk) |
+| RFC0003-20 | §9.1 Test practices | Test types (RFC 0003, N; changes RFC0001-20: the test agent fixes nothing on its own, replaced rule) |
+| RFC0003-21 | §10 Composable architecture | Backbone (RFC 0003, N; replaced rule: first usable path, then the whole Backbone) |
+| RFC0003-22 | §10 Composable architecture | Brain (RFC 0003, N; criteria for trusted and untrusted tasks set by the mandate) |
+| RFC0003-23 | §10 Composable architecture | Component contract (RFC 0003, N; reference to Backbone) |
+| RFC0003-24 | §11 Environment, execution and agent security | Run traceability (RFC 0003, N; role of the agent) |
+| RFC0003-25 | §1 Eiraman definition | Development Environment (RFC 0003, D; Human Manager in place of business owner) |
+| RFC0003-26 | §14 Applicability: classes, levels and the gate | Principle (RFC 0003, N; Human Manager in place of business owner) |
+| RFC0003-27 | §14 Applicability: classes, levels and the gate | Applicability gate (RFC 0003, N; Human Manager in place of business owner) |
+| RFC0003-28 | §14.1 Requirements per adoption level | Level 0 · Method (RFC 0003, N; documents due at level 0) |
+| RFC0003-29 | §14.1 Requirements per adoption level | Level 1 · Method (RFC 0003, N; milestone plan and Risk Log register) |
+| RFC0003-30 | §14.1 Requirements per adoption level | Operational documents (RFC 0003, N; new paragraph) |
+
 ## Count check
 
 - G rows in the coverage table: **189** (160 in the first draft; 29 rows moved from the Extended Framework by PA-1 C and PA-6 B)
@@ -241,5 +278,6 @@ Paragraphs added or changed by [RFC 0001](rfcs/0001-context-blinding-discovery.m
 - Normative (N) G rows whose paragraph lacks an RFC 2119 key word in capitals: **0** (158 N rows)
 - Paragraphs with a key word that carry no normative row: **0**, besides the community-maintained notes and the paragraph Changing the method of §15, which carry RFC-process rules with no coverage row
 - Rows added by RFC 0001: **21** (16 normative, 5 descriptive); every normative one has a key word in capitals
+- Rows added by RFC 0003: **30** (24 normative, 6 descriptive); every normative one has a key word in capitals. The check of these rows was run for 1.0.0-rc.3 by a script written for the release, which finds each paragraph by its label and tests the key words
 
 Result: **PASS**. G rows in the coverage table equal rows mapped (189 = 189), and every RFC row maps to a paragraph of the Guide. The check is run by a script that reads the coverage table, this table and the Guide, finds each paragraph by its label, and tests the key words.
