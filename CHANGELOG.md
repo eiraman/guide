@@ -13,21 +13,22 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [Unreleased]
 
-### Changed
+## [1.0.0-rc.1] - 2026-11-26
+
+First release candidate of the Eiraman Guide. Not yet in force. It supersedes the Italian specification
+0.3, which stays in `history/` as a non-normative copy.
+
+The same normative content was published on 25 November 2026, during the restricted launch, under the
+label "1.0-rc" (commit `f824888` of `github.com/eiraman/guide`, not tagged). This release adds only the
+version label and the release files below; the tag `v1.0.0-rc.1` goes on the release commit of
+26 November 2026, not retroactively on `f824888`.
+
+Release changes against `f824888`:
 
 - Version label normalised to Semantic Versioning: "1.0-rc" is now `1.0.0-rc.1` in the title block, in
   `README.md` and in row R002 of `TRACEABILITY.md`. No rule changes. Earlier records that say "v1.0-rc"
   (`AUTHOR-RATIFICATION.md`, the title of `TRACEABILITY.md`) refer to the same version.
-
-### Added
-
 - This changelog, and the CI workflow `changelog.yml`.
-
-## [1.0.0-rc.1] - 2026-11-25
-
-First release candidate of the Eiraman Guide, published as commit `f824888` of `github.com/eiraman/guide`
-during the restricted launch of 25 November 2026, under the label "1.0-rc". It was not tagged. Not yet in
-force. It supersedes the Italian specification 0.3, which stays in `history/` as a non-normative copy.
 
 The main changes from the Italian specification 0.3, in summary. The row-by-row mapping is in
 [TRACEABILITY.md](TRACEABILITY.md) (189 rows, each mapped to exactly one Guide paragraph), and the
@@ -79,4 +80,4 @@ which are not versions of this Guide and were not released from this repository.
 summarised in [HISTORY.md](HISTORY.md); the text of 0.3 is in [history/](history/).
 
 [Unreleased]: https://github.com/eiraman/guide/compare/f824888ba2295143217f3eb30484d5e042b427fa...main
-[1.0.0-rc.1]: https://github.com/eiraman/guide/tree/f824888ba2295143217f3eb30484d5e042b427fa
+[1.0.0-rc.1]: https://github.com/eiraman/guide/compare/f824888ba2295143217f3eb30484d5e042b427fa...main
