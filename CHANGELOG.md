@@ -13,6 +13,18 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [Unreleased]
 
+### Added
+
+- `rfcs/0002-governo-family.md` (CR-007): regularises the Role Profile family `governo/`, created in Wave
+  DT-01 without an RFC and without a family group (Do-S16). Three alternatives are kept for the record; the
+  Author, who is also the Steward in Stage 1, accepted alternative B on 2026-11-26 (Do-S18): a new working
+  group "Governance & Assurance" owns the family, and the reviewers of record of each domain co-review its
+  reviewer profile. Accepted before the end of the thirty-day comment period, a recorded deviation as for
+  RFC 0001. The implementation (community, role-profiles, site) is left to a separate release wave.
+  The RFC does not change the Guide text, so the Guide version stays 1.0.0-rc.2 (VERSIONING §1: the
+  version source is the Guide title block).
+- `rfcs/README.md`: RFC 0002 in the index.
+
 ### Fixed
 
 - CI, `compliance.yml`: the local-path check removes http(s) URLs from the matched lines and matches

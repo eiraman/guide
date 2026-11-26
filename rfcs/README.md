@@ -29,3 +29,4 @@ A rejected Guide RFC may be resubmitted with new evidence after 6 months.
 | # | Title | Owner | State |
 |---|---|---|---|
 | [0001](0001-context-blinding-discovery.md) | Context Consistency and Independence, agent blinding, AI Reviewer and Discovery as Design Thinking AI | Author (Guide) | accepted |
+| [0002](0002-governo-family.md) | Regularise the Role Profile family `governo/` and its working group | Steward (governance; also the Author in Stage 1) | accepted (alternative B) |
