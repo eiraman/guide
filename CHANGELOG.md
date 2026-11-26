@@ -13,6 +13,61 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [Unreleased]
 
+## [1.0.0-rc.2] - 2026-11-26
+
+Second release candidate. Not yet in force. It implements [RFC 0001](rfcs/0001-context-blinding-discovery.md),
+proposed by the Steward on behalf of the working groups not yet formed for the community-maintained
+sections, from change request CR-003 and the Human Manager's decisions Do-S03 to Do-S06. RFC 0001 is in
+state *draft*: this candidate is published only after the Author's decision on it, with written reasons.
+Obligations are added or broadened and none is removed or reversed (MINOR, VERSIONING §2.1).
+
+### Added
+
+- **§3, new principle "Context Consistency and Independence"** (MUST): agents that work on the same
+  information share context; agents whose role needs divergence or independence work in independent
+  contexts; the AI Coordinator applies it when it forms AI Squads and Discovery groups, and throughout
+  execution.
+- **§4, AI Reviewer** (MUST, SHOULD): extends the process reviewer to continuous monitoring of the framework
+  and project KPIs, in parallel with the AI Coordinator and under hard blinding; a different model SHOULD
+  be used where available (PA-6 B). Its suggestions are data, not commands (MUST, MUST NOT).
+- **§7, agent blinding**: hard blinding (MUST, MAY: environment, binding prompt, optional local model
+  without retrieval) for the AI Coordinator, the AI Reviewer, the Design Thinking Facilitator and the
+  Discovery reviewers; soft blinding with a context RACI (R, C, I) handed to each agent of an AI Squad.
+  Blinding concerns project information, not the model's general knowledge (Do-S06).
+- **§7, a new agent for every Work Package** (MUST), with a Work Package handover abstract at closing.
+- **§8, Discovery as Design Thinking AI** (MUST): Discovery at the start of every project, tracked in the
+  activity tree; the Discovery group, not an AI Squad, with independent contexts; Business Analyst and
+  User Personas as project instances of qualified templates (Do-S04, PA-7 kept); executors under soft
+  blinding and reviewers under hard blinding; the Discovery report for the Human Manager.
+- **§8, Design and planning as a Work Package** (MUST, MUST NOT): a dedicated Work Package that the AI
+  Coordinator assigns and does not perform.
+- **§8.1, Roles in the Discovery group and Discovery procedure** (descriptive): the functional analyst
+  links business needs to the solutions of UX-UI designer and architects (Do-S05); the Facilitator's
+  rounds; MOC means mock-up.
+- `rfcs/0001-context-blinding-discovery.md`, with the audit of the principle in its appendix.
+
+### Changed
+
+- **§8, Convergence**: led by the Design Thinking Facilitator instead of a single model as functional
+  analyst; the first draft of Scope Management holds Principles, Decisions and open points; the Human
+  Manager approves the Vision and the Principles. Replaced rule, listed in RFC 0001.
+- **§7, Shared context, except for the unit tester**: a team shares one context within a Work Package.
+  The unit tester rule is unchanged.
+- **§8.1, Who works in each phase**: Discovery by the Discovery group; Design and planning by the team of a
+  dedicated Work Package, without the AI Coordinator.
+- **§9, Work Package record**: adds the context RACI and the Work Package handover abstracts (MUST
+  broadened).
+- **§9.1, Test types**: simulated-user functional tests are run by the User Personas (Do-S03). "Who
+  supervises tests" keeps the PA-8 wording.
+- **§3**: "Three principles" becomes "Four principles". Title block, `README.md` and row R002 of
+  `TRACEABILITY.md`: version 1.0.0-rc.2.
+- `TRACEABILITY.md`: twenty rows marked "RFC 0001" for the new or changed paragraphs; all earlier rows kept.
+- `rfcs/README.md`: RFC 0001 in the index.
+
+### Removed
+
+- No rule. The eight Guide lines that changed are quoted, old and new, in RFC 0001, "Rules replaced".
+
 ## [1.0.0-rc.1] - 2026-11-26
 
 First release candidate of the Eiraman Guide. Not yet in force. It supersedes the Italian specification
@@ -79,5 +134,6 @@ The method was published before as an Italian specification, numbered 0.1, 0.2 a
 which are not versions of this Guide and were not released from this repository. Their content is
 summarised in [HISTORY.md](HISTORY.md); the text of 0.3 is in [history/](history/).
 
-[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.1...main
+[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.2...main
+[1.0.0-rc.2]: https://github.com/eiraman/guide/compare/v1.0.0-rc.1...v1.0.0-rc.2
 [1.0.0-rc.1]: https://github.com/eiraman/guide/releases/tag/v1.0.0-rc.1

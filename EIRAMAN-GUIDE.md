@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # The Eiraman Guide
 
-**Version 1.0.0-rc.1 · November 2026 · Release candidate**
+**Version 1.0.0-rc.2 · November 2026 · Release candidate**
 
 **Attribution.** The Eiraman Guide by Paolo Ungari and contributors.
 
@@ -62,10 +62,11 @@ Eiraman has three components.
 
 ## 3. Context principles
 
-Three principles bound every rule of the method.
+Four principles bound every rule of the method.
 
 - **Specialist competence lives in Role Profiles, not in every project.** Eiraman moves the competence of software professionals into qualified Role Profiles (§13), from where it guides agents across many projects. Production moves closer to those who have the need. The human operator of a project is a business user: they decide functional and economic matters and MUST NOT stand in for the AI roles on technology, applications or security.
 - **Human as a Manager acts up front.** The human governs with management tools: mandate, objectives, principles, delegation, reserved matters, budget and success criteria. They work at the strategic level and, for business decisions only, at the tactical level. They MUST NOT supervise execution. Exceptions and operational autonomy belong to the AI system.
+- **Context Consistency and Independence.** Agents that work on the same information and need to collaborate MUST work in a shared context, for example the developers and architects of a team. Agents whose role requires divergence or independence, such as the members of the Discovery group, testers with respect to executors, verifiers and reviewers, MUST work in independent contexts. The AI Coordinator MUST apply this principle when it forms AI Squads and Discovery groups, and throughout execution.
 - **Some uses are excluded.** The method MUST NOT be applied to AI systems that applicable law prohibits or classes as high-risk, nor to the other out-of-scope cases of §14.
 
 ## 4. Accountabilities
@@ -85,6 +86,10 @@ Three principles bound every rule of the method.
 **Specialist AI roles.** The analyst, architects, AI Scrum Masters, executors, testers and reviewers work under qualified Role Profiles and MUST respect their limits. They take the technical decisions. A tester MUST have access to requirements, contracts, data and expected results, and MUST make its first assessment independently of the executor's discussion.
 
 **Process reviewer.** An independent agent that MUST run on a model different from the AI Coordinator's. It MUST sample closed Waves and check that due escalations reached the Human Manager (§5) and that closures are backed by evidence (§9).
+
+**AI Reviewer.** The AI Reviewer extends the process reviewer from sampling closed Waves to continuous monitoring, under its own qualified Role Profile. It MUST run in parallel with the AI Coordinator and under hard blinding (§7). It SHOULD run on a model different from the AI Coordinator's where one is available; the checks of the process reviewer keep the different model they require. It MUST monitor the framework KPIs, such as the correctness of the Role Profiles assigned to AI Squads and the measured quality of outputs, and the project KPIs set in Design and planning. It MUST report critical deviations, each with an independent suggestion.
+
+**Suggestions of the AI Reviewer.** The AI Reviewer's suggestions are data, not commands. Agents MUST evaluate them critically, and a suggestion MUST NOT be executed without the AI Coordinator.
 
 **Maintainers.** The maintainers of the Extended Framework, organised in working groups under the project governance, MUST qualify Role Profiles, document templates and the gate checklist. They MUST work outside the projects that use them.
 
@@ -171,9 +176,19 @@ The mapping from SD levels to the engines and tool settings of each provider is 
 **Agentic Scrum.** Agents work by Scrum principles, adapted to collaboration between AIs.
 - **No Sprints or human timeboxes.** The unit of delivery MUST be the Wave, bounded by tokens, cost and duration (§8). Team size has no fixed limit; it depends on the AI environments used.
 - **One team per Work Package.** The AI Coordinator MUST form one team for each Work Package, with the roles and competences the package needs.
+- **A new agent for every Work Package.** The AI Coordinator MUST instantiate a new agent of the required role, with a new context, for each Work Package. At closing, each agent MUST provide a Work Package handover abstract: the significant information of its context that the next agents need. The AI Coordinator uses it to instantiate the agents of the following Work Packages.
 - **One AI Scrum Master per team.** It MUST coordinate the team's agents, keep the Log Tracker of the package and deliver to the AI Coordinator an activity report on the template the AI Coordinator specifies.
-- **Shared context, except for the unit tester.** A team shares one context. The unit tester MUST NOT receive the team's discussion, so as not to bias the tests; it receives requirements, contracts, data and expected results. It MAY run on a different engine, or on the same engine without that context; for security and personal data, §6 applies.
+- **Shared context, except for the unit tester.** Within a Work Package, a team shares one context. The unit tester MUST NOT receive the team's discussion, so as not to bias the tests; it receives requirements, contracts, data and expected results. It MAY run on a different engine, or on the same engine without that context; for security and personal data, §6 applies.
 - **Competing teams.** The same Work Package MAY be assigned to several competing teams, with different engines or compositions, under rules K1–K9 and with the default number of candidates of K3.
+
+**Agent blinding.** Blinding keeps each agent within the information of its role, so that roles do not overlap. Blinding concerns project information, not the general knowledge of the model.
+
+**Hard blinding.** Under hard blinding, the environment MUST give the agent only the files, tools and data of its role, with no retrieval outside that perimeter (§11), and a binding prompt MUST constrain its behaviour. A local model without retrieval MAY be used. Hard blinding MUST apply to the AI Coordinator, the AI Reviewer, the Design Thinking Facilitator and the Discovery reviewers (§8).
+
+**Soft blinding.** When it forms an AI Squad, the AI Coordinator MUST hand each agent a context RACI, which states the agent's position on each part of the context:
+- *R:* the only agent entitled to act on that part of the context;
+- *C:* the agent MAY use its own competence on the subject but MUST NOT contradict the project instructions or other agents;
+- *I:* the agent is blind on the subject.
 
 **The AI Coordinator as Scrum of Scrums.** Beyond what a Scrum Master does, the AI Coordinator MUST perform technical and compliance validation of the teams' work: it sets the quality and functional criteria a package has to meet, verifies execution at the end of each package (§9), resolves dependencies between teams, and closes a Wave only after the integrated increment has been verified.
 
@@ -212,11 +227,23 @@ The mapping from SD levels to the engines and tool settings of each provider is 
 
 **Discovery as Design Thinking between models.** Left free, AI engines gather information well but tend to diverge, so Discovery follows Design Thinking with precise roles and boundaries.
 
+**Discovery at every start.** Discovery MUST run at the start of every project and MUST be tracked in the activity tree of the plan. Its deliverable is the first draft of Scope Management: Principles, Decisions and open points.
+
+**Discovery group.** For Discovery the AI Coordinator MUST form a Discovery group, which is not an AI Squad: each of its members MUST work in an independent context. The group MUST include at least the Design Thinking Facilitator, the functional analyst, the Business Analyst, the UX-UI designer, the User Personas and, where the project has them, the platform and technology architects (§8.1).
+
+**Business Analyst and User Personas.** The Business Analyst and the User Personas are project instances of qualifiable templates. Each MUST start from a qualified template, as a high-tier role starts from a qualified Role Profile (§7); the project gives the instance its project and domain context, which MUST NOT alter the template's rules and limits.
+
+**Discovery executors and reviewers.** The Discovery group has executors and reviewers. Executors MUST work under soft blinding and bring interdisciplinary competence. Reviewers MUST work under hard blinding and MUST judge only the Principles and Decisions within their own domain.
+
 **Divergence.** Several models, with defined roles and behaviours, independently generate hypotheses, problems, benefits and principles for the Vision. Divergence MUST run within guardrails: a maximum number of rounds set by the mandate, permitted sources and data, and criteria for discarding a hypothesis.
 
 **Gates.** At predefined gates the Human Manager MAY give new inputs, which start a new round of divergence.
 
-**Convergence.** A single model, in the role of functional analyst, MUST gather the contributions, relate them to user evidence and produce the draft Vision and a first version of Scope Management: Vision, Principles, success criteria and open points. The Human Manager MUST then approve the Vision or relaunch the exploration.
+**Convergence.** The Design Thinking Facilitator MUST lead convergence; the functional analyst takes part as a member of the group. The Facilitator MUST submit the same prompt to every executor of the group, record the answers, restate them as Principles, Decisions and open points, and iterate until consensus within the maximum number of rounds that the mandate sets; it MUST then submit the result to the Discovery reviewers. Convergence MUST gather the contributions, relate them to user evidence and produce the draft Vision, the success criteria and the first draft of Scope Management. The Human Manager MUST then approve the Vision and the Principles, or relaunch the exploration.
+
+**Discovery report.** At the end of Discovery the Design Thinking Facilitator MUST produce a report for the Human Manager with the initial and the final position of each AI of the group.
+
+**Design and planning as a Work Package.** Design and planning MUST run as a dedicated Work Package, which the AI Coordinator assigns and MUST NOT perform. It produces the first Product Backlog and the architectural documents.
 
 **Wave.** The unit of technical delivery in every phase, at the pace of the AI. A Wave MUST have a spending cap and a maximum duration; whichever is reached first applies. At the early-warning threshold that the mandate sets, the AI Coordinator MUST flag the Wave. At the Deny threshold that the mandate sets, the environment MUST Deny new work, and the Wave closes with a checkpoint. Waves follow one another automatically within mandate and budget. A Wave MUST close only after the integrated increment is verified.
 
@@ -233,11 +260,28 @@ The mapping from SD levels to the engines and tool settings of each provider is 
 The playbooks describe how the AI system usually works; the rules are those of §8.
 
 **Who works in each phase.**
-- *Discovery:* the AI Coordinator, the analyst and explorer agents on different models; divergence, then convergence by the analyst.
+- *Discovery:* the Discovery group that the AI Coordinator forms, its members on different models; divergence, then convergence led by the Design Thinking Facilitator.
 - *Proof of concept:* the AI Coordinator, analyst, architect, executors and testers, who make the uncertainty explicit; alternative tests of the same technical question when the selector is measurable (K1).
-- *Design and planning:* the analyst, application and infrastructure architects, AI Scrum Master and AI Coordinator, who produce business, application, data and technology views; alternative architectures assessed against a rubric fixed in advance.
+- *Design and planning:* the team of a dedicated Work Package, with the analyst, application and infrastructure architects and AI Scrum Master, who produce business, application, data and technology views; alternative architectures assessed against a rubric fixed in advance.
 - *Scale:* the AI Coordinator and AI teams with their AI Scrum Masters, testers and reviewers; K1–K9 on generative packages.
 - *Acceptance and operation:* the AI Coordinator, testers and operations roles; alternative diagnoses of an incident.
+
+**Roles in the Discovery group.**
+- *Design Thinking Facilitator:* runs the Discovery procedure and leads convergence.
+- *Functional analyst:* links the needs of the Business Analyst and the User Personas to the solutions of the UX-UI designer and the architects.
+- *Business Analyst:* holds the Vision and, where applicable, brings the expertise of the industry.
+- *UX-UI designer:* proposes the solutions for the experience and the interface of the users.
+- *User Personas:* stand for the users of the application; later they run the simulated-user functional tests (§9.1).
+- *Platform and technology architects,* where present: propose the technical solutions.
+
+**Discovery procedure.** The Design Thinking Facilitator works in rounds:
+- *Same prompt.* It submits the same prompt to all the executors of the group, each in its own context.
+- *Record.* It records the answers.
+- *Reconcile.* It checks whether the answers reconcile fully or partially.
+- *Restate.* It issues a new prompt that states the Principles, immutable cornerstones everyone agrees on; the Decisions, which can change on new specifications or evidence; and the open points, deferred to design, to a mock-up (MOC) or to a proof of concept (POC), or needing a Do of the Human Manager.
+- *Iterate.* It repeats the rounds until consensus, within the maximum number of rounds that the mandate sets.
+- *Review.* It submits the result to the Discovery reviewers, each of whom judges only its own domain.
+- *Report.* It writes the report for the Human Manager, with the initial and the final position of each AI.
 
 **Proof of concept and MVP.** The functional analyst validates feasibility, in theory or by asking the AI Coordinator for small trial Work Packages. It also validates the compute and access the project needs, for example whether a local engine can process a document of the expected size within the expected time and cost.
 
@@ -263,7 +307,7 @@ The playbooks describe how the AI system usually works; the rules are those of �
 
 **Product Backlog.** The Product Backlog holds the workstreams the teams can carry out. Each workstream MUST be labelled with its component and priority (§10) and linked to the Decisions and open points it depends on.
 
-**Work Package record.** A Work Package record MUST hold at least: project and Wave, identifier and starting revision; success criteria and exclusions; Principles, Decisions and dependencies; profiles and their versions; budget and attempts allowed; expected result and verifier; resumption procedure.
+**Work Package record.** A Work Package record MUST hold at least: project and Wave, identifier and starting revision; success criteria and exclusions; Principles, Decisions and dependencies; profiles and their versions; budget and attempts allowed; expected result and verifier; resumption procedure; the context RACI handed to its agents; and, at closing, the Work Package handover abstract of each agent.
 
 **Final account.** The final account of a Work Package MUST include all candidates, the discarded ones too.
 
@@ -296,7 +340,7 @@ The playbooks describe how the AI system usually works; the rules are those of �
 **Test types.**
 - *Unit tests* run at the end of each Work Package and are performed by the independent AI tester. They also check the security and performance components, and they update the Security Risk Posture and the Performance Analysis.
 - *Scripted functional tests:* an agent runs the test script, records the logs and checks completion or failure. Gross errors that touch neither quality nor Decisions are fixed by the agent on its own, as a two-way door.
-- *Simulated-user functional tests:* an agent simulates a typical user and uses the application as a person would. They cost more, so they run in stable environments.
+- *Simulated-user functional tests:* the User Personas of the project, as simulated end users, use the application as a person would. They cost more, so they run in stable environments.
 - *Acceptance testing:* a person performs the business task while the AI assists, recording observations and missing information. The Human Manager decides on acceptance.
 
 **Who supervises tests.** The person MAY watch functional tests, but their progress MUST NOT depend on the person. Acceptance testing is supervised by the AI: the person executes and the AI records.

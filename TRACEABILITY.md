@@ -9,10 +9,12 @@ This table maps every row assigned to the Guide (level G) in the coverage table 
 
 The coverage table was updated after the Author's ratification of 25 November 2026 (PA-1 C, PA-2 C, PA-6 B). The Digital Seniority catalogue rules, the phase playbooks, the test practices and the requirements per adoption level moved into the Guide (§7.1, §8.1, §9.1, §14.1). Rows that held a value were split: the mechanism is mapped here, and the value went to the Extended Framework as Guidance.
 
+From 1.0.0-rc.2, paragraphs added or changed by an RFC have their own rows, listed after the coverage rows and marked with the RFC number. Their note says whether the paragraph is normative (N) or descriptive (D) and which coverage row it changes. The coverage rows stay as they are; only R002 follows the version label.
+
 | Row | Guide section | Paragraph |
 |---|---|---|
 | R001 | Title block | The Eiraman Guide |
-| R002 | Title block | Version 1.0.0-rc.1 |
+| R002 | Title block | Version 1.0.0-rc.2 |
 | R003 | Title block | Status |
 | R004 | §0 About this Guide | Normative language |
 | R005 | §0 About this Guide | Values and Guidance |
@@ -201,6 +203,33 @@ The coverage table was updated after the Author's ratification of 25 November 20
 | R221 | §16 End note | Version history |
 | R222 | §16 End note | Acknowledgements |
 
+## Rows added by RFC 0001
+
+Paragraphs added or changed by [RFC 0001](rfcs/0001-context-blinding-discovery.md) in 1.0.0-rc.2.
+
+| Row | Guide section | Paragraph |
+|---|---|---|
+| RFC0001-01 | §3 Context principles | Context Consistency and Independence (RFC 0001, N; with the opening sentence, now "Four principles") |
+| RFC0001-02 | §4 Accountabilities | AI Reviewer (RFC 0001, N; extends R026, which is unchanged) |
+| RFC0001-03 | §4 Accountabilities | Suggestions of the AI Reviewer (RFC 0001, N) |
+| RFC0001-04 | §7 AI Squads and Digital Seniority | A new agent for every Work Package (RFC 0001, N; Work Package handover abstract) |
+| RFC0001-05 | §7 AI Squads and Digital Seniority | Shared context, except for the unit tester (RFC 0001, N; changes R076: shared context within one Work Package) |
+| RFC0001-06 | §7 AI Squads and Digital Seniority | Agent blinding (RFC 0001, D) |
+| RFC0001-07 | §7 AI Squads and Digital Seniority | Hard blinding (RFC 0001, N) |
+| RFC0001-08 | §7 AI Squads and Digital Seniority | Soft blinding (RFC 0001, N; context RACI) |
+| RFC0001-09 | §8 Lifecycle and events | Discovery at every start (RFC 0001, N) |
+| RFC0001-10 | §8 Lifecycle and events | Discovery group (RFC 0001, N) |
+| RFC0001-11 | §8 Lifecycle and events | Business Analyst and User Personas (RFC 0001, N; PA-7 kept) |
+| RFC0001-12 | §8 Lifecycle and events | Discovery executors and reviewers (RFC 0001, N) |
+| RFC0001-13 | §8 Lifecycle and events | Convergence (RFC 0001, N; replaces the rule of R097, keeps R098) |
+| RFC0001-14 | §8 Lifecycle and events | Discovery report (RFC 0001, N) |
+| RFC0001-15 | §8 Lifecycle and events | Design and planning as a Work Package (RFC 0001, N) |
+| RFC0001-16 | §8.1 Phase playbooks | Who works in each phase (RFC 0001, D; changes R090b: Discovery and Design and planning items) |
+| RFC0001-17 | §8.1 Phase playbooks | Roles in the Discovery group (RFC 0001, D) |
+| RFC0001-18 | §8.1 Phase playbooks | Discovery procedure (RFC 0001, D) |
+| RFC0001-19 | §9 Commitments and artifacts | Work Package record (RFC 0001, N; changes R108: context RACI and handover abstract) |
+| RFC0001-20 | §9.1 Test practices | Test types (RFC 0001, D; changes R115: simulated-user tests by User Personas; R116 unchanged) |
+
 ## Count check
 
 - G rows in the coverage table: **189** (160 in the first draft; 29 rows moved from the Extended Framework by PA-1 C and PA-6 B)
@@ -209,6 +238,7 @@ The coverage table was updated after the Author's ratification of 25 November 20
 - Mapped rows that are not G rows: **0**
 - Rows mapped more than once: **0**
 - Normative (N) G rows whose paragraph lacks an RFC 2119 key word in capitals: **0** (158 N rows)
-- Paragraphs with a key word that carry no normative row: **0**
+- Paragraphs with a key word that carry no normative row: **0**, besides the community-maintained notes and the paragraph Changing the method of §15, which carry RFC-process rules with no coverage row
+- Rows added by RFC 0001: **20** (15 normative, 5 descriptive); every normative one has a key word in capitals
 
-Result: **PASS**. G rows in the coverage table equal rows mapped (189 = 189). The check is run by a script that reads the coverage table, this table and the Guide, finds each paragraph by its label, and tests the key words.
+Result: **PASS**. G rows in the coverage table equal rows mapped (189 = 189), and every RFC row maps to a paragraph of the Guide. The check is run by a script that reads the coverage table, this table and the Guide, finds each paragraph by its label, and tests the key words.
