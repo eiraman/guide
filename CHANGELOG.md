@@ -79,5 +79,5 @@ The method was published before as an Italian specification, numbered 0.1, 0.2 a
 which are not versions of this Guide and were not released from this repository. Their content is
 summarised in [HISTORY.md](HISTORY.md); the text of 0.3 is in [history/](history/).
 
-[Unreleased]: https://github.com/eiraman/guide/compare/f824888ba2295143217f3eb30484d5e042b427fa...main
-[1.0.0-rc.1]: https://github.com/eiraman/guide/compare/f824888ba2295143217f3eb30484d5e042b427fa...main
+[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.1...main
+[1.0.0-rc.1]: https://github.com/eiraman/guide/releases/tag/v1.0.0-rc.1
