@@ -13,6 +13,17 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [Unreleased]
 
+### Fixed
+
+- CI, `compliance.yml`: the local-path check removes http(s) URLs from the matched lines and matches
+  again, so a path segment inside a URL (such as `/home/` in an official ISO URL) is no longer flagged.
+  The block is the one of `role-profiles` v0.4.1 (the whole workflow file is now identical to that one). Change Requests CR-005 and CR-006 of the
+  method project.
+
+This change is not a Guide release: the Guide version is the one in the title block of `EIRAMAN-GUIDE.md`,
+and a workflow change leaves the Guide text unchanged (VERSIONING §1, notes). It stays under `[Unreleased]`,
+no tag is planned for it, and it is released with the next Guide version.
+
 ## [1.0.0-rc.2] - 2026-11-26
 
 Second release candidate. Not yet in force. It implements [RFC 0001](rfcs/0001-context-blinding-discovery.md),
