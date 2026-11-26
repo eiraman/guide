@@ -12,7 +12,7 @@ The coverage table was updated after the Author's ratification of 25 November 20
 | Row | Guide section | Paragraph |
 |---|---|---|
 | R001 | Title block | The Eiraman Guide |
-| R002 | Title block | Version 1.0-rc |
+| R002 | Title block | Version 1.0.0-rc.1 |
 | R003 | Title block | Status |
 | R004 | §0 About this Guide | Normative language |
 | R005 | §0 About this Guide | Values and Guidance |

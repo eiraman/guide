@@ -11,12 +11,13 @@ The Eiraman Guide by Paolo Ungari and contributors.
 
 This repository holds the **Eiraman Guide**, the stable core of the method, with the community-maintained sections on Digital Seniority, test practices and adoption levels. Templates, indicative values, Role Profiles and tools live in separate repositories of the project.
 
-**Status:** version 1.0-rc, a release candidate. The Author ratified its editorial choices on 25 November 2026. Not yet in force.
+**Status:** version 1.0.0-rc.1, a release candidate. The Author ratified its editorial choices on 25 November 2026. Not yet in force.
 
 | File | Content |
 |---|---|
 | [EIRAMAN-GUIDE.md](EIRAMAN-GUIDE.md) | The Guide |
 | [HISTORY.md](HISTORY.md) | Version history |
+| [CHANGELOG.md](CHANGELOG.md) | Changes per release, in Keep a Changelog format |
 | [TRACEABILITY.md](TRACEABILITY.md) | Mapping from specification 0.3 to the Guide sections |
 | [AUTHOR-RATIFICATION.md](AUTHOR-RATIFICATION.md) | Editorial choices ratified by the Author |
 | [history/](history/) | Italian specification 0.3, historical and non-normative |
