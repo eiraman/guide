@@ -13,6 +13,73 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [Unreleased]
 
+## [1.0.0-rc.4] - 2026-11-26
+
+Fourth release candidate. Not yet in force. It implements
+[RFC 0004](rfcs/0004-running-above-qualified-level.md), proposed by the Steward on behalf of the working
+groups not yet formed, from change requests CR-013 and CR-014 and the decisions of the Human Manager recorded
+there. The Author accepted RFC 0004 on 26 November 2026 (Do-S26), before the end of its thirty-day comment
+period and for the community-maintained sections §14, §14.1 and §14.2: two recorded deviations.
+Two rules are relaxed (the §14 Principle and the doubtful cases of the Applicability gate) and obligations
+are added. Relaxing a rule would be a MAJOR change for a
+version in force (VERSIONING §2.1); the Guide is not in force, so the change is released as the next candidate.
+
+### Added
+
+- **§14.2, Running above the qualified level** (MAY, MUST, MUST NOT): by an explicit and recorded decision,
+  taken on the risk profile of the Security Officer, the Human Manager may let a project of class 1 run in an
+  adoption qualified at level 0, and no other class or level. Each project has its own decision. The Do
+  states the risk accepted and how each requirement will be met; the decision is recorded in the project
+  record with a declaration that the project runs above the qualified level, and the third-party evidence
+  pack MUST carry that declaration. All the
+  Method requirements of level 1 are due before the first release, and a preview is not a release. Personal
+  data of colleagues are not processed until all the Method and Organisation requirements of level 1 are met,
+  the formal mandate included; until then the project works on test or masked data. In doubt between class 1
+  and a higher class, the higher class is assumed, also when the doubt depends on a question for the
+  organisation; the exception for the work on test data does not apply to that doubt. A case the gate treats as out of scope, or that leaves the scope of the method under §13, is
+  not admitted by decision, except that, while the only doubt is a question for the organisation not yet
+  answered, the decision may cover the work on test data alone; once the organisation answers, the gate
+  MUST run again and going beyond that work MUST have a new decision. An overdue or lapsed requirement of level 1 brings the
+  permitted class back to the one of the qualified level until it is met, and Automatic downgrade applies.
+  The AI Coordinator reports the state at every cycle review and proposes moving up once the evidence exists;
+  the experience counts as experience at level 0 for moving up. The decision waives only the Evidence of
+  experience at level 0 required for moving up and does not qualify the adopter for level 1.
+- **§14, Risk profile, Treatments, Questions for the organisation, Dialogue with the Human Manager,
+  Independence of the Security Officer** (MUST, MUST NOT, MAY, SHOULD): the Security Officer delivers a risk
+  profile with the treatments it proposes when the class exceeds the level or an exclusion is triggered, and
+  the profile MUST also say when the decision of §14.2 is available and what it requires; no treatment
+  passes a case out of scope at any level, and a reduced scope is a new scope that MUST pass the gate again;
+  for the questions that belong to the organisation it says who can answer and prepares the question, an
+  answer by the Human Manager alone does not resolve them, until the organisation answers the case MUST be
+  treated as in doubt, and in the meantime, if no exclusion criterion is triggered, work may go on only on
+  test data, with no real data and no release; the Human Manager may question it through the AI Coordinator,
+  which does not alter the content, and the original risk profile MUST be attached unchanged in the Manager
+  View; it does not act as a reviewer, the roles of security reviewer and privacy reviewer MUST NOT be held
+  on the same project by it or by an agent instantiated from its Role Profile, and it SHOULD run on a model
+  different from the AI Coordinator's where one is available.
+- `rfcs/0004-running-above-qualified-level.md`, accepted (Do-S26), and its row in `rfcs/README.md`.
+
+### Changed
+
+- **§14, Principle**: **relaxed rule**. A project MUST NOT run if its class exceeds the qualified level,
+  except by the decision of the Human Manager that §14.2 allows.
+- **§14, Applicability gate** (MUST, MUST NOT, MAY): the Security Officer, an AI compliance role under its
+  own qualified Role Profile, assigns the class; the AI Coordinator invokes it and MUST NOT assign the class
+  itself. **Relaxed rule** for doubtful cases: a doubtful case stays out of scope, but when the only doubt is
+  a question for the organisation not yet answered the work on test data may go on (see Questions for the
+  organisation), also for a project within the qualified level.
+- **§14.2, Class change** (exception tied to §14.2 Running above the qualified level): a fourth option, to let the project run by decision where §14.2 allows it.
+- **§14.1, Level 0 · Organisation** (exception tied to §14.2): a project that runs above the qualified level under a mandate of the
+  organisation is owned, with what it produces, by that organisation.
+- **§4, Liability towards third parties**: for such a project, liability lies with that organisation.
+- **§5, Deny** (MUST broadened, with an exception tied to §14.2): for an admitted project class 1 takes the place of the adoption level,
+  unless a requirement of level 1 is due and not met; while work goes on only on test data, the environment
+  also blocks any other data and every release.
+- **§5, Do**: the decision to run a project above the qualified level is in the list.
+- **§7, Hard blinding** (MUST broadened): it applies to the Security Officer too.
+- Title block, `README.md` and row R002 of `TRACEABILITY.md`: version 1.0.0-rc.4; `README.md` lists RFC 0004.
+- `TRACEABILITY.md`: fourteen rows marked "RFC 0004" for the new or changed paragraphs; all earlier rows kept.
+
 ## [1.0.0-rc.3] - 2026-11-26
 
 Third release candidate. Not yet in force. It implements [RFC 0003](rfcs/0003-critical-review-corrections.md),
@@ -248,7 +315,8 @@ The method was published before as an Italian specification, numbered 0.1, 0.2 a
 which are not versions of this Guide and were not released from this repository. Their content is
 summarised in [HISTORY.md](HISTORY.md); the text of 0.3 is in [history/](history/).
 
-[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.3...main
+[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.4...main
+[1.0.0-rc.4]: https://github.com/eiraman/guide/compare/v1.0.0-rc.3...v1.0.0-rc.4
 [1.0.0-rc.3]: https://github.com/eiraman/guide/compare/v1.0.0-rc.2...v1.0.0-rc.3
 [1.0.0-rc.2]: https://github.com/eiraman/guide/compare/v1.0.0-rc.1...v1.0.0-rc.2
 [1.0.0-rc.1]: https://github.com/eiraman/guide/releases/tag/v1.0.0-rc.1

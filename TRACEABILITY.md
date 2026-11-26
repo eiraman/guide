@@ -14,7 +14,7 @@ From 1.0.0-rc.2, paragraphs added or changed by an RFC have their own rows, list
 | Row | Guide section | Paragraph |
 |---|---|---|
 | R001 | Title block | The Eiraman Guide |
-| R002 | Title block | Version 1.0.0-rc.3 |
+| R002 | Title block | Version 1.0.0-rc.4 |
 | R003 | Title block | Status |
 | R004 | §0 About this Guide | Normative language |
 | R005 | §0 About this Guide | Values and Guidance |
@@ -268,6 +268,27 @@ Paragraphs added or changed by [RFC 0003](rfcs/0003-critical-review-corrections.
 | RFC0003-29 | §14.1 Requirements per adoption level | Level 1 · Method (RFC 0003, N; milestone plan and Risk Log register) |
 | RFC0003-30 | §14.1 Requirements per adoption level | Operational documents (RFC 0003, N; new paragraph) |
 
+## Rows added by RFC 0004
+
+Paragraphs added or changed by [RFC 0004](rfcs/0004-running-above-qualified-level.md) in 1.0.0-rc.4. The earlier rows stay as they are. Where a paragraph already has a row of RFC 0003, the note names it; the coverage rows of the other paragraphs are not named here.
+
+| Row | Guide section | Paragraph |
+|---|---|---|
+| RFC0004-01 | §14 Applicability: classes, levels and the gate | Principle (RFC 0004, N; changes RFC0003-26: exception by decision of the Human Manager) |
+| RFC0004-02 | §14.2 Moving between levels and classes | Running above the qualified level (RFC 0004, N; new paragraph) |
+| RFC0004-03 | §14.2 Moving between levels and classes | Class change (RFC 0004, N; fourth option) |
+| RFC0004-04 | §14.1 Requirements per adoption level | Level 0 · Organisation (RFC 0004, N; ownership of a project run under the organisation's mandate) |
+| RFC0004-05 | §4 Accountabilities | Liability towards third parties (RFC 0004, N; liability for a project run under the organisation's mandate) |
+| RFC0004-06 | §5 3D escalation: Deny, Delegate, Do | Deny (RFC 0004, N; limit for an admitted project and during the wait for the organisation) |
+| RFC0004-07 | §5 3D escalation: Deny, Delegate, Do | Do (RFC 0004, N; changes RFC0003-02: the decision to run above the qualified level) |
+| RFC0004-08 | §14 Applicability: classes, levels and the gate | Applicability gate (RFC 0004, N; changes RFC0003-27: the Security Officer assigns the class; work on test data while the organisation answers) |
+| RFC0004-09 | §14 Applicability: classes, levels and the gate | Risk profile (RFC 0004, N; new paragraph) |
+| RFC0004-10 | §14 Applicability: classes, levels and the gate | Treatments (RFC 0004, N; new paragraph) |
+| RFC0004-11 | §14 Applicability: classes, levels and the gate | Questions for the organisation (RFC 0004, N; new paragraph) |
+| RFC0004-12 | §14 Applicability: classes, levels and the gate | Dialogue with the Human Manager (RFC 0004, N; new paragraph) |
+| RFC0004-13 | §14 Applicability: classes, levels and the gate | Independence of the Security Officer (RFC 0004, N; new paragraph) |
+| RFC0004-14 | §7 AI Squads and Digital Seniority | Hard blinding (RFC 0004, N; changes RFC0003-07: the Security Officer) |
+
 ## Count check
 
 - G rows in the coverage table: **189** (160 in the first draft; 29 rows moved from the Extended Framework by PA-1 C and PA-6 B)
@@ -279,5 +300,6 @@ Paragraphs added or changed by [RFC 0003](rfcs/0003-critical-review-corrections.
 - Paragraphs with a key word that carry no normative row: **0**, besides the community-maintained notes and the paragraph Changing the method of §15, which carry RFC-process rules with no coverage row
 - Rows added by RFC 0001: **21** (16 normative, 5 descriptive); every normative one has a key word in capitals
 - Rows added by RFC 0003: **30** (24 normative, 6 descriptive); every normative one has a key word in capitals. The check of these rows was run for 1.0.0-rc.3 by a script written for the release, which finds each paragraph by its label and tests the key words
+- Rows added by RFC 0004: **14** (14 normative, 0 descriptive); every one has a key word in capitals. The check of these rows was run for 1.0.0-rc.4 by a script written for the release, which finds each paragraph by its label and tests the key words. The full coverage check behind the result below was last run for 1.0.0-rc.2 and was not re-run for 1.0.0-rc.3 or 1.0.0-rc.4
 
 Result: **PASS**. G rows in the coverage table equal rows mapped (189 = 189), and every RFC row maps to a paragraph of the Guide. The check is run by a script that reads the coverage table, this table and the Guide, finds each paragraph by its label, and tests the key words.

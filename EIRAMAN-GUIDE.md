@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # The Eiraman Guide
 
-**Version 1.0.0-rc.3 · November 2026 · Release candidate**
+**Version 1.0.0-rc.4 · November 2026 · Release candidate**
 
 **Attribution.** The Eiraman Guide by Paolo Ungari and contributors.
 
@@ -97,11 +97,11 @@ Four principles bound every rule of the method.
 
 **Internal accountability.** Everyone MUST answer for what they decide. The Human Manager answers for decisions within their remit and for using the method within the qualified scope. The AI Coordinator and the AI roles answer in an operational sense, not a legal one: every closure MUST have evidence and every error MUST become a retrospective case. Maintainers answer for the conformity of profiles to their sources at the time of qualification, not for individual projects.
 
-**Liability towards third parties** lies with the owner: the individual at adoption level 0, the organisation at levels 1 and 2. At levels 1 and 2 the Human Manager MUST act under a formal mandate from the organisation; without it the project stays at level 0. The owner exercises this responsibility through mandate, class and acceptance, and demonstrates due diligence with the evidence the method produces (§12).
+**Liability towards third parties** lies with the owner: the individual at adoption level 0, the organisation at levels 1 and 2. At levels 1 and 2 the Human Manager MUST act under a formal mandate from the organisation; without it the project stays at level 0. For a project that runs above the qualified level under a mandate of the organisation (§14.2), liability towards third parties lies with that organisation. The owner exercises this responsibility through mandate, class and acceptance, and demonstrates due diligence with the evidence the method produces (§12).
 
 ## 5. 3D escalation: Deny, Delegate, Do
 
-**Deny.** The environment, not the agent, MUST block an action that the mandate forbids or that lies outside the adoption level, and MUST record why. The AI Coordinator MUST look for an authorised alternative; if there is none, it MUST suspend the affected work.
+**Deny.** The environment, not the agent, MUST block an action that the mandate forbids or that lies outside the adoption level, and MUST record why. For a project admitted under §14.2 (Running above the qualified level), class 1 takes the place of the adoption level, unless a requirement of level 1 that the paragraph makes due is due and not met; while work goes on only on test data under Questions for the organisation (§14), with or without the decision of §14.2, the environment MUST also block any data other than test data, masked data included, and every release. The AI Coordinator MUST look for an authorised alternative; if there is none, it MUST suspend the affected work.
 
 **Delegate.** AI roles MAY decide two-way doors on their own: reversible decisions with a known cost, within budget, such as engine, retry, fix or restore. Every such choice MUST stay linked to its Work Package.
 
@@ -111,7 +111,7 @@ Four principles bound every rule of the method.
 - changes to a Decision;
 - new access;
 - changes that add an external service or move data outside the organisation (§9);
-- changes of project class and adoption-level upgrades. Downgrades are automatic (§14.2).
+- changes of project class, adoption-level upgrades and the decision to run a project above the qualified level. Downgrades are automatic (§14.2).
 
 **In doubt, one-way.** When reversibility is in doubt, the decision MUST be treated as a one-way door.
 
@@ -186,7 +186,7 @@ The mapping from SD levels to the engines and tool settings of each provider is 
 
 **Agent blinding.** Blinding keeps each agent within the information of its role, so that roles do not overlap. Blinding concerns project information, not the general knowledge of the model.
 
-**Hard blinding.** Under hard blinding, the environment MUST give the agent only the files, tools and data of its role, with no retrieval outside that perimeter (§11), and a binding prompt MUST constrain its behaviour. A local model without retrieval MAY be used. Hard blinding MUST apply to the AI Coordinator, the AI Reviewer, the Design Thinking Facilitator, the Discovery reviewers and the Discovery judge (§8).
+**Hard blinding.** Under hard blinding, the environment MUST give the agent only the files, tools and data of its role, with no retrieval outside that perimeter (§11), and a binding prompt MUST constrain its behaviour. A local model without retrieval MAY be used. Hard blinding MUST apply to the AI Coordinator, the AI Reviewer, the Design Thinking Facilitator, the Discovery reviewers, the Discovery judge (§8) and the Security Officer (§14).
 
 **Soft blinding.** When it forms an AI Squad, the AI Coordinator MUST hand each agent a context RACI, which states the agent's position on each part of the context:
 - *R:* the only agent entitled to act on that part of the context;
@@ -431,7 +431,7 @@ Further content, such as enabled engines, the task catalogue by Digital Seniorit
 
 > **Community-maintained section.** This section, with §14.1 and §14.2, is proposed by the responsible working groups (Security, with Privacy and Legal & Compliance; Adoption & Evidence, for the evidence behind thresholds) and changes are accepted by the Author via RFC without rewriting; the Author MAY return a proposal, with written reasons, only for a conflict with another part of this Guide.
 
-**Principle.** Specialist competence lives in qualified Role Profiles, not in specialists present in every project. The risk that the Human Manager cannot assess is therefore limited from the start. Every adoption of Eiraman MUST have a qualified adoption level and every project MUST have a class. A project MUST NOT run if its class exceeds the qualified level of the adopter. Whoever uses the method for themselves stays at level 0. To move up, an adopter MUST meet the requirements of the next level and demonstrate them with evidence.
+**Principle.** Specialist competence lives in qualified Role Profiles, not in specialists present in every project. The risk that the Human Manager cannot assess is therefore limited from the start. Every adoption of Eiraman MUST have a qualified adoption level and every project MUST have a class. A project MUST NOT run if its class exceeds the qualified level of the adopter, except by the decision of the Human Manager that §14.2 allows (Running above the qualified level). Whoever uses the method for themselves stays at level 0. To move up, an adopter MUST meet the requirements of the next level and demonstrate them with evidence.
 
 **Deliverables.** Classes also apply to the deliverables a product generates. For example, a level 0 adoption MUST NOT use a document generator to produce documents for customers, which are class 2.
 
@@ -458,7 +458,17 @@ Further content, such as enabled engines, the task catalogue by Digital Seniorit
 
 The Extended Framework maps these categories to the law of each jurisdiction, starting with the European Union.
 
-**Applicability gate.** An AI compliance role MUST assign the class, using a versioned checklist qualified by the maintainers. The gate MUST run when the project opens, at every Wave and at every change of mandate. If an exclusion criterion is triggered, or the case is in doubt, the project MUST be treated as out of scope and the Human Manager informed.
+**Applicability gate.** The Security Officer, an AI compliance role under its own qualified Role Profile, MUST assign the class, using a versioned checklist qualified by the maintainers. The AI Coordinator MUST invoke the Security Officer and MUST NOT assign the class itself. The gate MUST run when the project opens, at every Wave and at every change of mandate. If an exclusion criterion is triggered, or the case is in doubt, the project MUST be treated as out of scope and the Human Manager informed; when the only doubt is a question for the organisation not yet answered, the work on test data that Questions for the organisation allows MAY go on.
+
+**Risk profile.** When the class exceeds the qualified level, or an exclusion criterion is triggered, the Security Officer MUST deliver a risk profile of the project: the class with the answers to the checklist, the exclusions touched, the treatments it proposes in order of preference, the class after each treatment, its conditions, the residual risk and what remains impossible. A proposal whose class after treatment still exceeds the qualified level MUST say that it does not let the project start at that level; for a project of class 1 in an adoption at level 0 with no exclusion criterion triggered and the class not in doubt, it MUST also say that the decision of §14.2 (Running above the qualified level) is available and what it requires or, when the only doubt is a question for the organisation not yet answered, that the decision is available only for the work on test data that Questions for the organisation allows.
+
+**Treatments.** A treatment is a concrete form of the options of Class change (§14.2) other than running by decision: taking data or functions out of scope; building and testing only on test or masked data; keeping real data within the local execution of those already entitled to process them, never sent to agents or external services. A treatment MUST NOT be presented as a way past a case that is out of scope at any level; the only treatment of such a case MUST be to take the excluded data or function out of scope, and the reduced scope is a new scope that MUST pass the gate again.
+
+**Questions for the organisation.** For the questions of the checklist whose answer belongs to the organisation and not to the Human Manager, such as obligations under network and information security law, a data protection impact assessment, sector-specific regulation or the data protection officer, the Security Officer MUST say who can answer and MUST prepare the question to forward. An answer given by the Human Manager alone MUST be recorded as not verified and MUST NOT be taken as resolving the question. Until the organisation answers, the case MUST be treated as in doubt (Applicability gate). In the meantime, if no exclusion criterion is triggered, work MAY go on only on test data, with no real data and no release, within the class that the qualified level permits or under the decision of §14.2 (Running above the qualified level).
+
+**Dialogue with the Human Manager.** The Human Manager MAY question the Security Officer at any time, through the AI Coordinator. The AI Coordinator answers for the form, in business language, and MUST NOT alter the content. The original risk profile MUST be attached unchanged in the Manager View.
+
+**Independence of the Security Officer.** The Security Officer proposes and MUST NOT act as a reviewer. The roles of security reviewer and privacy reviewer MUST stay independent of it and MUST NOT be held, on the same project, by the Security Officer or by an agent instantiated from its Role Profile. The Security Officer SHOULD run on a model different from the AI Coordinator's where one is available.
 
 **Legal advice.** The checklist MUST NOT be used as a substitute for legal advice.
 
@@ -468,7 +478,7 @@ The Extended Framework maps these categories to the law of each jurisdiction, st
 
 **Level 0 · Method.** A personal-use adoption MUST use qualified base Role Profiles and run the deterministic anchors at every release (§9). Its documents for the Human Manager MUST include the project record with the milestone plan, the decision records, the governance cycle review with the business risks, the High Level Architectural View, the progress dashboard and an installation and user manual.
 
-**Level 0 · Organisation.** The adopter MUST be the owner of the project and of what it produces, and answers for both (§4).
+**Level 0 · Organisation.** The adopter MUST be the owner of the project and of what it produces, and answers for both (§4), except that a project that runs above the qualified level under a mandate of the organisation (§14.2) is owned, with what it produces, by that organisation, which answers for both.
 
 **Level 0 · Evidence.** An adoption MAY start at level 0 without prior evidence.
 
@@ -510,7 +520,9 @@ The Extended Framework maps these categories to the law of each jurisdiction, st
 
 **Automatic downgrade.** If a requirement lapses, for example a suspended profile, an expired penetration test or an open serious incident, the environment MUST apply a Deny. Only corrective releases MAY run until the requirement is restored or the project returns to the permitted class.
 
-**Class change.** A change of class MUST always go to the Human Manager as a Do and counts towards the drift budget (E5). If the new class exceeds the level, the Human Manager MUST choose one of three options: reduce the scope, hand the critical component to a certified provider, or take that project out of the method.
+**Class change.** A change of class MUST always go to the Human Manager as a Do and counts towards the drift budget (E5). If the new class exceeds the level, the Human Manager MUST choose one of four options: reduce the scope, hand the critical component to a certified provider, take that project out of the method or, where Running above the qualified level allows it, let the project run by decision.
+
+**Running above the qualified level.** By an explicit decision, the Human Manager MAY let a project of class 1 run in an adoption qualified at level 0. No other class and no other level are admitted this way. Each project MUST have its own decision. The decision MUST be taken on the risk profile that the Security Officer delivers (§14, Risk profile) and MUST go to the Human Manager as a Do that states the risk accepted and how each requirement of this paragraph will be met. It MUST be recorded in the project record, with a declaration that the project runs above the qualified level; the third-party evidence pack (§12) MUST carry that declaration. The project MUST meet all the Method requirements of level 1 (§14.1) before its first release; a preview given to colleagues to try is not a release. The decision waives only the Evidence of experience at level 0 that §14.1 requires for moving up. All the Method requirements and all the Organisation requirements of level 1, the formal mandate from the organisation included (§4), are due before personal data of colleagues are first processed, and the project MUST NOT process them until then; until then it MAY be built, tested and previewed only on test or masked data. If the class is in doubt between class 1 and a higher class, the higher class MUST be assumed, also when the doubt depends on a question for the organisation not yet answered; the exception below for the work on test data does not apply to it. A case that the applicability gate treats as out of scope (§14), because an exclusion criterion is triggered or the case is in doubt, or that leaves the scope of the method under §13, MUST NOT be admitted by decision, except that, while the only doubt is a question for the organisation not yet answered (§14, Questions for the organisation), the decision MAY be taken for the work on test data that that paragraph allows, and for nothing else. Once the organisation answers, the gate MUST run again, and running beyond that work MUST have a new decision under this paragraph. If a requirement of level 1 that this paragraph makes due is not met when it is due, or lapses afterwards, the permitted class of the project is the one of the qualified level until the requirement is met, and Automatic downgrade applies. At every cycle review the AI Coordinator MUST report that the project runs above the qualified level, and MUST propose moving up once the evidence exists; experience gathered on such a project counts as experience at level 0 for moving up. The decision does not qualify the adopter for level 1: moving up follows Moving up.
 
 ## 15. Conformance, partial application and feedback
 
