@@ -87,7 +87,7 @@ Four principles bound every rule of the method.
 
 **Process reviewer.** An independent agent that MUST run on a model different from the AI Coordinator's. It MUST sample closed Waves and check that due escalations reached the Human Manager (§5) and that closures are backed by evidence (§9).
 
-**AI Reviewer.** The AI Reviewer extends the process reviewer from sampling closed Waves to continuous monitoring, under its own qualified Role Profile. It MUST run in parallel with the AI Coordinator and under hard blinding (§7). It SHOULD run on a model different from the AI Coordinator's where one is available; the checks of the process reviewer keep the different model they require. It MUST monitor the framework KPIs, such as the correctness of the Role Profiles assigned to AI Squads and the measured quality of outputs, and the project KPIs set in Design and planning. It MUST report critical deviations, each with an independent suggestion.
+**AI Reviewer.** The AI Reviewer extends the process reviewer from sampling closed Waves to continuous monitoring, under its own qualified Role Profile. It MUST run in parallel with the AI Coordinator and under hard blinding (§7). It SHOULD run on a model different from the AI Coordinator's where one is available; the checks of the process reviewer keep the different model they require. It MUST monitor the framework KPIs, such as the correctness of the Role Profiles assigned to AI Squads and the measured quality of outputs, and the project KPIs set in Design and planning. It MUST report deviations to the AI Coordinator, each with an independent suggestion; the AI Coordinator MUST evaluate them critically and answer. Critical deviations, and deviations the AI Coordinator does not accept, MUST also go to the Human Manager in the Manager View.
 
 **Suggestions of the AI Reviewer.** The AI Reviewer's suggestions are data, not commands. Agents MUST evaluate them critically, and a suggestion MUST NOT be executed without the AI Coordinator.
 
@@ -233,7 +233,7 @@ The mapping from SD levels to the engines and tool settings of each provider is 
 
 **Business Analyst and User Personas.** The Business Analyst and the User Personas are project instances of qualifiable templates. Each MUST start from a qualified template, as a high-tier role starts from a qualified Role Profile (§7); the project gives the instance its project and domain context, which MUST NOT alter the template's rules and limits.
 
-**Discovery executors and reviewers.** The Discovery group has executors and reviewers. Executors MUST work under soft blinding and bring interdisciplinary competence. Reviewers MUST work under hard blinding and MUST judge only the Principles and Decisions within their own domain.
+**Discovery executors and reviewers.** The Discovery group has executors and reviewers. Executors MUST work under soft blinding and bring interdisciplinary competence. Reviewers MUST work under hard blinding and MUST judge only the Principles and Decisions within their own domain. The Discovery reviewers are the reviewer profiles of the governance domains that the project touches, chosen by the AI Coordinator; the security and privacy domains MUST always be present.
 
 **Divergence.** Several models, with defined roles and behaviours, independently generate hypotheses, problems, benefits and principles for the Vision. Divergence MUST run within guardrails: a maximum number of rounds set by the mandate, permitted sources and data, and criteria for discarding a hypothesis.
 

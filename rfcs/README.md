@@ -28,4 +28,4 @@ A rejected Guide RFC may be resubmitted with new evidence after 6 months.
 
 | # | Title | Owner | State |
 |---|---|---|---|
-| [0001](0001-context-blinding-discovery.md) | Context Consistency and Independence, agent blinding, AI Reviewer and Discovery as Design Thinking AI | Author (Guide) | draft |
+| [0001](0001-context-blinding-discovery.md) | Context Consistency and Independence, agent blinding, AI Reviewer and Discovery as Design Thinking AI | Author (Guide) | accepted |

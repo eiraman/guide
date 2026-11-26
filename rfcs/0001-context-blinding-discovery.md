@@ -5,21 +5,21 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # RFC 0001: Context Consistency and Independence, agent blinding, AI Reviewer and Discovery as Design Thinking AI
 
-- **Author(s):** the Steward, on behalf of the working groups not yet formed for the community-maintained sections
+- **Author(s):** the Steward, on behalf of the working groups not yet formed
 - **Accountable human:** Paolo Ungari (Steward)
 - **AI-Use:** substantial (CONTRIBUTING.md §3)
 - **Assisted-by:** Claude Opus 5.5
 - **Conflicts of interest:** none
 - **Owner of the decision:** Author (Guide)
 - **Affected artifacts:** Guide §3, §4, §7, §8, §8.1, §9, §9.1; Role Profiles (AI Reviewer, Design Thinking Facilitator, AI Coordinator, functional analyst, simulated user; Business Analyst and User Persona templates), in a separate release of `role-profiles`
-- **State:** draft
-- **Dates:** opened 2026-11-26 · comment period ends 2026-12-10
+- **State:** accepted
+- **Dates:** opened 2026-11-26 · comment period ends 2026-12-10 · accepted 2026-11-26, before the end of the comment period (deviation, see Decision)
 
 ## Summary
 
 This RFC adds to the Guide a fourth context principle, **Context Consistency and Independence**: agents that work on the same information share context, agents whose role needs divergence or independence work in independent contexts. It introduces **hard blinding** and **soft blinding** (with a **context RACI**) to keep roles from overlapping, an **AI Reviewer** that extends the process reviewer to continuous monitoring, and a detailed **Discovery as Design Thinking AI** led by a **Design Thinking Facilitator** with a **Discovery group** that is not an AI Squad. Design and planning becomes a dedicated Work Package, every Work Package gets a new agent with a new context, and each agent closes with a **Work Package handover abstract**. User Personas run the simulated-user functional tests. The change affects every project that applies the Guide, its AI Coordinator and the Role Profiles listed above.
 
-The working groups that own the community-maintained parts touched here (§8.1, §9.1) do not exist yet, so the Steward proposes their text in this RFC; the Author accepts it by RFC as for any community-maintained section (Guide §0, §15).
+The RFC touches one community-maintained section, the test practices (§9.1). Its working groups do not exist yet, so the Steward proposes that text in this RFC; the Author accepts it by RFC as for any community-maintained section (Guide §0, §15). The phase playbooks (§8.1) are maintained by the Author, as are the other sections touched (PA-1 × D-OPEN-4).
 
 ## Motivation
 
@@ -33,7 +33,7 @@ The change request CR-003 of the project "Eiraman Open Framework" (26 November 2
 - **Context grows across Work Packages.** Reusing the same agent carries over a context that is large, unchecked and not designed for the next package.
 - **"Human Supervised" functional tests** in the historical specification were read as tests watched by a person; Do-S03 decided that they are tests run by User Personas as simulated users, and that PA-8 stays.
 
-Decisions applied: **Do-S03** (User Personas as simulated users; PA-8 stays), **Do-S04** (Business Analyst and User Personas are project instances of qualifiable templates; PA-7 stays), **Do-S05** (the functional analyst links business needs to the solutions of UX-UI and architects; MOC means mock-up), **Do-S06** (hard blinding by environment and prompt, local model as an option; blinding concerns project information, not the model's general knowledge). Editorial points that stay: PA-2 (no numbers), PA-3 (vendor neutrality), PA-6 B (different model as a recommendation), PA-7, PA-8, PA-12 (RFC 2119 capitals).
+Decisions applied: **Do-S03** (User Personas as simulated users; PA-8 stays), **Do-S04** (Business Analyst and User Personas are project instances of qualifiable templates; PA-7 stays), **Do-S05** (the functional analyst links business needs to the solutions of UX-UI and architects; MOC means mock-up), **Do-S06** (hard blinding by environment and prompt, local model as an option; blinding concerns project information, not the model's general knowledge). The Author's decisions on the open points of the draft: **Do-S07** (acceptance, see Decision), **Do-S08** (recipients of the AI Reviewer's reports), **Do-S09** (who the Discovery reviewers are), and the correction that §8.1 is Author-maintained. Editorial points that stay: PA-2 (no numbers), PA-3 (vendor neutrality), PA-6 B (different model as a recommendation), PA-7, PA-8, PA-12 (RFC 2119 capitals).
 
 ## Proposal
 
@@ -43,9 +43,9 @@ The proposed text is in `EIRAMAN-GUIDE.md` at version 1.0.0-rc.2. Changes by sec
 |---|---|---|
 | Title block | Version 1.0.0-rc.2 | Modified line |
 | §3 Context principles | "Three principles" becomes "Four principles"; new principle **Context Consistency and Independence** | Modified line; new paragraph |
-| §4 Accountabilities | New paragraphs **AI Reviewer** and **Suggestions of the AI Reviewer**. **Process reviewer** is unchanged | New paragraphs |
+| §4 Accountabilities | New paragraphs **AI Reviewer** (with the reports to the AI Coordinator and, for critical or unaccepted deviations, to the Human Manager in the Manager View, Do-S08) and **Suggestions of the AI Reviewer**. **Process reviewer** is unchanged | New paragraphs |
 | §7 AI Squads and Digital Seniority | New item **A new agent for every Work Package**, with the Work Package handover abstract; **Shared context, except for the unit tester** now scopes the shared context to one Work Package; new paragraphs **Agent blinding**, **Hard blinding**, **Soft blinding** (context RACI) | New paragraphs; modified line |
-| §8 Lifecycle and events | New paragraphs **Discovery at every start**, **Discovery group**, **Business Analyst and User Personas**, **Discovery executors and reviewers**, **Discovery report**, **Design and planning as a Work Package**; **Convergence** moves from the functional analyst to the Design Thinking Facilitator. **Divergence**, **Gates** and **Phases and decisions** are unchanged | New paragraphs; replaced rule |
+| §8 Lifecycle and events | New paragraphs **Discovery at every start**, **Discovery group**, **Business Analyst and User Personas**, **Discovery executors and reviewers** (the Discovery reviewers are the reviewer profiles of the governance domains the project touches, security and privacy always present, Do-S09), **Discovery report**, **Design and planning as a Work Package**; **Convergence** moves from the functional analyst to the Design Thinking Facilitator. **Divergence**, **Gates** and **Phases and decisions** are unchanged | New paragraphs; replaced rule |
 | §8.1 Phase playbooks | **Who works in each phase**: Discovery and Design and planning items updated; new paragraphs **Roles in the Discovery group** and **Discovery procedure** (step by step, descriptive; the obligations are in §8) | Modified lines; new paragraphs |
 | §9 Commitments and artifacts | **Work Package record** adds the context RACI and the Work Package handover abstract | Modified line |
 | §9.1 Test practices | **Test types**: simulated-user functional tests are run by the User Personas. **Who supervises tests** (PA-8) is unchanged | Modified line |
@@ -130,7 +130,8 @@ These lines carry no rule; they are listed so that the scope review can map ever
 | `TRACEABILITY.md` | Row R002, "Version 1.0.0-rc.1" | Row R002, "Version 1.0.0-rc.2" (version string only; the row is kept) |
 | `TRACEABILITY.md` | "Count check": the line "Paragraphs with a key word that carry no normative row: 0" and the "Result: PASS" line | The same lines, naming the known exemptions, the RFC 0001 rows and their mapping |
 | `CHANGELOG.md` | `[Unreleased]: …/compare/v1.0.0-rc.1...main` | `[Unreleased]: …/compare/v1.0.0-rc.2...main` |
-| `rfcs/README.md` | Empty index row "— · — · —" | Index row for RFC 0001 |
+| `rfcs/README.md` | Empty index row "— · — · —" | Index row for RFC 0001, state accepted |
+| `CHANGELOG.md` | In the 1.0.0-rc.1 entry, the three lines of "Community-maintained sections (PA-1 C)", which listed the phase playbooks (§8.1) as community-maintained | "Broad Guide (PA-1 C)": the same four parts, with the phase playbooks maintained by the Author; the correction is recorded under Fixed in 1.0.0-rc.2 |
 
 ## Reversibility
 
@@ -156,20 +157,24 @@ A change to the Guide text is a one-way door (GOVERNANCE §6.2). The new obligat
 - `tools/release_diff.py` from `v1.0.0-rc.1` to the candidate: every removed line is listed above; no heading removed; the RFC 2119 counts rise only.
 - `TRACEABILITY.md`: all rc.1 rows kept; one row per new or changed paragraph, marked "RFC 0001"; the traceability check passes.
 - Independent scope review REV-DT: every change maps to CR-003, terms are consistent between the Guide and the Role Profiles, no conflict with PA-7 and PA-8.
-- The Author's decision on this RFC, with written reasons, before the release Do.
+- The Author's decision on this RFC, with written reasons, before the release Do (recorded below, Do-S07).
 
 ## Open questions
 
-- **§8.1 marker.** `CHANGELOG.md` and `AUTHOR-RATIFICATION.md` (PA-1 C) count §8.1 among the community-maintained sections, but the Guide (§0 Purpose, and no boxed note in §8.1) and GOVERNANCE §2 do not. This RFC treats §8.1 as community-maintained, as CR-003 does, and does not change the markers; aligning them needs its own decision.
-- **AI Reviewer reports.** CR-003 does not say who receives the critical deviations. The text leaves the recipient open; the AI Reviewer profile or a later RFC should name it (the AI Coordinator, and the Human Manager through the cycle review when the deviation concerns the AI Coordinator).
-- **Discovery reviewers.** CR-003 does not say which roles review. The text requires that they work under hard blinding and judge only their own domain.
-- **Comment period.** The comment period of this RFC ends after the date of the candidate. The candidate can be reviewed now, but the release Do waits for the Author's decision.
+All open questions of the draft were decided by the Author on 2026-11-26:
+
+- **§8.1 marker.** Under PA-1 × D-OPEN-4 only the adoption levels, the Digital Seniority catalogue and the test practices are community-maintained; the phase playbooks (§8.1) are maintained by the Author. No boxed note is added; the 1.0.0-rc.1 changelog entry that said otherwise is corrected.
+- **AI Reviewer reports (Do-S08).** The AI Reviewer reports deviations to the AI Coordinator, which evaluates them critically and answers. Critical deviations, and deviations the AI Coordinator does not accept, also go to the Human Manager in the Manager View. Added to §4 AI Reviewer.
+- **Discovery reviewers (Do-S09).** The reviewer profiles of the governance domains that the project touches, chosen by the AI Coordinator; the security and privacy domains are always present. Added to §8 Discovery executors and reviewers.
+- **Comment period (Do-S07).** Decided below.
 
 ## Decision
 
-*Filled in by the owner.* Accepted | Rejected | Postponed, on <date>, by <role>.
+**Accepted**, on 2026-11-26, by the Author (Do-S07).
 
-Written reasons:
+Written reasons: no community member is active yet; founding contributors may reopen it with a new RFC.
+
+**Deviation from the comment period.** The decision was taken before the end of the comment period (2026-12-10), which `rfcs/README.md` sets at no less than fourteen days. The deviation is recorded here and in the changelog; it does not change the process for later RFCs.
 
 ## Appendix: audit of the Context Consistency and Independence principle
 
@@ -188,10 +193,10 @@ Every place in the Guide (1.0.0-rc.2) where agents share, or must not share, con
 | A9 | §6 Independence of verification; Security and personal data; Seniority of the verifier | Verifiers vs executors | Independent | Verification is worth only as much as its independence | Yes: level recorded (separate context, model, supplier, person); SHOULD different model for security and personal data | Yes, unchanged; principle in §3 |
 | A10 | §5 E4 Classifier | Classifier vs AI Coordinator | Independent | The Coordinator must not judge its own escalation | Partly: different model, context not named | Covered by §3 (verifier) |
 | A11 | §4 Process reviewer; §5 E6; §6 K8 | Process reviewer vs AI Coordinator | Independent | It checks the Coordinator's escalations and closures | Partly: different model (MUST), context not named | Yes: kept, and extended by the AI Reviewer |
-| A12 | §4 AI Reviewer | AI Reviewer vs AI Coordinator and agents | Independent, hard blinding | Its suggestions must stay independent; it must not drift into the Coordinator's role | No (new role) | Yes: parallel run, hard blinding, SHOULD different model; suggestions are data, not commands |
+| A12 | §4 AI Reviewer | AI Reviewer vs AI Coordinator and agents | Independent, hard blinding | Its suggestions must stay independent; it must not drift into the Coordinator's role | No (new role) | Yes: parallel run, hard blinding, SHOULD different model; reports to the AI Coordinator and, if critical or unaccepted, to the Human Manager; suggestions are data, not commands |
 | A13 | §7 Hard blinding; §4 AI Coordinator | AI Coordinator vs the teams | Independent, hard blinding | It validates the teams' work and must not perform it; it receives reports and handover abstracts, not discussions | No | Yes: hard blinding; Design and planning taken out of its roles |
 | A14 | §8 Discovery group, Divergence | Members of the Discovery group | Independent, each member | Divergence needs independent positions; the group is not an AI Squad | Partly: divergence "independently" | Yes: each member in an independent context |
-| A15 | §8 Discovery executors and reviewers | Executors vs reviewers of Discovery | Executors: soft blinding; reviewers: hard blinding | Executors bring interdisciplinary competence within a context RACI; reviewers judge only their domain | No | Yes |
+| A15 | §8 Discovery executors and reviewers | Executors vs reviewers of Discovery | Executors: soft blinding; reviewers: hard blinding | Executors bring interdisciplinary competence within a context RACI; reviewers judge only their domain | No | Yes; the reviewers are the reviewer profiles of the governance domains the project touches, security and privacy always present |
 | A16 | §8 Convergence; §7 Hard blinding | Design Thinking Facilitator vs executors | Independent, hard blinding | The convergence judge must not be a participant | No: convergence by the functional analyst, a participant | Yes: Facilitator leads, functional analyst takes part |
 | A17 | §8 Design and planning as a Work Package; §8.1 | Analyst, architects, AI Scrum Master of the Work Package | Shared within the Work Package; independent of the AI Coordinator | They produce one design together; the Coordinator validates it | Partly: "Together they produce"; Coordinator listed among the roles | Yes: dedicated Work Package, Coordinator does not perform it |
 | A18 | §8.1 Design and planning; §6 K1 | Judge of alternative architectures vs their authors | Independent | Rubric fixed in advance, judge on a different model | Yes | Yes, unchanged |

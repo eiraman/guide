@@ -16,9 +16,10 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 ## [1.0.0-rc.2] - 2026-11-26
 
 Second release candidate. Not yet in force. It implements [RFC 0001](rfcs/0001-context-blinding-discovery.md),
-proposed by the Steward on behalf of the working groups not yet formed for the community-maintained
-sections, from change request CR-003 and the Human Manager's decisions Do-S03 to Do-S06. RFC 0001 is in
-state *draft*: this candidate is published only after the Author's decision on it, with written reasons.
+proposed by the Steward on behalf of the working groups not yet formed, from change request CR-003 and
+the Human Manager's decisions Do-S03 to Do-S06. The Author accepted RFC 0001 on 26 November 2026, before
+the end of its comment period (Do-S07, a recorded deviation), and decided its open points (Do-S08,
+Do-S09).
 Obligations are added or broadened and none is removed or reversed (MINOR, VERSIONING §2.1).
 
 ### Added
@@ -29,7 +30,9 @@ Obligations are added or broadened and none is removed or reversed (MINOR, VERSI
   execution.
 - **§4, AI Reviewer** (MUST, SHOULD): extends the process reviewer to continuous monitoring of the framework
   and project KPIs, in parallel with the AI Coordinator and under hard blinding; a different model SHOULD
-  be used where available (PA-6 B). Its suggestions are data, not commands (MUST, MUST NOT).
+  be used where available (PA-6 B). It reports deviations to the AI Coordinator, which evaluates them
+  and answers; critical or unaccepted deviations also go to the Human Manager in the Manager View
+  (Do-S08). Its suggestions are data, not commands (MUST, MUST NOT).
 - **§7, agent blinding**: hard blinding (MUST, MAY: environment, binding prompt, optional local model
   without retrieval) for the AI Coordinator, the AI Reviewer, the Design Thinking Facilitator and the
   Discovery reviewers; soft blinding with a context RACI (R, C, I) handed to each agent of an AI Squad.
@@ -38,7 +41,9 @@ Obligations are added or broadened and none is removed or reversed (MINOR, VERSI
 - **§8, Discovery as Design Thinking AI** (MUST): Discovery at the start of every project, tracked in the
   activity tree; the Discovery group, not an AI Squad, with independent contexts; Business Analyst and
   User Personas as project instances of qualified templates (Do-S04, PA-7 kept); executors under soft
-  blinding and reviewers under hard blinding; the Discovery report for the Human Manager.
+  blinding and reviewers under hard blinding; the Discovery reviewers are the reviewer profiles of the
+  governance domains the project touches, security and privacy always present (Do-S09); the Discovery
+  report for the Human Manager.
 - **§8, Design and planning as a Work Package** (MUST, MUST NOT): a dedicated Work Package that the AI
   Coordinator assigns and does not perform.
 - **§8.1, Roles in the Discovery group and Discovery procedure** (descriptive): the functional analyst
@@ -62,11 +67,18 @@ Obligations are added or broadened and none is removed or reversed (MINOR, VERSI
 - **§3**: "Three principles" becomes "Four principles". Title block, `README.md` and row R002 of
   `TRACEABILITY.md`: version 1.0.0-rc.2.
 - `TRACEABILITY.md`: twenty rows marked "RFC 0001" for the new or changed paragraphs; all earlier rows kept.
-- `rfcs/README.md`: RFC 0001 in the index.
+- `rfcs/README.md`: RFC 0001 in the index, accepted.
 
 ### Removed
 
 - No rule. The eight Guide lines that changed are quoted, old and new, in RFC 0001, "Rules replaced".
+
+### Fixed
+
+- **1.0.0-rc.1 entry, "Community-maintained sections"**: it listed the phase playbooks (§8.1) among the
+  community-maintained sections. Under the Author's ratification (PA-1 × D-OPEN-4) only the adoption
+  levels, the Digital Seniority catalogue and the test practices are community-maintained; §8.1 is
+  maintained by the Author. The Guide text was already correct.
 
 ## [1.0.0-rc.1] - 2026-11-26
 
@@ -114,9 +126,10 @@ editorial choices with their reasons are in [AUTHOR-RATIFICATION.md](AUTHOR-RATI
 
 ### Added
 
-- **Community-maintained sections (PA-1 C).** The Digital Seniority catalogue rules (§7.1), the phase
-  playbooks (§8.1), the test practices (§9.1) and the requirements per adoption level (§14.1, §14.2) are
-  in the Guide, kept by the working groups and accepted by the Author by RFC.
+- **Broad Guide (PA-1 C).** The Digital Seniority catalogue rules (§7.1), the phase playbooks (§8.1), the
+  test practices (§9.1) and the requirements per adoption level (§14.1, §14.2) are in the Guide. All but
+  the phase playbooks are community-maintained sections, kept by the working groups and accepted by the
+  Author by RFC; the phase playbooks are maintained by the Author (corrected in 1.0.0-rc.2).
 - **Changing the method.** Maintainers and working groups for the Extended Framework, and the RFC process
   for the Guide (§4, §15).
 - `history/`: the Italian specification 0.3, non-normative, under CC BY-SA 4.0; `rfcs/` with the RFC
