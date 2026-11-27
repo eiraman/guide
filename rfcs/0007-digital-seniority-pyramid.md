@@ -40,6 +40,7 @@ The proposed text is in the diff of `EIRAMAN-GUIDE.md` on the branch. In short:
 
 1. **§2.** «Organisation and seniority» is staffed as a pyramid. *Acceptance sampling* joins the management practices. Two differences are added to the existing two: agents' time is not people's time; communication between agents is not human communication.
 2. **§4.** The Interpreter is the only channel to the Human Manager: it converts, quotes verbatim, does not decide, and reviews the work one level below it. The reports of the AI Reviewer and of the Security Officer reach the Human Manager unchanged; the Interpreter checks only their form, so that the channel does not filter its own controls. The AI Coordinator runs at the base, carrying out a procedure that the Tools compute.
+   The AI Reviewer is started by the AI Coordinator before the phase it watches and runs at events and on samples, no longer «in parallel» in continuous monitoring: review cost stays small against execution (decision 4 of the review of the profiles, 27/11).
 3. **§6.**
    - The verifier works one SD level above the executor; the highest level in use is verified by the Human Manager or by another provider.
    - Review by samples: an oracle runs first; review on a different model always covers the risk class and covers a sample of the rest, under switching rules.

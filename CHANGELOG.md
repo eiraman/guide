@@ -19,6 +19,7 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
   agents is not human communication); seniority staffed as a pyramid; acceptance sampling among the practices.
 - §4: new role, the Interpreter, the only channel between the Human Manager and the agents; the reports of the AI Reviewer and of the Security Officer pass through it unchanged, checked only for form; the AI Coordinator
   runs at the base and carries out a procedure computed by the Tools.
+- §4, AI Reviewer: it no longer runs «in parallel» in «continuous monitoring»; the AI Coordinator MUST start it before the phase it watches, and it runs at the events and on the samples the Extended Framework suggests (decision 4 of the review of the profiles). An obligation is narrowed: to be read in the independent review of the diff.
 - §6: the verifier works one SD level above the executor (was: at least at the same level); new «Review by
   samples», with an oracle first, the risk class always reviewed on a different model and switching rules.
 - §7: role tiers restated as a pyramid; SD table restated by role; Unit Cost includes review.
