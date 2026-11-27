@@ -23,10 +23,13 @@ the `guide` repository.
 
 ## [Unreleased]
 
-**Pending update.** The English Guide 1.0.0-rc.6 ([RFC 0006](../../rfcs/0006-managerial-role-in-security.md), CR-031)
-adds three sentences at the end of the paragraph "Why Eiraman exists" (§2) and changes the version label. The
-translation still declares 1.0.0-rc.5 and must be updated to `1.0.0-rc.6+it.1`: translate the three
-sentences and update the version label and the "Nota alla traduzione". No normative key word is involved.
+**Pending update.** The English Guide 1.0.0-rc.6 ([RFC 0006](../../rfcs/0006-security-measurement-self-feeding.md), CR-031)
+adds three sentences at the end of the paragraph "Why Eiraman exists" (§2), a new paragraph "The method applies
+to itself" (§2), a new normative paragraph "Measuring the method" (§15) and the words "not measured" in the
+Status of the title block, and changes the version label. The translation still declares 1.0.0-rc.5 and must
+be updated to `1.0.0-rc.6+it.1`: translate these texts, keeping the key words of §15 with the same counts
+(in §15 MUST 12 → 28, MUST NOT 2 → 4, SHOULD NOT 0 → 1, MAY 2 → 3), and update the version label and the
+"Nota alla traduzione".
 
 ## [1.0.0-rc.5+it.1] - 2026-11-27
 

@@ -26,15 +26,43 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [1.0.0-rc.6] - 2026-11-27
 
-Sixth release candidate. Not yet in force. It implements
-[RFC 0006](rfcs/0006-managerial-role-in-security.md), from change request CR-031. The Author approved its
-direction on 27 November 2026 (D-031), before the end of its fourteen-day comment period: a recorded
-deviation; the Author approves the final text at the publication Do. The change is descriptive: no obligation
-is added, removed or changed, and the counts of the RFC 2119 key words are those of 1.0.0-rc.5.
+Sixth release candidate. Not yet in force and **not measured**: no measurement campaign of the method has been
+completed. It implements [RFC 0006](rfcs/0006-security-measurement-self-feeding.md), from change request CR-031.
+The Author approved its direction on 27 November 2026 (D-031, extended by D-031-B), before the end of its
+thirty-day comment period: a recorded deviation; the Author approves the final text at the publication Do.
+D-031-B replaces the decision of 26 November 2026 that kept the rules on measuring the method out of the Guide
+until a campaign was completed (RFC 0003, "Not included"). Obligations are added for those who maintain the
+method, none for adopters; the RFC 2119 key words change only in §15: MUST 350 → 366, MUST NOT 66 → 68,
+SHOULD NOT 2 → 3, MAY 37 → 38 in the whole Guide.
 
 ### Added
 
-- `rfcs/0006-managerial-role-in-security.md`, accepted (D-031), and its row in `rfcs/README.md`.
+- **§15, Measuring the method** (MUST, MUST NOT, SHOULD NOT, MAY), binding the Author and the Maintainers (§4),
+  not adopters: each version of the Guide, with the Extended Framework, Role Profiles and Tools released with
+  it, MUST be measured on a test bench against a declared baseline, the simplest configuration without the
+  method (two agents, a designer at a Digital Seniority suited to design and an implementer at a lower one, no
+  AI Coordinator, no reviewer, a single candidate; levels and models in the Extended Framework); a release
+  that does not change the Guide is covered by the campaign of its version; a version MAY be released before
+  its campaign is completed and MUST then declare itself "not measured"; equal conditions (request, files and
+  tools, simulated Human Manager, limits) and isolated runs MUST apply, and a run beyond the limits counts as
+  failed; the baseline MUST be run again at every change of model and comparisons MUST be made only between
+  the same models; bench testing MUST take the delivery as it is and record every fault, defined; testers MUST
+  be independent of the developers and SHOULD NOT use models more capable than those measured, and Seniority of
+  the verifier (§6) does not apply to them; requests, briefs and expected results MUST be written by others
+  than the maintainers and frozen before the campaign, the measured agents MUST NOT see briefs or expected
+  results, and judged indicators MUST follow K1; bench testing is distinct from the acceptance testing of
+  §9.1; hypotheses, with indicator, margin and repetitions, MUST be recorded before a campaign and MUST NOT
+  change after it, and every result MUST be kept and counted; when a test that removes a rule excludes a
+  benefit above the margin, a proposal to reduce or remove it MUST go to the Human Manager; when the baseline
+  is demonstrated to obtain the same result at lower cost for a class, the Author MUST state it in the Guide
+  and indicate the baseline; "not demonstrated" is enough for neither. Indicators, applications, repetitions,
+  limits and the models of the baseline are Guidance of the Extended Framework (`guidance/BENCH.md`, in
+  preparation in the framework candidate 0.3.0).
+- **§2, The method applies to itself** (descriptive, new paragraph): each rule is a hypothesis measured against
+  a baseline, the same tasks without the method; the method feeds itself: the Human Manager gives the
+  direction, the agents translate it by the principles of the method into change requests, specific choices
+  and suggestions, and the Human Manager decides through Do escalations.
+- `rfcs/0006-security-measurement-self-feeding.md`, accepted (D-031, D-031-B), and its row in `rfcs/README.md`.
 
 ### Changed
 
@@ -46,11 +74,14 @@ is added, removed or changed, and the counts of the RFC 2119 key words are those
   blocking by default: the adoption levels and the Applicability gate stop what the qualified level does not
   allow, except what the Human Manager decides to run above it under the conditions of §14.2 (§14,
   Classification mode). The earlier text of the paragraph is kept whole.
+- **Title block, Status** (descriptive): "not measured (§15, Measuring the method)"; the same in `README.md`.
 - Title block, `README.md` and row R002 of `TRACEABILITY.md`: version 1.0.0-rc.6; `README.md` lists RFC 0006.
-- `TRACEABILITY.md`: one row marked "RFC 0006" (descriptive); all earlier rows kept; in the Count check, a
-  line for the rows added by RFC 0006 (1 row, descriptive, no key word in capitals).
+- `TRACEABILITY.md`: four rows marked "RFC 0006" (RFC0006-03 normative; RFC0006-01, -02 and -04 descriptive);
+  all earlier rows kept; in the Count check, a line for the rows added by RFC 0006 (4 rows, 1 normative and 3
+  descriptive).
 - `translations/it/CHANGELOG.md`: note under [Unreleased] that the Italian translation, which still declares
-  1.0.0-rc.5, must be updated to `1.0.0-rc.6+it.1`. The text of the translation is not changed.
+  1.0.0-rc.5, must be updated to `1.0.0-rc.6+it.1`, with the texts to translate. The text of the translation is
+  not changed.
 
 ## [1.0.0-rc.5] - 2026-11-27
 
