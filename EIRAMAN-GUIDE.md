@@ -90,6 +90,7 @@ Four principles bound every rule of the method.
 - MUST quote verbatim the words of the Human Manager in every Decision, Do and request it converts;
 - MUST NOT decide, and MUST NOT change the meaning of what it converts;
 - MUST review, before they reach the Human Manager, the work of the roles one level below it and the Do records.
+- MUST pass the reports of the AI Reviewer and of the Security Officer to the Human Manager unchanged, checking only their form under §12.
 
 **AI Coordinator.** The agent that runs the project, under its own qualified Role Profile. It runs at the base of the pyramid (§7): coordination is a procedure that the Tools compute and the agent carries out. The AI Coordinator:
 - MUST acquire only the authorised repository, configure engines and tools, assign credentials within the permissions granted, and check availability and budget;

@@ -23,6 +23,8 @@ the `guide` repository.
 
 ## [Unreleased]
 
+- §4, Interprete: traduzione della riga sui rapporti del Revisore AI e del Security Officer passati senza modifiche (decisione 4 della review dei profili, CR-033).
+
 ### Changed
 
 - 2026-11-27: translation of the changes of CR-033 (RFC 0007) to the English Guide, proposed version 1.0.0-rc.7: Interpreter, pyramid of roles, review by samples, promotion rules, cost of errors, agent dialect. The translation becomes `1.0.0-rc.7+it.1`; new terms added to the glossary. Local candidate on the branch `cr-033-guida`, not published, not tagged.

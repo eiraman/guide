@@ -94,6 +94,7 @@ Quattro principi delimitano ogni regola del metodo.
 - DEVE citare alla lettera le parole del Manager umano in ogni Decisione, Do e richiesta che converte;
 - NON DEVE decidere e NON DEVE cambiare il significato di ciò che converte;
 - DEVE rivedere, prima che arrivino al Manager umano, il lavoro dei ruoli di un livello sotto il suo e le schede Do.
+- DEVE passare al Manager umano senza modifiche i rapporti del Revisore AI e del Security Officer, controllandone solo la forma secondo il §12.
 
 **Coordinatore AI.** L'agente che conduce il progetto, con un proprio Role Profile qualificato. Opera alla base della piramide (§7): il coordinamento è una procedura che gli Strumenti calcolano e che l'agente esegue. Il Coordinatore AI:
 - DEVE acquisire solo il repository autorizzato, configurare motori e strumenti, assegnare credenziali entro i permessi concessi e verificare disponibilità e budget;

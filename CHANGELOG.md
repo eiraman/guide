@@ -17,7 +17,7 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 - §2: two new differences between people and machines (agents' time is not people's time; communication between
   agents is not human communication); seniority staffed as a pyramid; acceptance sampling among the practices.
-- §4: new role, the Interpreter, the only channel between the Human Manager and the agents; the AI Coordinator
+- §4: new role, the Interpreter, the only channel between the Human Manager and the agents; the reports of the AI Reviewer and of the Security Officer pass through it unchanged, checked only for form; the AI Coordinator
   runs at the base and carries out a procedure computed by the Tools.
 - §6: the verifier works one SD level above the executor (was: at least at the same level); new «Review by
   samples», with an oracle first, the risk class always reviewed on a different model and switching rules.
