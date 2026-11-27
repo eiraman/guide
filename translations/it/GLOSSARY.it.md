@@ -264,6 +264,22 @@ Termini entrati con la Guida 1.0.0-rc.6 (§2 e §15). La fonte **B** è il banco
 | by default | per impostazione predefinita | N |
 | feeds itself | si alimenta da sé | N |
 
+Termini entrati con la Guida 1.0.0-rc.7 (CR-033, RFC 0007; §2, §4, §6, §7, §12).
+
+| Inglese | Italiano | Fonte |
+|---|---|---|
+| Interpreter | Interprete | N |
+| agent dialect | dialetto degli agenti | N |
+| oracle (controllo deterministico, test o rubrica fissata in anticipo) | oracolo | N |
+| risk class | classe di rischio | N |
+| review by samples | revisione a campione | N |
+| acceptance sampling | campionamento di accettazione | N |
+| switching rules | regole di passaggio | N |
+| cost of errors | costo degli errori | N |
+| ladder of promotion | scala di promozione | N |
+| pyramid (dei ruoli); base, top | piramide; base, vertice | N |
+| work order | ordine di lavoro | N |
+
 ## 10. Note sulle scelte
 
 - **Scoperta.** La specifica 0.3 e il sito chiamano «Scoperta» la prima fase; i profili più recenti usano anche «Discovery». La traduzione usa «Scoperta» in tutto il testo.

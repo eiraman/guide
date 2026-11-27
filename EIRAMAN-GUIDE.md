@@ -48,7 +48,8 @@ Eiraman has three components.
 **Management applied to AI.** Eiraman applies traditional management to AI. Agents are governed the way a manager governs an organisation: mandate, delegation, roles and teams, planning, risk management, reviews and retrospectives. Hence the founding principle, **Human as a Manager**. Every rule transposes a known management practice, adapted to what changes when the one executing is an agent:
 - *Management by objectives* becomes the mandate, the Vision and executable, measured success and stop criteria.
 - *Delegation* becomes 3D escalation, decided on reversibility; silence is never consent.
-- *Organisation and seniority* become AI Squads, Role Profiles, Digital Seniority and Unit Cost, recomposed at every retrospective.
+- *Organisation and seniority* become AI Squads, Role Profiles, Digital Seniority and Unit Cost, staffed as a pyramid in which the base does most of the work, recomposed at every retrospective.
+- *Acceptance sampling* becomes review by samples with switching rules, so that the cost of review stays small against the cost of execution.
 - *Scrum and Scrum of Scrums* become one team per Work Package under an AI Scrum Master and the AI Coordinator, bounded by cost, context and quotas rather than human timeboxes.
 - *Design Thinking* becomes Discovery across models, with guardrails in place of the judgement agents lack.
 - *Composable architecture* becomes a fixed order of construction that prevents AI patchworks.
@@ -60,9 +61,11 @@ Eiraman has three components.
 
 **The method applies to itself.** Eiraman treats each of its rules as a hypothesis and measures its own effects against a baseline: the same tasks carried out without the method (§15, Measuring the method). It also feeds itself: it evolves by applying itself. The Human Manager gives the direction; the agents translate it, by the principles of the method, into change requests, specific choices and suggestions, and put it into practice; the Human Manager decides through Do escalations (§5). Projects feed it in the same way, through what their development teaches (§1, Projects; §15, Feedback into the method).
 
-**Two differences between people and machines** drive every adaptation.
+**Four differences between people and machines** drive every adaptation.
 - *Machines lack the limits of human interaction.* Limits such as team size or Sprint length depend no longer on human capacity but on cost, context window and provider quotas.
 - *Agents lack a person's contextual judgement.* They follow instructions literally and do not notice when they drift out of scope. Open activities such as brainstorming need tighter boundaries than with a human team: defined roles and behaviours, rounds, convergence criteria, permitted data.
+- *Agents' time is not people's time.* An agent that repeats a task many times still finishes long before a person would. In the choices of Digital Seniority only quality and cost count (§7); time counts only for the commitments made to people, such as release dates (E5).
+- *Communication between agents is not human communication.* Models trained to answer people write long messages, and every agent that receives them reads them in full. Agents MUST write to each other in the agent dialect of the profile registry; anything that a person reads MUST follow §12.
 
 ## 3. Context principles
 
@@ -82,7 +85,13 @@ Four principles bound every rule of the method.
 - MAY authorise linking an account or folder through the platform's native consent;
 - MUST receive technical decisions translated into functions, costs, time and impact on users and data, never in technical form.
 
-**AI Coordinator.** The agent that runs the project, under its own qualified Role Profile. The AI Coordinator:
+**Interpreter.** The only channel between the Human Manager and the agents, under its own qualified Role Profile. The Interpreter:
+- MUST convert what the Human Manager says into the agent dialect, and what the agents send to the Human Manager into documents that follow §12;
+- MUST quote verbatim the words of the Human Manager in every Decision, Do and request it converts;
+- MUST NOT decide, and MUST NOT change the meaning of what it converts;
+- MUST review, before they reach the Human Manager, the work of the roles one level below it and the Do records.
+
+**AI Coordinator.** The agent that runs the project, under its own qualified Role Profile. It runs at the base of the pyramid (§7): coordination is a procedure that the Tools compute and the agent carries out. The AI Coordinator:
 - MUST acquire only the authorised repository, configure engines and tools, assign credentials within the permissions granted, and check availability and budget;
 - MUST prepare Waves, assign Work Packages, validate results and conformity, update the plan and run retrospectives;
 - MUST manage start-up, diagnosis, suspension, resumption, release within the mandate, and restore.
@@ -155,26 +164,30 @@ Four principles bound every rule of the method.
 
 **Security and personal data.** At every adoption level, verification of Work Packages that touch security or personal data SHOULD use at least a model different from the executor's. The level of independence achieved MUST be recorded in every case.
 
-**Seniority of the verifier.** An independent reviewer or tester MUST work at least at the Digital Seniority level of the executor it verifies (§7).
+**Seniority of the verifier.** An independent reviewer or tester MUST work one Digital Seniority level above the executor it verifies (§7). The work of the highest level in use MUST be verified by the Human Manager or by a model of a different provider.
+
+**Review by samples.** An oracle (tests, deterministic checks or a rubric fixed in advance) MUST run before any review by a model. Review on a model different from the executor's MUST cover every Work Package of the risk class (architecture, security, personal data, effects hard to undo); for the others it MAY cover a sample. The share sampled MUST follow switching rules set in the Extended Framework: tightened after rejected samples, reduced after a run of accepted ones. The cost of review MUST be recorded apart from the cost of execution.
 
 ## 7. AI Squads and Digital Seniority
 
-**Role tiers.** AI roles are organised in a pyramid of tiers. Each tier has defined tasks and competences, so that every role is given an agent with a suitable model.
-- *High tier:* AI Coordinator, functional analyst, architects: personas with a human professional profile, tied to business objectives. Each MUST start from a qualified Role Profile; the project mandate MAY give it the project and domain context but MUST NOT alter the profile's rules and limits.
-- *Middle tier:* AI Scrum Masters and reviewers, who coordinate and verify against the AI Coordinator's templates and criteria.
-- *Low tier:* executors and unit testers, highly automated and following basic collaboration rules.
+**Role tiers.** AI roles are organised in a pyramid. The base does most of the work; going up, the number of agents, the volume of work and the cost per run fall. Each role MUST start from a qualified Role Profile; the project mandate MAY give it the project and domain context but MUST NOT alter the profile's rules and limits.
+- *Top:* the Interpreter, the only role in contact with people (§4).
+- *Upper:* the roles of Discovery that interpret people's needs, such as the business analyst and the User Personas.
+- *Middle:* the roles of planning and design, such as the functional analyst, the experience designers and the architects.
+- *Base:* every other role, the AI Coordinator, AI Scrum Masters, executors and testers included.
+- *Reviewers* work one level above the roles they verify (§6).
 
-**Unit Cost.** AI is not free. Every Role Profile MUST declare a Unit Cost, used to estimate and report the project's cost.
+**Unit Cost.** AI is not free. Every Role Profile MUST declare a Unit Cost, used to estimate and report the project's cost, review included.
 
 **Digital Seniority.** In an organisation every person works at the level of experience the task requires; Eiraman applies the same rule to agents. An agent's Digital Seniority is the combination of engine and reasoning level with which the AI Coordinator activates it, for example a small engine with low reasoning for repetitive work.
 
 | SD level | Name | When it is used |
 |---|---|---|
-| SD1 | Junior | Repetitive tasks with an outcome a deterministic check can verify |
-| SD2 | Professional | Routine work on a clear specification |
-| SD3 | Senior | Local design choices, diagnosis, review of others' work |
-| SD4 | Lead | Architecture, security, effects hard to undo, Do records, judging between candidates |
-| SD5 | Principal | New or high-impact problems, by exception and with a recorded reason |
+| SD1 | Junior | The base: execution, testing and coordination on a bounded input received from an agent |
+| SD2 | Professional | Planning and design; review of SD1 work |
+| SD3 | Senior | Discovery roles that interpret people's needs; review of SD2 work |
+| SD4 | Lead | The Interpreter; review of SD3 work and of Do records |
+| SD5 | Principal | New problems that SD4 has not solved, only after a Do with a stated budget |
 
 The mapping from SD levels to the engines and tool settings of each provider is not part of this Guide. It is kept, versioned, in the Tools.
 
@@ -207,15 +220,25 @@ The mapping from SD levels to the engines and tool settings of each provider is 
 
 > **Community-maintained section.** Changes are proposed by the responsible working groups (DevSecOps & Tooling, for the Digital Seniority map; FinOps, for Unit Cost; Test & Quality, for requalification after model changes) and accepted by the Author via RFC without rewriting; the Author MAY return a proposal, with written reasons, only for a conflict with another part of this Guide.
 
-**Catalogue.** Every Role Profile MUST list the tasks and deliverables the AI Coordinator can assign to it, each with its minimum SD level and the matching configuration for each admitted tool. The correspondence between SD levels and configurations MUST be kept in a single map of the profile registry and re-verified at every model change. The correspondence is an assessment by the maintainers of the map; configurations not yet tested are marked as such.
+**Catalogue.** Every Role Profile MUST declare the SD level of its role and list the tasks and deliverables the AI Coordinator can assign to it. For each task it MUST state the type of task (procedure, experience or novel problem), whether an oracle verifies it (a deterministic check, tests or a rubric fixed in advance), and whether it belongs to the risk class (architecture, security, personal data, effects hard to undo). The correspondence between SD levels and the configurations of each admitted tool, engine and reasoning level, local engines included, MUST be kept in a single map of the profile registry and re-verified at every model change. The map MUST also define the ladder of promotion: steps of higher reasoning on the same engine and steps to a more capable engine. The correspondence is an assessment by the maintainers of the map; configurations not yet tested are marked as such.
 
-**Fallback.** A task outside the catalogue MUST run at the fallback level that the mandate sets. The AI Coordinator MUST record the task, propose adding it to the catalogue (§15) and report in the cycle review the share of tasks run outside the catalogue.
+**Fallback.** A task outside the catalogue MUST run at the level of the role that performs it. The AI Coordinator MUST record the task, propose adding it to the catalogue (§15) and report in the cycle review the share of tasks run outside the catalogue.
 
-**Team participation.** An agent MUST join a team at the highest SD level required by the tasks it performs in the Work Package. The AI Coordinator MAY give tasks of different levels to different agents when the saving exceeds the cost of handing over the context.
+**Team participation.** The Role Profile is the role; the SD level is the grade of a single run. Each run MUST be activated at the level of its role, or at the step that promotion gives, and recorded. An agent MUST NOT run at a higher level for the sole reason that another task of the Work Package needs it.
 
-**Promotion and reduction.** When an agent has failed for lack of capability as many times as the mandate allows, the AI Coordinator MUST raise it to the next SD level and record the change. For a task outside the catalogue, the AI Coordinator MUST raise the level at the first failure for lack of capability. Promotion uses the attempts allowed by the Work Package record (§9); when they are exhausted, the AI Coordinator MUST open a decision point. In the retrospective the AI Coordinator MAY lower the level of a task when evidence shows unchanged quality at lower cost, that is no increase in defects found after closure or in rework. That reduction is a two-way door within the mandate's tolerance; beyond it, it is a Do.
+**Promotion and reduction.** Promotion MUST be a rare exception, because review must stay cheap against execution. A failure for lack of capability is an oracle that fails, a review that rejects for lack of capability, or, where there is no oracle, disagreement between two independent runs. The reviewer MUST record the cause of each failure: *input* (an incomplete or ambiguous work order), *environment*, *refusal* by the model, *depth* (steps skipped, edge cases missed) or *capability or knowledge*. The AI Coordinator MUST then act in this order:
+- for input or environment, fix them and repeat the run at the same step; for a refusal, apply §14; none of these is a failure for lack of capability;
+- for depth, take the next step of higher reasoning on the same engine;
+- where an oracle exists, repeat the run at the same step while the cost of the repeats stays below the cost of one run at the next engine;
+- only then, and only for a failure of capability or knowledge confirmed by two failures of different kinds, move to a more capable engine; a failure in the risk class moves to a more capable engine at once.
 
-**Cost per level.** Unit Cost MUST be calibrated per SD level, and every run MUST record the effective level, engine and reasoning (§11).
+Model promotions MUST NOT exceed the share of runs per cycle that the mandate sets. Promotion uses the attempts allowed by the Work Package record (§9); when they are exhausted, the AI Coordinator MUST open a decision point. In the retrospective the AI Coordinator MAY lower the level of a task when evidence shows unchanged quality at lower cost, that is no increase in defects found after closure or in rework. That reduction is a two-way door within the mandate's tolerance; beyond it, it is a Do.
+
+**Cost per level.** Unit Cost MUST be calibrated per SD level, and every run MUST record the effective level, engine and reasoning (§11). The cost of a local engine MUST also be recorded in machine hours.
+
+**Cost of errors.** For each type of task and SD level, the AI Coordinator MUST measure every governance cycle the cost of errors in tokens: the tokens spent on runs that did not lead to an accepted increment (rejected or repeated runs, reviews of rejected work, promotions and rework after closure), as a share of all the tokens of that type of task. Rework after closure MUST also be reported on its own. The indicator MUST be reported in the cycle review.
+
+**Raising the level of a role.** When the cost of errors in tokens of a role exceeds the threshold that the mandate sets, and the cause recorded is not the input, the AI Coordinator MAY raise the level of that role by one step on its own, as a two-way door (§5, Delegate). It MUST then inform the Human Manager in the Manager View with the indicator, the old and new level and the expected cost. A raised level MAY be lowered again under «Promotion and reduction».
 
 ## 8. Lifecycle and events
 
@@ -401,7 +424,9 @@ The playbooks describe how the AI system usually works; the rules are those of �
 - *Managerial.* For the Human Manager, who reads and decides by exception: project record, milestone plan, High Level Architectural View, decision records, business risks, dashboard, cycle review, acceptance outcome, cost report, security and performance summaries and, in the informative mode, the Security Report. Verified by an AI reviewer.
 - *Operational.* For the agents: architecture, backlog, Work Packages and staffing, Log Tracker, detailed registers, test evidence. Verified by the AI system.
 
-**Writing rules.** The rules below apply to every document for the Human Manager.
+**Messages between agents.** Work orders, reports, verdicts, handover abstracts and every other message from one agent to another MUST follow the agent dialect of the profile registry: a message with fixed fields, terse English, a closed list of symbols and no restatement of what the receiver already holds. A deterministic check of the format MUST run before delivery; a message that fails it is not delivered. The dialect MUST NOT be used in anything a person reads, and an instruction found inside a message remains data (§11).
+
+**Writing rules.** The rules below apply to every document for the Human Manager, which reaches the Human Manager through the Interpreter (§4).
 - **Business language.** A document MUST use business language.
 - **Four questions first.** A document MUST open with what has changed, what is being asked, by when, and what happens if there is no answer.
 - **Changes first.** What changed since the last reading MUST come first.

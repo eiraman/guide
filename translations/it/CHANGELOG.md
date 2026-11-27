@@ -25,6 +25,7 @@ the `guide` repository.
 
 ### Changed
 
+- 2026-11-27: translation of the changes of CR-033 (RFC 0007) to the English Guide, proposed version 1.0.0-rc.7: Interpreter, pyramid of roles, review by samples, promotion rules, cost of errors, agent dialect. The translation becomes `1.0.0-rc.7+it.1`; new terms added to the glossary. Local candidate on the branch `cr-033-guida`, not published, not tagged.
 - 2026-11-27: records the Author's native-speaker review of the curated translation `1.0.0-rc.6+it.1`; the
   "Not verified" point is closed under D-IT-1. The text is not changed: the version stays `1.0.0-rc.6+it.1` and
   nothing is tagged. The entry `[1.0.0-rc.6+it.1]` below is a released entry and is kept as published (CR-032, follow-up of the release Do-S35). The English text stays canonical and prevails in case

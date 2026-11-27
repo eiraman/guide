@@ -13,6 +13,23 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [Unreleased]
 
+### Changed (proposed for 1.0.0-rc.7, RFC 0007, CR-033; local candidate, not released)
+
+- §2: two new differences between people and machines (agents' time is not people's time; communication between
+  agents is not human communication); seniority staffed as a pyramid; acceptance sampling among the practices.
+- §4: new role, the Interpreter, the only channel between the Human Manager and the agents; the AI Coordinator
+  runs at the base and carries out a procedure computed by the Tools.
+- §6: the verifier works one SD level above the executor (was: at least at the same level); new «Review by
+  samples», with an oracle first, the risk class always reviewed on a different model and switching rules.
+- §7: role tiers restated as a pyramid; SD table restated by role; Unit Cost includes review.
+- §7.1: catalogue per role with type, oracle and risk class per task; ladder of reasoning and engine steps; fallback
+  at the level of the role; «Team participation» per run (the obligation to join at the highest level is removed);
+  promotion as a rare exception decided from the cause of failure; new «Cost of errors» (tokens) and «Raising the
+  level of a role».
+- §12: new «Messages between agents» (agent dialect, format check, never for people); documents reach the Human
+  Manager through the Interpreter.
+
+
 ### Added
 
 - `translations/it/`: the Italian curated translation of the Guide 1.0.0-rc.5, `EIRAMAN-GUIDE.it.md`, with its

@@ -7,7 +7,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 **Versione 1.0.0-rc.6 · novembre 2026 · Release candidate**
 
-> **Nota alla traduzione.** Questo documento è la traduzione italiana curata di *The Eiraman Guide*, versione 1.0.0-rc.6 (repository `guide`, commit `d39ce03`). Versione della traduzione: **1.0.0-rc.6+it.1**. Il testo inglese, [EIRAMAN-GUIDE.md](../../EIRAMAN-GUIDE.md), è il testo canonico. La traduzione è curata e approvata dall'Autore (decisione D-IT-1). Il testo normativo è quello inglese, che prevale in caso di differenza. La traduzione non aggiunge, non toglie e non modifica alcuna regola. Sezioni e paragrafi hanno la stessa numerazione e lo stesso ordine dell'originale.
+> **Nota alla traduzione.** Questo documento è la traduzione italiana curata di *The Eiraman Guide*, versione 1.0.0-rc.7 proposta (repository `guide`, ramo `cr-033-guida`, non ancora pubblicata; ultima base pubblicata 1.0.0-rc.6, commit `d39ce03`). Versione della traduzione: **1.0.0-rc.7+it.1**. Il testo inglese, [EIRAMAN-GUIDE.md](../../EIRAMAN-GUIDE.md), è il testo canonico. La traduzione è curata e approvata dall'Autore (decisione D-IT-1). Il testo normativo è quello inglese, che prevale in caso di differenza. La traduzione non aggiunge, non toglie e non modifica alcuna regola. Sezioni e paragrafi hanno la stessa numerazione e lo stesso ordine dell'originale.
 >
 > Le parole chiave normative sono tradotte così, sempre in maiuscolo: MUST = DEVE (al plurale DEVONO); MUST NOT = NON DEVE (NON DEVONO); SHOULD = DOVREBBE (DOVREBBERO); SHOULD NOT = NON DOVREBBE (NON DOVREBBERO); MAY = PUÒ (POSSONO). Rendono le parole chiave inglesi con lo stesso significato (RFC 2119 e RFC 8174). I termini del metodo e le scelte di traduzione sono nel [glossario](GLOSSARY.it.md); i punti ambigui della fonte, tradotti fedelmente, sono in [SOURCE-NOTES.md](SOURCE-NOTES.md); le modifiche alla traduzione sono nel suo [CHANGELOG](CHANGELOG.md).
 
@@ -52,7 +52,8 @@ Eiraman ha tre componenti.
 **Il management applicato all'AI.** Eiraman applica all'AI il management tradizionale. Gli agenti si governano come un manager governa un'organizzazione: mandato, deleghe, ruoli e squadre, pianificazione, gestione dei rischi, revisioni e retrospettive. Da qui il principio fondante, **Human as a Manager**. Ogni regola è la trasposizione di una pratica di management nota, adattata a ciò che cambia quando chi esegue è un agente:
 - Il *management per obiettivi* diventa il mandato, la Visione e criteri di successo e di arresto eseguibili e misurati.
 - La *delega* diventa l'escalation 3D, decisa sulla reversibilità; il silenzio non vale mai assenso.
-- *Organizzazione e seniority* diventano AI Squad, Role Profile, Seniority Digitale e Unit Cost, ricomposti a ogni retrospettiva.
+- *Organizzazione e seniority* diventano AI Squad, Role Profile, Seniority Digitale e Unit Cost, con un organico a piramide in cui la base fa la maggior parte del lavoro, ricomposti a ogni retrospettiva.
+- *Il campionamento di accettazione* diventa la revisione a campione con regole di passaggio, così che il costo della revisione resti piccolo rispetto al costo dell'esecuzione.
 - *Scrum e Scrum of Scrums* diventano una squadra per Work Package sotto uno Scrum Master AI e il Coordinatore AI, limitata da costo, contesto e quote anziché da timebox umani.
 - Il *Design Thinking* diventa una Scoperta tra modelli, con guardrail al posto del giudizio che agli agenti manca.
 - L'*architettura componibile* diventa un ordine fisso di costruzione che previene i patchwork dell'AI.
@@ -64,9 +65,11 @@ Eiraman ha tre componenti.
 
 **Il metodo si applica a sé stesso.** Eiraman tratta ciascuna delle sue regole come un'ipotesi e misura i propri effetti rispetto a una baseline: gli stessi compiti svolti senza il metodo (§15, Misurare il metodo). Inoltre si alimenta da sé: evolve applicando sé stesso. Il Manager umano dà la direzione; gli agenti la traducono, secondo i principi del metodo, in Change Request, scelte specifiche e suggerimenti, e la mettono in pratica; il Manager umano decide attraverso i Do (§5). I progetti lo alimentano allo stesso modo, con ciò che il loro sviluppo insegna (§1, Projects; §15, Ritorno al metodo).
 
-**Due differenze tra persone e macchine** guidano ogni adattamento.
+**Quattro differenze tra persone e macchine** guidano ogni adattamento.
 - *Le macchine non hanno i limiti dell'interazione umana.* Limiti come la dimensione del team o la durata dello Sprint non dipendono più dalla capacità umana ma da costo, finestra di contesto e quote dei fornitori.
 - *Gli agenti non hanno il giudizio di contesto di una persona.* Seguono le istruzioni alla lettera e non si accorgono di quando escono dallo scopo. Le attività aperte, come il brainstorming, richiedono confini più stretti che con un team umano: ruoli e comportamenti definiti, giri, criteri di convergenza, dati ammessi.
+- *Il tempo degli agenti non è il tempo delle persone.* Un agente che ripete un compito molte volte finisce comunque molto prima di una persona. Nelle scelte di Seniority Digitale contano solo qualità e costo (§7); il tempo conta soltanto per gli impegni presi con le persone, come le date di rilascio (E5).
+- *La comunicazione tra agenti non è comunicazione umana.* I modelli addestrati a rispondere alle persone scrivono messaggi lunghi, e ogni agente che li riceve li legge per intero. Gli agenti DEVONO scrivere tra loro nel dialetto degli agenti del registro dei profili; tutto ciò che una persona legge DEVE seguire il §12.
 
 ## 3. Principi di contesto
 
@@ -86,7 +89,13 @@ Quattro principi delimitano ogni regola del metodo.
 - PUÒ autorizzare il collegamento di un account o di una cartella attraverso il consenso nativo della piattaforma;
 - DEVE ricevere le decisioni tecniche tradotte in funzioni, costi, tempi e impatto su utenti e dati, mai in forma tecnica.
 
-**Coordinatore AI.** L'agente che conduce il progetto, con un proprio Role Profile qualificato. Il Coordinatore AI:
+**Interprete.** L'unico canale tra il Manager umano e gli agenti, con un proprio Role Profile qualificato. L'Interprete:
+- DEVE convertire ciò che dice il Manager umano nel dialetto degli agenti, e ciò che gli agenti inviano al Manager umano in documenti che seguono il §12;
+- DEVE citare alla lettera le parole del Manager umano in ogni Decisione, Do e richiesta che converte;
+- NON DEVE decidere e NON DEVE cambiare il significato di ciò che converte;
+- DEVE rivedere, prima che arrivino al Manager umano, il lavoro dei ruoli di un livello sotto il suo e le schede Do.
+
+**Coordinatore AI.** L'agente che conduce il progetto, con un proprio Role Profile qualificato. Opera alla base della piramide (§7): il coordinamento è una procedura che gli Strumenti calcolano e che l'agente esegue. Il Coordinatore AI:
 - DEVE acquisire solo il repository autorizzato, configurare motori e strumenti, assegnare credenziali entro i permessi concessi e verificare disponibilità e budget;
 - DEVE preparare le Wave, assegnare i Work Package, validare risultati e conformità, aggiornare il piano e condurre le retrospettive;
 - DEVE gestire avvio, diagnosi, sospensione, ripresa, rilascio entro il mandato e ripristino.
@@ -159,26 +168,30 @@ Quattro principi delimitano ogni regola del metodo.
 
 **Sicurezza e dati personali.** A ogni livello di adozione, la verifica dei Work Package che toccano la sicurezza o i dati personali DOVREBBE usare almeno un modello diverso da quello dell'esecutore. Il livello di indipendenza ottenuto DEVE essere registrato in ogni caso.
 
-**Seniority del verificatore.** Un revisore o un tester indipendente DEVE lavorare almeno al livello di Seniority Digitale dell'esecutore che verifica (§7).
+**Seniority del verificatore.** Un revisore o un tester indipendente DEVE lavorare un livello di Seniority Digitale sopra l'esecutore che verifica (§7). Il lavoro del livello più alto in uso DEVE essere verificato dal Manager umano o da un modello di un altro fornitore.
+
+**Revisione a campione.** Un oracolo (test, controlli deterministici o una rubrica fissata in anticipo) DEVE essere eseguito prima di ogni revisione fatta da un modello. La revisione su un modello diverso da quello dell'esecutore DEVE coprire ogni Work Package della classe di rischio (architettura, sicurezza, dati personali, effetti difficili da annullare); per gli altri PUÒ coprire un campione. La quota campionata DEVE seguire regole di passaggio fissate nel Framework esteso: più stretta dopo i campioni respinti, ridotta dopo una serie di campioni accolti. Il costo della revisione DEVE essere registrato a parte dal costo dell'esecuzione.
 
 ## 7. AI Squad e Seniority Digitale
 
-**Livelli dei ruoli.** I ruoli AI sono organizzati in una piramide di livelli. Ogni livello ha compiti e competenze definiti, così che a ogni ruolo sia dato un agente con un modello adatto.
-- *Livello alto:* Coordinatore AI, analista funzionale, architetti: figure con un profilo professionale umano, legate agli obiettivi di business. Ciascuna DEVE partire da un Role Profile qualificato; il mandato di progetto PUÒ darle il contesto di progetto e di dominio ma NON DEVE alterare le regole e i limiti del profilo.
-- *Livello medio:* Scrum Master AI e revisori, che coordinano e verificano secondo i template e i criteri del Coordinatore AI.
-- *Livello basso:* esecutori e unit tester, molto automatizzati, che seguono regole di collaborazione di base.
+**Livelli dei ruoli.** I ruoli AI sono organizzati in una piramide. La base fa la maggior parte del lavoro; salendo, calano il numero degli agenti, il volume del lavoro e il costo per run. Ogni ruolo DEVE partire da un Role Profile qualificato; il mandato di progetto PUÒ dargli il contesto di progetto e di dominio ma NON DEVE alterare le regole e i limiti del profilo.
+- *Vertice:* l'Interprete, l'unico ruolo in contatto con le persone (§4).
+- *Parte alta:* i ruoli della Scoperta che interpretano i bisogni delle persone, come il Business Analyst e le User Personas.
+- *Parte media:* i ruoli di pianificazione e di progettazione, come l'analista funzionale, gli UX-UI designer e gli architetti.
+- *Base:* ogni altro ruolo, compresi il Coordinatore AI, gli Scrum Master AI, gli esecutori e i tester.
+- *I revisori* lavorano un livello sopra i ruoli che verificano (§6).
 
-**Unit Cost.** L'AI non è gratis. Ogni Role Profile DEVE dichiarare uno Unit Cost, usato per stimare e rendicontare il costo del progetto.
+**Unit Cost.** L'AI non è gratis. Ogni Role Profile DEVE dichiarare uno Unit Cost, usato per stimare e rendicontare il costo del progetto, revisione compresa.
 
 **Seniority Digitale.** In un'organizzazione ogni persona lavora al livello di esperienza che il compito richiede; Eiraman applica la stessa regola agli agenti. La Seniority Digitale di un agente è la combinazione di motore e livello di ragionamento con cui il Coordinatore AI lo attiva, per esempio un motore piccolo con ragionamento basso per il lavoro ripetitivo.
 
 | Livello SD | Nome | Quando si usa |
 |---|---|---|
-| SD1 | Junior | Compiti ripetitivi con un esito che un controllo deterministico può verificare |
-| SD2 | Professional | Lavoro corrente su una specifica chiara |
-| SD3 | Senior | Scelte locali di progettazione, diagnosi, revisione del lavoro di altri |
-| SD4 | Lead | Architettura, sicurezza, effetti difficili da annullare, schede Do, giudizio tra candidate |
-| SD5 | Principal | Problemi nuovi o ad alto impatto, per eccezione e con una motivazione registrata |
+| SD1 | Junior | La base: esecuzione, test e coordinamento su un input delimitato ricevuto da un agente |
+| SD2 | Professional | Pianificazione e progettazione; revisione del lavoro SD1 |
+| SD3 | Senior | Ruoli della Scoperta che interpretano i bisogni delle persone; revisione del lavoro SD2 |
+| SD4 | Lead | L'Interprete; revisione del lavoro SD3 e delle schede Do |
+| SD5 | Principal | Problemi nuovi che SD4 non ha risolto, solo dopo un Do con un budget dichiarato |
 
 La corrispondenza tra i livelli SD e i motori e le impostazioni degli strumenti di ciascun fornitore non fa parte di questa Guida. È mantenuta, versionata, negli Strumenti.
 
@@ -211,15 +224,25 @@ La corrispondenza tra i livelli SD e i motori e le impostazioni degli strumenti 
 
 > **Sezione mantenuta dalla comunità.** Le modifiche sono proposte dai gruppi di lavoro responsabili (DevSecOps & Tooling, per la mappa della Seniority Digitale; FinOps, per lo Unit Cost; Test & Quality, per la riqualificazione dopo i cambi di modello) e accettate dall'Autore tramite RFC senza riscrittura; l'Autore PUÒ restituire una proposta, con motivazione scritta, solo per un conflitto con un'altra parte di questa Guida.
 
-**Catalogo.** Ogni Role Profile DEVE elencare i task e i deliverable che il Coordinatore AI può assegnargli, ciascuno con il suo livello SD minimo e la configurazione corrispondente per ogni strumento ammesso. La corrispondenza tra livelli SD e configurazioni DEVE essere mantenuta in un'unica mappa del registro dei profili e riverificata a ogni cambio di modello. La corrispondenza è una valutazione dei manutentori della mappa; le configurazioni non ancora provate sono segnate come tali.
+**Catalogo.** Ogni Role Profile DEVE dichiarare il livello SD del proprio ruolo ed elencare i task e i deliverable che il Coordinatore AI può assegnargli. Per ogni task DEVE indicare il tipo di task (procedura, esperienza o problema nuovo), se un oracolo lo verifica (un controllo deterministico, test o una rubrica fissata in anticipo) e se appartiene alla classe di rischio (architettura, sicurezza, dati personali, effetti difficili da annullare). La corrispondenza tra livelli SD e configurazioni di ogni strumento ammesso, motore e livello di ragionamento, motori locali compresi, DEVE essere mantenuta in un'unica mappa del registro dei profili e riverificata a ogni cambio di modello. La mappa DEVE anche definire la scala di promozione: passi di ragionamento più alto sullo stesso motore e passi verso un motore più capace. La corrispondenza è una valutazione dei manutentori della mappa; le configurazioni non ancora provate sono segnate come tali.
 
-**Ripiego.** Un task fuori dal catalogo DEVE essere eseguito al livello di ripiego che il mandato fissa. Il Coordinatore AI DEVE registrare il task, proporre di aggiungerlo al catalogo (§15) e riportare nella revisione del ciclo la quota di task eseguiti fuori dal catalogo.
+**Ripiego.** Un task fuori dal catalogo DEVE essere eseguito al livello del ruolo che lo esegue. Il Coordinatore AI DEVE registrare il task, proporre di aggiungerlo al catalogo (§15) e riportare nella revisione del ciclo la quota di task eseguiti fuori dal catalogo.
 
-**Partecipazione alle squadre.** Un agente DEVE entrare in una squadra al livello SD più alto richiesto dai task che esegue nel Work Package. Il Coordinatore AI PUÒ dare task di livelli diversi ad agenti diversi quando il risparmio supera il costo del passaggio del contesto.
+**Partecipazione alle squadre.** Il Role Profile è il ruolo; il livello SD è il grado della singola run. Ogni run DEVE essere attivata al livello del suo ruolo, o al passo che la promozione dà, e registrata. Un agente NON DEVE eseguire a un livello più alto per il solo motivo che un altro task del Work Package lo richiede.
 
-**Promozioni e riduzioni.** Quando un agente ha fallito per carenza di capacità tante volte quante il mandato ne consente, il Coordinatore AI DEVE portarlo al livello SD successivo e registrare il cambio. Per un task fuori dal catalogo, il Coordinatore AI DEVE alzare il livello al primo fallimento per carenza di capacità. La promozione usa i tentativi consentiti dalla scheda del Work Package (§9); quando sono esauriti, il Coordinatore AI DEVE aprire un punto decisionale. Nella retrospettiva il Coordinatore AI PUÒ abbassare il livello di un task quando le evidenze mostrano qualità invariata a costo minore, cioè nessun aumento dei difetti trovati dopo la chiusura né del rework. Questa riduzione è una porta a due vie entro la tolleranza del mandato; oltre, è un Do.
+**Promozioni e riduzioni.** La promozione DEVE essere un'eccezione rara, perché la revisione deve restare economica rispetto all'esecuzione. Un fallimento per carenza di capacità è un oracolo che fallisce, una revisione che respinge per carenza di capacità o, dove non c'è un oracolo, il disaccordo tra due run indipendenti. Il revisore DEVE registrare la causa di ogni fallimento: *input* (un ordine di lavoro incompleto o ambiguo), *ambiente*, *rifiuto* del modello, *profondità* (passi saltati, casi limite trascurati) oppure *capacità o conoscenza*. Il Coordinatore AI DEVE poi agire in quest'ordine:
+- per input o ambiente, correggerli e ripetere la run allo stesso passo; per un rifiuto, applicare il §14; nessuno di questi è un fallimento per carenza di capacità;
+- per la profondità, prendere il passo successivo di ragionamento più alto sullo stesso motore;
+- dove esiste un oracolo, ripetere la run allo stesso passo finché il costo delle ripetizioni resta sotto il costo di una run al motore successivo;
+- solo allora, e solo per un fallimento di capacità o di conoscenza confermato da due fallimenti di tipo diverso, passare a un motore più capace; un fallimento nella classe di rischio passa subito a un motore più capace.
 
-**Costo per livello.** Lo Unit Cost DEVE essere tarato per livello SD, e ogni run DEVE registrare il livello, il motore e il ragionamento effettivi (§11).
+Le promozioni di modello NON DEVONO superare la quota di run per ciclo che il mandato fissa. La promozione usa i tentativi consentiti dalla scheda del Work Package (§9); quando sono esauriti, il Coordinatore AI DEVE aprire un punto decisionale. Nella retrospettiva il Coordinatore AI PUÒ abbassare il livello di un task quando le evidenze mostrano qualità invariata a costo minore, cioè nessun aumento dei difetti trovati dopo la chiusura né del rework. Questa riduzione è una porta a due vie entro la tolleranza del mandato; oltre, è un Do.
+
+**Costo per livello.** Lo Unit Cost DEVE essere tarato per livello SD, e ogni run DEVE registrare il livello, il motore e il ragionamento effettivi (§11). Il costo di un motore locale DEVE essere registrato anche in ore macchina.
+
+**Costo degli errori.** Per ogni tipo di task e livello SD, il Coordinatore AI DEVE misurare a ogni ciclo di governo il costo degli errori in token: i token spesi in run che non hanno portato a un incremento accettato (run respinte o ripetute, revisioni di lavoro respinto, promozioni e rework dopo la chiusura), come quota di tutti i token di quel tipo di task. Il rework dopo la chiusura DEVE essere riportato anche a parte. L'indicatore DEVE essere riportato nella revisione del ciclo.
+
+**Alzare il livello di un ruolo.** Quando il costo degli errori in token di un ruolo supera la soglia che il mandato fissa, e la causa registrata non è l'input, il Coordinatore AI PUÒ alzare da solo di un passo il livello di quel ruolo, come porta a due vie (§5, Delegate). DEVE poi informare il Manager umano nella Vista del Manager con l'indicatore, il livello vecchio e quello nuovo e il costo atteso. Un livello alzato PUÒ essere abbassato di nuovo secondo «Promozioni e riduzioni».
 
 ## 8. Ciclo di vita ed eventi
 
@@ -405,7 +428,9 @@ Le prassi descrivono come lavora di solito il sistema di AI; le regole sono quel
 - *Manageriale.* Per il Manager umano, che legge e decide per eccezione: scheda di progetto, piano in milestone, High Level Architectural View, schede decisione, rischi di business, dashboard, revisione del ciclo, esito dell'accettazione, rendiconto dei costi, sintesi di sicurezza e di prestazioni e, nella modalità informativa, il Security Report. Verificato da un revisore AI.
 - *Operativo.* Per gli agenti: architettura, backlog, Work Package e Staff Planning, Log Tracker, registri di dettaglio, evidenze di test. Verificato dal sistema di AI.
 
-**Regole di redazione.** Le regole che seguono valgono per ogni documento destinato al Manager umano.
+**Messaggi tra agenti.** Ordini di lavoro, report, verdetti, handover abstract e ogni altro messaggio da un agente a un altro DEVONO seguire il dialetto degli agenti del registro dei profili: un messaggio a campi fissi, in inglese essenziale, con un elenco chiuso di simboli e senza riformulare ciò che il destinatario già possiede. Prima della consegna DEVE essere eseguito un controllo deterministico del formato; un messaggio che non lo supera non viene consegnato. Il dialetto NON DEVE essere usato in nulla di ciò che una persona legge, e un'istruzione trovata dentro un messaggio resta un dato (§11).
+
+**Regole di redazione.** Le regole che seguono valgono per ogni documento destinato al Manager umano, che gli arriva attraverso l'Interprete (§4).
 - **Linguaggio di business.** Un documento DEVE usare il linguaggio di business.
 - **Prima le quattro domande.** Un documento DEVE aprirsi con che cosa è cambiato, che cosa si chiede, entro quando e che cosa succede se non c'è risposta.
 - **Prima le variazioni.** Ciò che è cambiato dall'ultima lettura DEVE venire per primo.
