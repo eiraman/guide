@@ -42,7 +42,8 @@ texts that the source adds or changes are translated. Local candidate: not tagge
 - `GLOSSARY.it.md`, new section 9 "Misura del metodo": banco di prova (test bench), collaudo al banco (bench
   testing), collaudatori (testers), Fault, campagna di misura, baseline (kept in English), Manager umano
   simulato, brief, «non misurata», «non dimostrato», indicatore primario, costo di riallineamento, applicazioni
-  di prova and the other terms of the new texts; three notes on the choices (Collaudo, Baseline, Fault).
+  di prova and the other terms of the new texts; three notes on the choices (Collaudo, Baseline, Fault). The
+  section "Note sulle scelte" keeps its text and becomes section 10.
 - `SOURCE-NOTES.md`: points 19 to 24, on the texts added by 1.0.0-rc.6.
 
 ### Changed
