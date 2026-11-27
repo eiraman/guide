@@ -13,6 +13,17 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [Unreleased]
 
+### Added
+
+- `translations/it/`: the Italian curated translation of the Guide 1.0.0-rc.5, `EIRAMAN-GUIDE.it.md`, with its
+  glossary `GLOSSARY.it.md`, the notes on the source `SOURCE-NOTES.md` and its own `CHANGELOG.md`; version of the translation `1.0.0-rc.5+it.1` (the
+  source version plus the translation revision as SemVer build metadata). From change request CR-029 and the
+  Human Manager's decision D-IT-1. The English text stays canonical and prevails in case of difference; it is
+  not changed, so the Guide version is not changed and nothing is tagged (VERSIONING §1, notes). The
+  translation keeps every normative key word of the source, rendered in capitals as DEVE, NON DEVE, DOVREBBE,
+  NON DOVREBBE and PUÒ, with the same counts section by section; it adds, removes and changes no obligation.
+  Row for the translation in `README.md`.
+
 ## [1.0.0-rc.5] - 2026-11-27
 
 Fifth release candidate. Not yet in force. It implements
