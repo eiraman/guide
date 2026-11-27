@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # The Eiraman Guide
 
-**Version 1.0.0-rc.5 · November 2026 · Release candidate**
+**Version 1.0.0-rc.6 · November 2026 · Release candidate**
 
 **Attribution.** The Eiraman Guide by Paolo Ungari and contributors.
 
@@ -43,7 +43,7 @@ Eiraman has three components.
 
 ## 2. Eiraman theory
 
-**Why Eiraman exists.** *Human-in-the-loop* control, where a person approves each AI step, *human-on-the-loop* control, where a person monitors and steps in on exceptions, and human code review help little where there is no development team. They have two limits. Point checks multiply until approving them is like accepting a software licence: nobody reads them. And they confine AI to helping developers, instead of putting it at the service of business users. Vibe coding, building software by instructing AI in natural language, sharpens both limits. Governed vibe coding keeps its speed and adds the governance it lacks: a business person directs the work as a Human Manager, and the AI system answers with evidence.
+**Why Eiraman exists.** *Human-in-the-loop* control, where a person approves each AI step, *human-on-the-loop* control, where a person monitors and steps in on exceptions, and human code review help little where there is no development team. They have two limits. Point checks multiply until approving them is like accepting a software licence: nobody reads them. And they confine AI to helping developers, instead of putting it at the service of business users. Vibe coding, building software by instructing AI in natural language, sharpens both limits. Governed vibe coding keeps its speed and adds the governance it lacks: a business person directs the work as a Human Manager, and the AI system answers with evidence. Vibe coding also sharply increases the data people handle, often without the competence needed to see the risks. In Eiraman the managerial role extends to security: a Human Manager who delegates a task knows what that choice implies for security, privacy and regulatory compliance, because the classification of the project and the Security Officer make it known (§14). When the adopter uses the method for themselves, this knowledge is, by default, information, recorded in the Security Report (§12); in work and organisational contexts it is blocking by default: the adoption levels and the Applicability gate stop what the qualified level does not allow, except what the Human Manager decides to run above it under the conditions of §14.2 (§14, Classification mode).
 
 **Management applied to AI.** Eiraman applies traditional management to AI. Agents are governed the way a manager governs an organisation: mandate, delegation, roles and teams, planning, risk management, reviews and retrospectives. Hence the founding principle, **Human as a Manager**. Every rule transposes a known management practice, adapted to what changes when the one executing is an agent:
 - *Management by objectives* becomes the mandate, the Vision and executable, measured success and stop criteria.

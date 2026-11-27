@@ -24,6 +24,34 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
   NON DOVREBBE and PUÒ, with the same counts section by section; it adds, removes and changes no obligation.
   Row for the translation in `README.md`.
 
+## [1.0.0-rc.6] - 2026-11-27
+
+Sixth release candidate. Not yet in force. It implements
+[RFC 0006](rfcs/0006-managerial-role-in-security.md), from change request CR-031. The Author approved its
+direction on 27 November 2026 (D-031), before the end of its fourteen-day comment period: a recorded
+deviation; the Author approves the final text at the publication Do. The change is descriptive: no obligation
+is added, removed or changed, and the counts of the RFC 2119 key words are those of 1.0.0-rc.5.
+
+### Added
+
+- `rfcs/0006-managerial-role-in-security.md`, accepted (D-031), and its row in `rfcs/README.md`.
+
+### Changed
+
+- **§2, Why Eiraman exists** (descriptive): a second reason for the method. Vibe coding sharply increases the
+  data people handle, often without the competence needed to see the risks; in Eiraman the managerial role
+  extends to security, and a Human Manager who delegates a task knows what it implies for security, privacy
+  and regulatory compliance, through the classification and the Security Officer (§14). For one's own use this
+  is, by default, information, recorded in the Security Report (§12); in work and organisational contexts it is
+  blocking by default: the adoption levels and the Applicability gate stop what the qualified level does not
+  allow, except what the Human Manager decides to run above it under the conditions of §14.2 (§14,
+  Classification mode). The earlier text of the paragraph is kept whole.
+- Title block, `README.md` and row R002 of `TRACEABILITY.md`: version 1.0.0-rc.6; `README.md` lists RFC 0006.
+- `TRACEABILITY.md`: one row marked "RFC 0006" (descriptive); all earlier rows kept; in the Count check, a
+  line for the rows added by RFC 0006 (1 row, descriptive, no key word in capitals).
+- `translations/it/CHANGELOG.md`: note under [Unreleased] that the Italian translation, which still declares
+  1.0.0-rc.5, must be updated to `1.0.0-rc.6+it.1`. The text of the translation is not changed.
+
 ## [1.0.0-rc.5] - 2026-11-27
 
 Fifth release candidate. Not yet in force. It implements
@@ -419,7 +447,8 @@ The method was published before as an Italian specification, numbered 0.1, 0.2 a
 which are not versions of this Guide and were not released from this repository. Their content is
 summarised in [HISTORY.md](HISTORY.md); the text of 0.3 is in [history/](history/).
 
-[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.5...main
+[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.6...main
+[1.0.0-rc.6]: https://github.com/eiraman/guide/compare/v1.0.0-rc.5...v1.0.0-rc.6
 [1.0.0-rc.5]: https://github.com/eiraman/guide/compare/v1.0.0-rc.4...v1.0.0-rc.5
 [1.0.0-rc.4]: https://github.com/eiraman/guide/compare/v1.0.0-rc.3...v1.0.0-rc.4
 [1.0.0-rc.3]: https://github.com/eiraman/guide/compare/v1.0.0-rc.2...v1.0.0-rc.3

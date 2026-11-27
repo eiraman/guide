@@ -23,6 +23,11 @@ the `guide` repository.
 
 ## [Unreleased]
 
+**Pending update.** The English Guide 1.0.0-rc.6 ([RFC 0006](../../rfcs/0006-managerial-role-in-security.md), CR-031)
+adds three sentences at the end of the paragraph "Why Eiraman exists" (§2) and changes the version label. The
+translation still declares 1.0.0-rc.5 and must be updated to `1.0.0-rc.6+it.1`: translate the three
+sentences and update the version label and the "Nota alla traduzione". No normative key word is involved.
+
 ## [1.0.0-rc.5+it.1] - 2026-11-27
 
 First Italian translation, of The Eiraman Guide 1.0.0-rc.5 (commit `2635a69`, tag `v1.0.0-rc.5`). Local

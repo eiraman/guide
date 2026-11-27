@@ -14,7 +14,7 @@ From 1.0.0-rc.2, paragraphs added or changed by an RFC have their own rows, list
 | Row | Guide section | Paragraph |
 |---|---|---|
 | R001 | Title block | The Eiraman Guide |
-| R002 | Title block | Version 1.0.0-rc.5 |
+| R002 | Title block | Version 1.0.0-rc.6 |
 | R003 | Title block | Status |
 | R004 | §0 About this Guide | Normative language |
 | R005 | §0 About this Guide | Values and Guidance |
@@ -323,6 +323,12 @@ Paragraphs added or changed by [RFC 0005](rfcs/0005-classification-modes.md) in 
 | RFC0005-28 | §8.1 Phase playbooks | Discovery procedure (step Questions) (RFC 0005, D; changes RFC0003-15: new step) |
 | RFC0005-29 | §9 Commitments and artifacts | Shape of control artifacts (RFC 0005, N; minimum content of the level in the blocking mode) |
 
+Paragraphs added or changed by [RFC 0006](rfcs/0006-managerial-role-in-security.md) in 1.0.0-rc.6. The earlier rows stay as they are.
+
+| Row | Guide section | Paragraph |
+|---|---|---|
+| RFC0006-01 | §2 Eiraman theory | Why Eiraman exists (RFC 0006, D; changes R008: the managerial role extends to security; information for one's own use, blocking by default in work and organisations) |
+
 ## Count check
 
 - G rows in the coverage table: **189** (160 in the first draft; 29 rows moved from the Extended Framework by PA-1 C and PA-6 B)
@@ -336,5 +342,6 @@ Paragraphs added or changed by [RFC 0005](rfcs/0005-classification-modes.md) in 
 - Rows added by RFC 0003: **30** (24 normative, 6 descriptive); every normative one has a key word in capitals. The check of these rows was run for 1.0.0-rc.3 by a script written for the release, which finds each paragraph by its label and tests the key words
 - Rows added by RFC 0004: **14** (14 normative, 0 descriptive); every one has a key word in capitals. The check of these rows was run for 1.0.0-rc.4 by a script written for the release, which finds each paragraph by its label and tests the key words. The full coverage check behind the result below was last run for 1.0.0-rc.2 and was not re-run for 1.0.0-rc.3 or 1.0.0-rc.4
 - Rows added by RFC 0005: **29** (26 normative, 3 descriptive); every normative one has a key word in capitals. The check of these rows was run for 1.0.0-rc.5 by a script written for the release, which finds each paragraph or item by its label and tests the key words. The full coverage check behind the result below was last run for 1.0.0-rc.2 and was not re-run for 1.0.0-rc.3, 1.0.0-rc.4 or 1.0.0-rc.5
+- Rows added by RFC 0006: **1** (0 normative, 1 descriptive); the paragraph carries no key word in capitals, as a descriptive row requires. Checked for 1.0.0-rc.6 by finding the paragraph by its label and testing the key words. The full coverage check behind the result below was last run for 1.0.0-rc.2 and was not re-run for 1.0.0-rc.3 to 1.0.0-rc.6
 
 Result: **PASS**. G rows in the coverage table equal rows mapped (189 = 189), and every RFC row maps to a paragraph of the Guide. The check is run by a script that reads the coverage table, this table and the Guide, finds each paragraph by its label, and tests the key words.
