@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # La Guida Eiraman
 
-**Versione 1.0.0-rc.6 · novembre 2026 · Release candidate**
+**Versione 1.0.0-rc.7 · novembre 2026 · Release candidate**
 
 > **Nota alla traduzione.** Questo documento è la traduzione italiana curata di *The Eiraman Guide*, versione 1.0.0-rc.7 proposta (repository `guide`, ramo `cr-033-guida`, non ancora pubblicata; ultima base pubblicata 1.0.0-rc.6, commit `d39ce03`). Versione della traduzione: **1.0.0-rc.7+it.1**. Il testo inglese, [EIRAMAN-GUIDE.md](../../EIRAMAN-GUIDE.md), è il testo canonico. La traduzione è curata e approvata dall'Autore (decisione D-IT-1). Il testo normativo è quello inglese, che prevale in caso di differenza. La traduzione non aggiunge, non toglie e non modifica alcuna regola. Sezioni e paragrafi hanno la stessa numerazione e lo stesso ordine dell'originale.
 >

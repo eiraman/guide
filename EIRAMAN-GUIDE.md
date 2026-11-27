@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # The Eiraman Guide
 
-**Version 1.0.0-rc.6 · November 2026 · Release candidate**
+**Version 1.0.0-rc.7 · November 2026 · Release candidate**
 
 **Attribution.** The Eiraman Guide by Paolo Ungari and contributors.
 
