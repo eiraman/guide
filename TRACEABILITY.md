@@ -14,7 +14,7 @@ From 1.0.0-rc.2, paragraphs added or changed by an RFC have their own rows, list
 | Row | Guide section | Paragraph |
 |---|---|---|
 | R001 | Title block | The Eiraman Guide |
-| R002 | Title block | Version 1.0.0-rc.4 |
+| R002 | Title block | Version 1.0.0-rc.5 |
 | R003 | Title block | Status |
 | R004 | §0 About this Guide | Normative language |
 | R005 | §0 About this Guide | Values and Guidance |
@@ -289,6 +289,40 @@ Paragraphs added or changed by [RFC 0004](rfcs/0004-running-above-qualified-leve
 | RFC0004-13 | §14 Applicability: classes, levels and the gate | Independence of the Security Officer (RFC 0004, N; new paragraph) |
 | RFC0004-14 | §7 AI Squads and Digital Seniority | Hard blinding (RFC 0004, N; changes RFC0003-07: the Security Officer) |
 
+Paragraphs added or changed by [RFC 0005](rfcs/0005-classification-modes.md) in 1.0.0-rc.5. The earlier rows stay as they are. Where a paragraph already has a row of RFC 0001, 0003 or 0004, the note names the latest one; the coverage rows of the other paragraphs are not named here.
+
+| Row | Guide section | Paragraph |
+|---|---|---|
+| RFC0005-01 | §14 Applicability: classes, levels and the gate | Classification mode (RFC 0005, N; new paragraph) |
+| RFC0005-02 | §14 Applicability: classes, levels and the gate | Principle (RFC 0005, N; changes RFC0004-01: the class stops a project in the blocking mode only) |
+| RFC0005-03 | §14 Applicability: classes, levels and the gate | Deliverables (RFC 0005, N; the example holds in the blocking mode; class recorded in the informative mode) |
+| RFC0005-04 | §14 Applicability: classes, levels and the gate | Out of scope at any level (RFC 0005, N; the exclusion holds in the blocking mode) |
+| RFC0005-05 | §14 Applicability: classes, levels and the gate | Out of scope in the informative mode (RFC 0005, N; new paragraph) |
+| RFC0005-06 | §14 Applicability: classes, levels and the gate | Applicability gate (RFC 0005, N; changes RFC0004-08: the gate stops a project in the blocking mode only) |
+| RFC0005-07 | §14 Applicability: classes, levels and the gate | Security Officer in the informative mode (RFC 0005, N; new paragraph) |
+| RFC0005-08 | §14 Applicability: classes, levels and the gate | Local engines in the informative mode (RFC 0005, N; new paragraph) |
+| RFC0005-09 | §3 Context principles | Some uses are excluded (RFC 0005, N; in the blocking mode only) |
+| RFC0005-10 | §2 Eiraman theory | Management applied to AI (item Scope and risk management) (RFC 0005, D; changes RFC0003-01: levels limit risk or make it known) |
+| RFC0005-11 | §4 Accountabilities | Internal accountability (RFC 0005, N; answer for proceeding in the informative mode) |
+| RFC0005-12 | §4 Accountabilities | Liability towards third parties (RFC 0005, N; changes RFC0004-05: sentence on the informative mode) |
+| RFC0005-13 | §5 3D escalation: Deny, Delegate, Do | Deny (RFC 0005, N; changes RFC0004-06: the adoption level is enforced in the blocking mode) |
+| RFC0005-14 | §5 3D escalation: Deny, Delegate, Do | Do (RFC 0005, N; changes RFC0004-07: personal data, third parties and class changes in the informative mode) |
+| RFC0005-15 | §9 Commitments and artifacts | Project record (RFC 0005, N; names the classification mode) |
+| RFC0005-16 | §12 Writing for the Human Manager | Three layers of documentation (item Managerial) (RFC 0005, N; the Security Report in the informative mode) |
+| RFC0005-17 | §12 Writing for the Human Manager | Third-party evidence pack (RFC 0005, N; mode and Security Report) |
+| RFC0005-18 | §12 Writing for the Human Manager | Security Report (RFC 0005, N; new paragraph) |
+| RFC0005-19 | §13 Role Profiles | Minimum content (item on declared limits) (RFC 0005, N; limits recorded in the informative mode) |
+| RFC0005-20 | §14.2 Moving between levels and classes | Class change (RFC 0005, N; changes RFC0004-03: the Do and the drift budget in the blocking mode only) |
+| RFC0005-21 | §4 Accountabilities | Human Manager (item on approvals) (RFC 0005, N; class approved in the blocking mode only) |
+| RFC0005-22 | §8 Lifecycle and events | Phases and decisions (Discovery item) (RFC 0005, N; changes RFC0001-21: class approved in the blocking mode only) |
+| RFC0005-23 | §14 Applicability: classes, levels and the gate | Project classes (RFC 0005, N; a case that fits no class) |
+| RFC0005-24 | §5 3D escalation: Deny, Delegate, Do | E5 · Drift budget (RFC 0005, N; changes RFC0003-03: class changes in the informative mode) |
+| RFC0005-25 | §8 Lifecycle and events | Question round (RFC 0005, N; new paragraph) |
+| RFC0005-26 | §8 Lifecycle and events | Gates (RFC 0005, N; changes RFC0003-12: a gate after the question round) |
+| RFC0005-27 | §8.1 Phase playbooks | Roles in the Discovery group (item User Personas) (RFC 0005, D; changes RFC0001-17: first answers in the question round) |
+| RFC0005-28 | §8.1 Phase playbooks | Discovery procedure (step Questions) (RFC 0005, D; changes RFC0003-15: new step) |
+| RFC0005-29 | §9 Commitments and artifacts | Shape of control artifacts (RFC 0005, N; minimum content of the level in the blocking mode) |
+
 ## Count check
 
 - G rows in the coverage table: **189** (160 in the first draft; 29 rows moved from the Extended Framework by PA-1 C and PA-6 B)
@@ -301,5 +335,6 @@ Paragraphs added or changed by [RFC 0004](rfcs/0004-running-above-qualified-leve
 - Rows added by RFC 0001: **21** (16 normative, 5 descriptive); every normative one has a key word in capitals
 - Rows added by RFC 0003: **30** (24 normative, 6 descriptive); every normative one has a key word in capitals. The check of these rows was run for 1.0.0-rc.3 by a script written for the release, which finds each paragraph by its label and tests the key words
 - Rows added by RFC 0004: **14** (14 normative, 0 descriptive); every one has a key word in capitals. The check of these rows was run for 1.0.0-rc.4 by a script written for the release, which finds each paragraph by its label and tests the key words. The full coverage check behind the result below was last run for 1.0.0-rc.2 and was not re-run for 1.0.0-rc.3 or 1.0.0-rc.4
+- Rows added by RFC 0005: **29** (26 normative, 3 descriptive); every normative one has a key word in capitals. The check of these rows was run for 1.0.0-rc.5 by a script written for the release, which finds each paragraph or item by its label and tests the key words. The full coverage check behind the result below was last run for 1.0.0-rc.2 and was not re-run for 1.0.0-rc.3, 1.0.0-rc.4 or 1.0.0-rc.5
 
 Result: **PASS**. G rows in the coverage table equal rows mapped (189 = 189), and every RFC row maps to a paragraph of the Guide. The check is run by a script that reads the coverage table, this table and the Guide, finds each paragraph by its label, and tests the key words.

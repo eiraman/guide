@@ -13,6 +13,99 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ## [Unreleased]
 
+## [1.0.0-rc.5] - 2026-11-27
+
+Fifth release candidate. Not yet in force. It implements
+[RFC 0005](rfcs/0005-classification-modes.md), from change requests CR-022 and CR-023 and the Human Manager's
+decisions recorded in them. The Author accepted RFC 0005 on 27 November 2026 (Do-S29), before the end of its
+comment period and for the community-maintained sections §14 and §14.2: two recorded deviations. No run of the
+test bench has used either classification mode or the question round.
+
+### Added
+
+- **§14, Classification mode** (MUST, MUST NOT, MAY): the classification works in a blocking or an informative
+  mode. In the informative mode the same rules stop nothing; the Security Officer records the class and every
+  finding in the Security Report and the Human Manager answers for proceeding. The Human Manager may choose
+  the mode at the opening; the mandate records it. Without a choice, informative MUST apply for personal use
+  and blocking in every other case, doubt included. An organisation may impose the blocking mode on the
+  projects opened and versions approved while its rules are in force. The mode MUST NOT change during a
+  project, except for a new version under such rules.
+- **§14, Classification mode, informative mode** — **relaxed rules**: the classification MUST NOT stop or
+  reduce any action; the rules of §14.2 that stop a project or limit its data or releases do not, except that
+  the environment MUST Deny the work depending on a lapsed requirement set by another rule; a requirement of
+  §14.1 other than Error budget that no other rule sets MAY be left unmet and MUST be listed in the report.
+  Error budget MUST apply in both modes. Evidence of a project in the informative mode MUST NOT count towards
+  a higher level.
+- **§14, Classification mode, refusals** (both modes; MUST, MUST NOT): an action a model refuses MUST NOT be
+  performed by the same model with another request, nor by another model, candidate or Digital Seniority level;
+  the output of every competing candidate for it MUST be discarded; the refusal is recorded in the Security
+  Report in the informative mode, and in the Log Tracker and the cycle review in the blocking mode; it MUST NOT
+  count as a failure for lack of capability (§7.1); the Work Package is closed without the action when its
+  mandatory checks pass, or re-planned; in doubt between refusal and incapacity it is a refusal. **Changed
+  rule** of §9 Dissent or missing proof: a refused mandatory check keeps the package open, MUST NOT be repeated
+  or assigned to another verifier, and goes to the Human Manager as a Do.
+- **§14, Out of scope in the informative mode** — **relaxed rule**: the excluded cases, AI systems that the law
+  prohibits included, MUST NOT stop the project and MUST be recorded; a case that fits no class MUST be recorded
+  as out of scope; the project record states it in place of the class.
+- **§14, Security Officer in the informative mode** (MUST, MUST NOT, MAY) — **relaxed rules**: silent, it MUST
+  NOT start an exchange with the Human Manager or write to them outside the Security Report and the answers
+  under Dialogue with the Human Manager; the scope MUST NOT be reduced on grounds of the classification; what it
+  cannot determine is recorded as not determined; reversible protections MAY be applied by delegation and are
+  recorded; Risk profile, Treatments and Questions for the organisation apply in the blocking mode only, so the
+  limit to test data while the organisation answers does not apply; in the Manager View the Security Report is
+  attached in place of the risk profile; the findings of security, privacy and legal and compliance reviewers on
+  class, presence of personal data and exclusions are recorded in the report and MUST NOT keep a package open or
+  stop or reopen a phase; their other findings follow §9.
+- **§14, Local engines in the informative mode** (MUST, MUST NOT): the mandate states the local engines that run
+  the agents or are part of the product; none is used before the Human Manager approves it, with the mandate
+  or by a Do; adding one later is a Do; the report names the engines.
+- **§12, Security Report** (MUST, MUST NOT): shipped with every release in the informative mode, with fixed
+  contents, updated at every Wave and release.
+- **§8, Question round** (MUST, MUST NOT): before divergence every executor says what is not known and who
+  should be asked; the User Personas answer with source and confidence; the least certain questions, up to the
+  number the mandate sets (before its approval, the number communicated at the start of Discovery), reach the
+  Human Manager with the answer supposed; the others become visible assumptions.
+- **§8.1, Discovery procedure**: step *Questions*, once, before the first round.
+- `rfcs/0005-classification-modes.md`, accepted (Do-S29), and its row in `rfcs/README.md`.
+
+### Changed
+
+- **§14, Principle** — **relaxed rule**: the prohibition to run above the qualified level holds in the blocking
+  mode; every project MUST have a class or, in the informative mode, the record that it fits none.
+- **§14, Deliverables** — **relaxed rule**: the example holds in the blocking mode; in the informative mode the
+  class of the deliverables MUST be recorded.
+- **§14, Out of scope at any level** — **relaxed rule**: the MUST NOT holds in the blocking mode.
+- **§14, Project classes** — **relaxed rule**: exception for a case that fits no class.
+- **§14, Applicability gate** — **relaxed rule**: out-of-scope treatment in the blocking mode only; in the
+  informative mode the gate MUST NOT stop the project and MUST record its findings; a repeated gate with
+  unchanged scope MAY be recorded by reference to the last run.
+- **§3, Some uses are excluded** — **relaxed rule**, a context principle: the exclusion holds in the blocking
+  mode.
+- **§2, Management applied to AI**: adoption levels limit risk up front or make it known.
+- **§4, Internal accountability** and **Liability towards third parties**: the Human Manager answers for
+  proceeding in the informative mode.
+- **§4, Human Manager** — **relaxed rule**: approval of the project class in the blocking mode only; the same in
+  **§8, Phases and decisions**, Discovery.
+- **§5, Deny** — **relaxed rule**: Deny for the adoption level in the blocking mode.
+- **§5, Do** — **relaxed rules**: in the informative mode personal data, third parties and changes of class MUST
+  NOT go to the Human Manager as a Do on that ground alone, even where the mandate reserves the first two.
+- **§5, E5 · Drift budget** — **relaxed rule**: in the informative mode a change of class MUST NOT count towards
+  the drift budget or be reported as an item of its own, and is recorded in the Security Report; the spending
+  and time it causes count as any deviation.
+- **§14.2, Class change** — **relaxed rule**: the Do and the four options in the blocking mode only.
+- **§8, Gates**: one gate MUST follow the question round.
+- **§8.1, Roles in the Discovery group**: the User Personas give first answers to the question round.
+- **§9, Project record** (MUST broadened): it names the classification mode.
+- **§9, Shape of control artifacts** — **relaxed rule**: in the informative mode content that only §14.1
+  requires MAY be left out; the documents §12 lists are kept.
+- **§12, Three layers of documentation** and **Third-party evidence pack** (MUST broadened): the managerial
+  layer includes the Security Report in the informative mode; the pack names the classification mode and, in the
+  informative mode, MUST include the Security Report.
+- **§13, Minimum content** — **relaxed rule**: in the informative mode a limit of the Security Officer or of a
+  security, privacy or legal and compliance profile is recorded instead of taking the project out of the method.
+- Title block, `README.md` and row R002 of `TRACEABILITY.md`: version 1.0.0-rc.5; `README.md` lists RFC 0005.
+- `TRACEABILITY.md`: twenty-nine rows marked "RFC 0005"; all earlier rows kept.
+
 ## [1.0.0-rc.4] - 2026-11-26
 
 Fourth release candidate. Not yet in force. It implements
@@ -315,7 +408,8 @@ The method was published before as an Italian specification, numbered 0.1, 0.2 a
 which are not versions of this Guide and were not released from this repository. Their content is
 summarised in [HISTORY.md](HISTORY.md); the text of 0.3 is in [history/](history/).
 
-[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.4...main
+[Unreleased]: https://github.com/eiraman/guide/compare/v1.0.0-rc.5...main
+[1.0.0-rc.5]: https://github.com/eiraman/guide/compare/v1.0.0-rc.4...v1.0.0-rc.5
 [1.0.0-rc.4]: https://github.com/eiraman/guide/compare/v1.0.0-rc.3...v1.0.0-rc.4
 [1.0.0-rc.3]: https://github.com/eiraman/guide/compare/v1.0.0-rc.2...v1.0.0-rc.3
 [1.0.0-rc.2]: https://github.com/eiraman/guide/compare/v1.0.0-rc.1...v1.0.0-rc.2

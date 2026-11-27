@@ -32,3 +32,4 @@ A rejected Guide RFC may be resubmitted with new evidence after 6 months.
 | [0002](0002-governo-family.md) | Regularise the Role Profile family `governo/` and its working group | Steward (governance; also the Author in Stage 1) | accepted (alternative B) |
 | [0003](0003-critical-review-corrections.md) | Corrections from the critical review of specification 0.3 | Author (Guide) | accepted |
 | [0004](0004-running-above-qualified-level.md) | Running a class 1 project from level 0, by decision of the Human Manager; the Security Officer | Author (Guide) | accepted |
+| [0005](0005-classification-modes.md) | Security classification in two modes, and the question round of Discovery | Author (Guide) | accepted |
