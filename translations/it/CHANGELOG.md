@@ -23,6 +23,8 @@ the `guide` repository.
 
 ## [Unreleased]
 
+- §14, «Dialogo con il Manager umano»: traduzione del passaggio all'Interprete.
+
 - §4, Revisore AI: traduzione della nuova regola di avvio, a eventi e a campione.
 
 - §4, Interprete: traduzione della riga sui rapporti del Revisore AI e del Security Officer passati senza modifiche (decisione 4 della review dei profili, CR-033).
