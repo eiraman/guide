@@ -33,6 +33,9 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
   DOVREBBERO, 3 PUÒ/POSSONO), and the Status "not measured"; glossary and notes on the source updated; the
   note "Pending update" of `translations/it/CHANGELOG.md` is replaced by the entry of that version. The English
   text is not changed.
+- `translations/it/CHANGELOG.md`, `[Unreleased]`: records the Author's native-speaker review of the Italian translation `1.0.0-rc.6+it.1` on
+  2026-11-27, with no change to the text; the "Not verified" point is closed under D-IT-1 (CR-032). The Guide version and the
+  translation version are unchanged, and nothing is tagged (VERSIONING §1, notes).
 
 ## [1.0.0-rc.6] - 2026-11-27
 
