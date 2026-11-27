@@ -34,7 +34,7 @@ texts that the source adds or changes are translated. Local candidate: not tagge
 
 - **§2, "Perché esiste Eiraman"**: the three sentences that the source adds at the end of the paragraph, on the
   data people handle, the managerial role extended to security and the two defaults of the classification.
-- **§2, "Il metodo si applica a se stesso"**: the new descriptive paragraph.
+- **§2, "Il metodo si applica a sé stesso"**: the new descriptive paragraph.
 - **§15, "Misurare il metodo"**: the new normative paragraph, with the key words of the source one for one. In
   §15 the translation now carries 28 DEVE/DEVONO (was 12), 4 NON DEVE/NON DEVONO (was 2), 1 NON DOVREBBERO
   (was 0), 3 PUÒ/POSSONO (was 2) and no DOVREBBE, as the source; in the whole text 366, 68, 7 DOVREBBE, 3 NON
@@ -44,7 +44,7 @@ texts that the source adds or changes are translated. Local candidate: not tagge
   simulato, brief, «non misurata», «non dimostrato», indicatore primario, costo di riallineamento, applicazioni
   di prova and the other terms of the new texts; three notes on the choices (Collaudo, Baseline, Fault). The
   section "Note sulle scelte" keeps its text and becomes section 10.
-- `SOURCE-NOTES.md`: points 19 to 24, on the texts added by 1.0.0-rc.6.
+- `SOURCE-NOTES.md`: points 19 to 25, on the texts added by 1.0.0-rc.6.
 
 ### Changed
 
@@ -54,8 +54,10 @@ texts that the source adds or changes are translated. Local candidate: not tagge
 - `SOURCE-NOTES.md`: the source version in the heading and in point 18.
 - This changelog: the note "Pending update", written with the source, is replaced by this entry.
 
-**Not verified.** No independent review of this version of the translation and no native-speaker review by a
-second person have taken place; the translation was prepared with AI assistance (see the commit trailers).
+**Review.** An independent AI review of the candidate (commit `e2355f5`) gave PASS with one minor correction
+and two refinements, applied in this version: «sé stesso» with the accent in §2 (was «se stesso»), «non pone
+alcun obbligo a carico di chi adotta» in §15, and point 25 of `SOURCE-NOTES.md`. **Not verified.** No
+native-speaker review by a second person has taken place; the translation was prepared with AI assistance (see the commit trailers).
 
 ## [1.0.0-rc.5+it.1] - 2026-11-27
 
