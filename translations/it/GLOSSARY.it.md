@@ -236,11 +236,42 @@ I nomi dei gruppi di lavoro restano come nei documenti di comunità: DevSecOps &
 | declaration of partial conformity | dichiarazione di conformità parziale | S |
 | feedback into the method | ritorno al metodo | S |
 
-## 9. Note sulle scelte
+## 9. Misura del metodo
+
+Termini entrati con la Guida 1.0.0-rc.6 (§2 e §15). La fonte **B** è il banco di prova del progetto, che usa già «banco di prova», «collaudo», «Fault» e «campagna».
+
+| Inglese | Italiano | Fonte |
+|---|---|---|
+| test bench, bench | banco di prova, banco | B |
+| bench testing | collaudo al banco | B («collaudo») |
+| testers (del banco) | collaudatori | N |
+| fault | Fault | B |
+| delivery (taken as it is) | consegna (presa così com'è) | B |
+| measurement campaign, campaign | campagna di misura, campagna | B |
+| baseline | baseline (resta in inglese, al femminile) | P, W |
+| simulated Human Manager | Manager umano simulato | N |
+| brief | brief (resta in inglese) | P |
+| "not measured" | «non misurata» (detto di una versione) | N |
+| "not demonstrated" | «non dimostrato» (detto di un esito) | N |
+| under measurement / measured agents | sotto misura / agenti misurati | N |
+| hypothesis | ipotesi | P |
+| primary indicator | indicatore primario | N |
+| margin / repetitions | margine / ripetizioni | P |
+| cost of realignment | costo di riallineamento | N |
+| test applications | applicazioni di prova | N |
+| change requests | Change Request | termine fisso del progetto |
+| regulatory compliance | conformità normativa | N |
+| by default | per impostazione predefinita | N |
+| feeds itself | si alimenta da sé | N |
+
+## 10. Note sulle scelte
 
 - **Scoperta.** La specifica 0.3 e il sito chiamano «Scoperta» la prima fase; i profili più recenti usano anche «Discovery». La traduzione usa «Scoperta» in tutto il testo.
 - **Trattamento.** In italiano la stessa parola traduce *treatment* (le opzioni che il Security Officer propone, §14) e *processing* (il trattamento dei dati personali). Il contesto distingue i due sensi; il paragrafo «Trattamenti» del §14 riguarda solo il primo.
 - **Livello e strato.** «Livello» traduce *level* (livello di adozione, livello SD, livello di confidenza) e *tier* (livelli dei ruoli), come nella specifica 0.3. *Layer* si rende «strato» (strati di documentazione, strato operativo), per non confonderlo con i livelli di adozione.
 - **Fornitore.** «Fornitore» traduce *supplier*, *provider* e *vendor* in tutto il testo, anche nella tabella delle classi di dati per fornitore (§11).
 - **Figure.** *Personas* dei ruoli di livello alto (§7) si rende «figure»; «User Personas» resta il nome del ruolo.
+- **Collaudo.** «Collaudo al banco» (*bench testing*, §15) misura il metodo; «collaudo di accettazione» (*acceptance testing*, §9.1) riguarda un progetto. Il §15 tiene distinti i due.
+- **Baseline.** Resta in inglese: il progetto usa già «la baseline» nei profili, negli strumenti e sul sito, e «riferimento» o «linea di base» si confonderebbero con altri usi.
+- **Fault.** Resta in inglese e con l'iniziale maiuscola, come nei documenti del banco di prova; la fonte scrive «fault» in minuscolo.
 - **Attribuzione.** La riga di attribuzione «The Eiraman Guide by Paolo Ungari and contributors» resta in inglese, perché è la formula richiesta dalla licenza.

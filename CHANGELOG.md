@@ -24,6 +24,16 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
   NON DOVREBBE and PUÒ, with the same counts section by section; it adds, removes and changes no obligation.
   Row for the translation in `README.md`.
 
+### Changed
+
+- `translations/it/`: the Italian translation is updated to the Guide 1.0.0-rc.6, version of the translation
+  `1.0.0-rc.6+it.1` (CR-031, decisions D-031 and D-031-B). It translates the three sentences added to "Why
+  Eiraman exists" and the paragraph "The method applies to itself" (§2), the paragraph "Measuring the method"
+  (§15), with the same key words as the source (in §15: 28 DEVE/DEVONO, 4 NON DEVE/NON DEVONO, 1 NON
+  DOVREBBERO, 3 PUÒ/POSSONO), and the Status "not measured"; glossary and notes on the source updated; the
+  note "Pending update" of `translations/it/CHANGELOG.md` is replaced by the entry of that version. The English
+  text is not changed.
+
 ## [1.0.0-rc.6] - 2026-11-27
 
 Sixth release candidate. Not yet in force and **not measured**: no measurement campaign of the method has been

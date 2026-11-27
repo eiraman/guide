@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # Notes on the source
 
-Points of the English source, [EIRAMAN-GUIDE.md](../../EIRAMAN-GUIDE.md) 1.0.0-rc.5 (commit `2635a69`), found
+Points of the English source, [EIRAMAN-GUIDE.md](../../EIRAMAN-GUIDE.md) 1.0.0-rc.6 (commit `d39ce03`), found
 ambiguous or odd while preparing the Italian translation, [EIRAMAN-GUIDE.it.md](EIRAMAN-GUIDE.it.md). Each
 point is translated faithfully and is not corrected: the English text is canonical, and a correction of the
 source needs an RFC. These notes are part of the translation and share its version and its
@@ -30,4 +30,10 @@ source needs an RFC. These notes are part of the translation and share its versi
 | 15 | §14.1 Level 1 · Evidence | "detection of a deliberately vulnerable test suite" | Literally the suite is detected, not the vulnerabilities placed in it (specification 0.3: "rilevazione di una suite di vulnerabilità inserite di proposito") | Literal: «rilevazione di una suite di prova deliberatamente vulnerabile» |
 | 16 | §14.2 Running above the qualified level | "the exception below for the work on test data does not apply to it" | "it" can be the doubt or the case of a class in doubt; "below" points to the next sentence | «l'eccezione indicata sotto per il lavoro su dati di prova non si applica a questo caso» |
 | 17 | §14.2 Running above the qualified level | "moving up follows Moving up" | Self-reference to the paragraph of the same name | «la salita segue Salita» |
-| 18 | §16 Version history | "Version 1.0 supersedes the Italian specification 0.3" | The document is 1.0.0-rc.5, a release candidate not yet in force | «La versione 1.0 sostituisce la specifica italiana 0.3» |
+| 18 | §16 Version history | "Version 1.0 supersedes the Italian specification 0.3" | The document is 1.0.0-rc.6, a release candidate not yet in force | «La versione 1.0 sostituisce la specifica italiana 0.3» |
+| 19 | §2 Why Eiraman exists | "this knowledge is, by default, information"; "in work and organisational contexts it is blocking by default" | §14 names the modes "informative" and "blocking" and sets the blocking mode "in every other case", doubt included; here the wording is looser ("information", "work and organisational contexts") | «questa conoscenza è, per impostazione predefinita, informazione»; «nei contesti di lavoro e organizzativi è bloccante per impostazione predefinita» |
+| 20 | §15 Measuring the method | "the Maintainers (§4) for the Extended Framework and, with them, the Role Profiles and Tools" | "them" has no clear antecedent (the Maintainers, or the Extended Framework, which is singular); "Maintainers" is capitalised here and not elsewhere | «i Manutentori (§4) per il Framework esteso e, con essi, i Role Profile e gli Strumenti» |
+| 21 | §15 Measuring the method | "they MUST record as a fault, that is, any failure of the delivery to do what its instructions say or what was asked, everything that does not work" | The definition of fault is inserted between the verb and its object | Same order: «DEVONO registrare come Fault, cioè ogni caso in cui la consegna non fa ciò che le sue istruzioni dicono o ciò che è stato chiesto, tutto ciò che non funziona» |
+| 22 | §15 Measuring the method | "whoever coordinates the work on the method MUST propose to the Human Manager" | The role is not among those of §4, and "the Human Manager" of the method is not defined in the Guide | «chi coordina il lavoro sul metodo DEVE proporre al Manager umano» |
+| 23 | §15 Measuring the method | "for a class of project"; "the classes the bench represents" | "class" can be the project classes 0 to 2 of §14 or a kind of project | «per una classe di progetto»; «le classi che il banco rappresenta» |
+| 24 | §15 Measuring the method | "An outcome of "not demonstrated" is enough for neither" | "neither" refers to the two consequences of the two sentences before it (reducing or removing a rule; stating the baseline for a class) | «Un esito «non dimostrato» non basta né per l'una né per l'altra cosa» |
