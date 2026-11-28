@@ -49,7 +49,8 @@ without DEVE, NON DEVE or PUÒ.
   scelta aperta, stato del progetto per gli agenti, iterazione, the three outcomes of the judge, Design
   completo and the others), taken from the Role Profile of the AI Manager in the registry where it has them;
   two notes on the choices (Manager AI; Deroga e tralasciare).
-- `SOURCE-NOTES.md`: points 26 to 39, on the texts of 1.0.0-rc.7.
+- `SOURCE-NOTES.md`: points 26 to 39, on the texts of 1.0.0-rc.7; points 32 and 35 to 39 assessed against the decisions of CR-041
+  (D-041-D, D-041-E, D-041-H) and marked resolved, with no change to the source or to the translation (WP-41A2).
 
 ### Changed
 
