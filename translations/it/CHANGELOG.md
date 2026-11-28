@@ -34,22 +34,21 @@ must translate, keeping the key words and their counts section by section (RFC 0
 - §4, «Human Manager» (first two items), «AI Manager» in place of «Interpreter», the new paragraphs «Approvals in
   the Human Manager's stead» and «Derogations of the AI Manager», «AI Coordinator» (opening and three new
   items), «Process reviewer», «Internal accountability»;
-- §5, the new paragraph «Do through the AI Manager»;
-- §6, the new paragraph «Outcome of review»;
+- §5, «E4 · Classifier» and the new paragraph «Do through the AI Manager»;
 - §7, «Role tiers» (Top), the SD table (SD4), «Agent blinding», the new paragraph «Omniscience», «Retrospective»,
   «Tolerance»;
 - §7.1, «Promotion and reduction», «Raising the level of a role»;
 - §8, «Phases and decisions» (opening, Proof of concept, Design and planning), the new paragraph «Iterations»,
   «Discovery group», «Question round» (through the AI Manager), «Convergence», the new paragraphs «Complete
-  design» and «A real proof of concept», «Governance cycle» (governance share);
+  design» and «A real proof of concept»;
 - §8.1, «Discovery procedure» (Iterate, Review, Judge), «Proof of concept and MVP»;
-- §9, «Product Backlog», «Definition of done», «Dissent or missing proof», the new paragraph «Closure by
-  derogation», «Manager View»;
+- §9, «Product Backlog», «Manager View»;
 - §12, «Three layers of documentation» (Strategic), «Messages between agents», «Writing rules» (opening);
 - §13, «Minimum content» (the sentence on the AI Manager);
-- §14, «Dialogue with the Human Manager» (AI Manager in place of Interpreter);
+- §14, «Dialogue with the Human Manager» (AI Manager in place of Interpreter; the Tools attach the risk profile);
 - the «Nota alla traduzione» (source commit and status) and the glossary: AI Manager, omniscience, derogation,
-  closure by derogation, open choice, iteration, the three outcomes of the judge.
+  open choice, iteration, the three outcomes of the judge. Under D-041-H the sentences on the AI Manager are
+  descriptive and carry no key word: the translation renders them without DEVE, NON DEVE or PUÒ.
 
 - §14, «Dialogo con il Manager umano»: traduzione del passaggio all'Interprete.
 
