@@ -28,13 +28,13 @@ the `guide` repository.
 that this translation already renders (commit `59402b6`). The Italian text is left unchanged; a translator
 must translate, keeping the key words and their counts section by section (RFC 0008, Impact):
 - §1, «Planning and many models» (the AI Manager among the roles);
-- §2, «Management applied to AI» (*Delegation*, *Design Thinking*, *Quality control*), the fourth difference
+- §2, «Management applied to AI» (*Delegation*, *Design Thinking*), the fourth difference
   between people and machines (human language), and the new paragraph «The laws of the AI Manager»;
 - §3, «Human as a Manager acts up front» (last sentence);
 - §4, «Human Manager» (first two items), «AI Manager» in place of «Interpreter», the new paragraphs «Approvals in
   the Human Manager's stead» and «Derogations of the AI Manager», «AI Coordinator» (opening and three new
   items), «Process reviewer», «Internal accountability»;
-- §5, «E4 · Classifier» and the new paragraph «Do through the AI Manager»;
+- §5, «Do» (opening), «E4 · Classifier» and the new paragraph «Do through the AI Manager»;
 - §7, «Role tiers» (Top), the SD table (SD4), «Agent blinding», the new paragraph «Omniscience», «Retrospective»,
   «Tolerance»;
 - §7.1, «Promotion and reduction», «Raising the level of a role»;

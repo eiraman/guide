@@ -365,12 +365,12 @@ Paragraphs added or changed by [RFC 0008](rfcs/0008-ai-manager-proportionate-dis
 | RFC0008-04 | §2 Eiraman theory | The laws of the AI Manager (RFC 0008, N; new paragraph) |
 | RFC0008-05 | §3 Context principles | Human as a Manager acts up front (RFC 0008, N; the AI Manager represents the Human Manager) |
 | RFC0008-06 | §4 Accountabilities | Human Manager (RFC 0008, N; approvals and Do escalations directly or through the AI Manager) |
-| RFC0008-07 | §4 Accountabilities | AI Manager (RFC 0008, D; new paragraph; replaces the Interpreter of the RFC 0007 text; behaviour descriptive under D-041-H; its closing sentence, normative, binds the Tools: the reports of the AI Reviewer and the Security Officer attached unchanged) |
+| RFC0008-07 | §4 Accountabilities | AI Manager (RFC 0008, D; new paragraph; replaces the Interpreter of the RFC 0007 text; behaviour descriptive under D-041-H; its closing sentence, normative, binds the Tools: they attach the reports of the AI Reviewer and the Security Officer unchanged) |
 | RFC0008-08 | §4 Accountabilities | Approvals in the Human Manager's stead (RFC 0008, N; new paragraph; the AI Coordinator sends; reserved items as consequences of the first law; one-way doors, D-041-E) |
 | RFC0008-09 | §4 Accountabilities | Derogations of the AI Manager (RFC 0008, D; new paragraph, descriptive under D-041-H) |
 | RFC0008-10 | §4 Accountabilities | AI Coordinator (RFC 0008, N; changes RFC0007-03: state for the agents, open choices, derogations) |
 | RFC0008-11 | §4 Accountabilities | Process reviewer (RFC 0008, N; escalations through the AI Manager) |
-| RFC0008-12 | §4 Accountabilities | Internal accountability (RFC 0008, N; changes RFC0005-11: the AI Manager answers; the Human Manager remains accountable) |
+| RFC0008-12 | §4 Accountabilities | Internal accountability (RFC 0008, N; changes RFC0005-11: the AI Manager answers, descriptively; the Human Manager remains accountable) |
 | RFC0008-13 | §5 3D escalation: Deny, Delegate, Do | E4 · Classifier (RFC 0008, N; a Do reaches the AI Manager, D-041-E) |
 | RFC0008-14 | §5 3D escalation: Deny, Delegate, Do | Do through the AI Manager (RFC 0008, N; new paragraph; one-way doors, D-041-E) |
 | RFC0008-15 | §7 AI Squads and Digital Seniority | Role tiers (item Top) (RFC 0008, N; changes RFC0007-07: the AI Manager) |
@@ -382,10 +382,10 @@ Paragraphs added or changed by [RFC 0008](rfcs/0008-ai-manager-proportionate-dis
 | RFC0008-21 | §7.1 Digital Seniority catalogue | Promotion and reduction (RFC 0008, N; changes RFC0007-13: open choices decided by the AI Manager; the cap a value of the mandate) |
 | RFC0008-22 | §7.1 Digital Seniority catalogue | Raising the level of a role (RFC 0008, N; changes RFC0007-16: decided by the AI Manager) |
 | RFC0008-23 | §8 Lifecycle and events | Phases and decisions (RFC 0008, N; changes RFC0005-22: through the AI Manager; a real proof of concept; acceptance criteria) |
-| RFC0008-24 | §8 Lifecycle and events | Iterations (RFC 0008, N; new paragraph) |
+| RFC0008-24 | §8 Lifecycle and events | Iterations (RFC 0008, N; new paragraph; Discovery reopened after the fact, Design and proof of concept decided at the end of an iteration) |
 | RFC0008-25 | §8 Lifecycle and events | Discovery group (RFC 0008, N; no minimum, roles decided by the AI Manager (D-041-B, D-041-G)) |
 | RFC0008-26 | §8 Lifecycle and events | Question round (RFC 0008, N; changes RFC0005-25: through the AI Manager) |
-| RFC0008-27 | §8 Lifecycle and events | Convergence (RFC 0008, N; proposed Decisions; content criteria; inputs and three outcomes of the judge; the Vision, D-041-D) |
+| RFC0008-27 | §8 Lifecycle and events | Convergence (RFC 0008, N; proposed Decisions; content criteria; inputs and three outcomes of the judge; the Vision, D-041-D; «convergent with reservations» to the Human Manager) |
 | RFC0008-28 | §8 Lifecycle and events | Complete design (RFC 0008, N; new paragraph: the Tools check and report; backlog review) |
 | RFC0008-29 | §8 Lifecycle and events | A real proof of concept (RFC 0008, N; new paragraph) |
 | RFC0008-30 | §8.1 Phase playbooks | Discovery procedure (steps Iterate, Review, Judge) (RFC 0008, D; iterations) |
@@ -397,6 +397,7 @@ Paragraphs added or changed by [RFC 0008](rfcs/0008-ai-manager-proportionate-dis
 | RFC0008-36 | §12 Writing for the Human Manager | Writing rules (RFC 0008, N; through the AI Manager) |
 | RFC0008-37 | §13 Role Profiles | Minimum content (RFC 0008, N; changes RFC0005-19: the laws of the AI Manager) |
 | RFC0008-38 | §14 Applicability: classes, levels and the gate | Dialogue with the Human Manager (RFC 0008, N; changes RFC0007-18: through the AI Manager; the Tools attach the risk profile) |
+| RFC0008-39 | §5 3D escalation: Deny, Delegate, Do | Do (RFC 0008, N; changes RFC0005-14: the list goes to the Human Manager through the AI Manager) |
 
 ## Count check
 
@@ -412,6 +413,6 @@ Paragraphs added or changed by [RFC 0008](rfcs/0008-ai-manager-proportionate-dis
 - Rows added by RFC 0004: **14** (14 normative, 0 descriptive); every one has a key word in capitals. The check of these rows was run for 1.0.0-rc.4 by a script written for the release, which finds each paragraph by its label and tests the key words. The full coverage check behind the result below was last run for 1.0.0-rc.2 and was not re-run for 1.0.0-rc.3 or 1.0.0-rc.4
 - Rows added by RFC 0005: **29** (26 normative, 3 descriptive); every normative one has a key word in capitals. The check of these rows was run for 1.0.0-rc.5 by a script written for the release, which finds each paragraph or item by its label and tests the key words. The full coverage check behind the result below was last run for 1.0.0-rc.2 and was not re-run for 1.0.0-rc.3, 1.0.0-rc.4 or 1.0.0-rc.5
 - Rows added by RFC 0006: **4** (1 normative, 3 descriptive); the normative one has key words in capitals and the descriptive ones have none. Checked for 1.0.0-rc.6 by finding each paragraph by its label and testing the key words. The full coverage check behind the result below was last run for 1.0.0-rc.2 and was not re-run for 1.0.0-rc.3 to 1.0.0-rc.6
-- Rows added by RFC 0007: **18** (16 normative, 2 descriptive) and by RFC 0008: **38** (29 normative, 9 descriptive; the descriptive row of the AI Manager carries one normative closing sentence that binds the Tools); every normative one has a key word in capitals and the descriptive ones have none. Checked for 1.0.0-rc.7 by finding each paragraph by its label and testing the key words. The full coverage check was not re-run for 1.0.0-rc.7
+- Rows added by RFC 0007: **18** (16 normative, 2 descriptive) and by RFC 0008: **39** (30 normative, 9 descriptive; the descriptive row of the AI Manager carries one normative closing sentence that binds the Tools); every normative one has a key word in capitals and the descriptive ones have none. Checked for 1.0.0-rc.7 by finding each paragraph by its label and testing the key words. The full coverage check was not re-run for 1.0.0-rc.7
 
 Result: **PASS**. G rows in the coverage table equal rows mapped (189 = 189), and every RFC row maps to a paragraph of the Guide. The check is run by a script that reads the coverage table, this table and the Guide, finds each paragraph by its label, and tests the key words.

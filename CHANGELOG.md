@@ -49,7 +49,10 @@ D-041-D to D-041-I). RFC 0008 replaces the Interpreter of RFC 0007 with the AI M
 released Guide has had the Interpreter. Under D-041-H the AI Manager is bound only by its four laws: its behaviour
 is described, not prescribed. Under D-041-I the Guide describes the behaviour tried in the pilots with the
 registry candidate `5818b13`; what was decided and is not in that kit, the closure by derogation of D-041-A and
-D-041-F among it, is an open question of RFC 0008 and not a rule. Both RFCs were accepted by the Author before the
+D-041-F among it, is an open question of RFC 0008 and not a rule. One rule is ahead of the kit by decision of the
+Human Manager («Guida senza minimo»), a declared exception to D-041-I: the Discovery group with no minimum; the
+kit `5818b13` still keeps the roles of rc.6 in the first iteration and does not let the functional analyst be left
+out, and is behind the Guide until it is aligned. Both RFCs were accepted by the Author before the
 end of their thirty-day comment period, and §7.1 without the proposal of its working groups, which are not yet
 formed: recorded deviations. Contrary evidence, stated in RFC 0008: in a single informal comparison the baseline
 of §15 reached a similar result at about one twentieth of the cost; it is not a campaign and does not trigger
@@ -65,8 +68,8 @@ SHOULD NOT 3 → 3, MAY 38 → 38 (per section in RFC 0007 and RFC 0008).
   human language and follow §12 (RFC 0007, RFC 0008).
 - §2, *Acceptance sampling* among the transposed practices (RFC 0007).
 - §4, **AI Manager**: representative of the Human Manager and only channel to the agents, under omniscience,
-  bound only by the four laws; its behaviour is described as a consequence of the laws; the reports of the AI
-  Reviewer and the Security Officer MUST reach the Human Manager unchanged, attached by the Tools (RFC 0008, D24,
+  bound only by the four laws in its decisions; its behaviour is described as a consequence of the laws; the Tools
+  MUST attach the reports of the AI Reviewer and the Security Officer to the Manager View unchanged (RFC 0008, D24,
   D27, D34, D-041-H).
 - §4, **Approvals in the Human Manager's stead**: the AI Coordinator MUST send approvals, Do escalations and
   questions to the AI Manager, which decides what it can assume and, under the first law, brings to the Human
@@ -78,14 +81,16 @@ SHOULD NOT 3 → 3, MAY 38 → 38 (per section in RFC 0007 and RFC 0008).
 - §4, AI Coordinator: keeps the state for the agents; MUST NOT ask for approvals or review costs and MUST send
   open choices; MUST execute and record derogations; runs at the base (RFC 0007, RFC 0008, D13, D26).
 - §5, **Do through the AI Manager** (MUST): every Do, one-way doors included, reaches the AI Manager, which
-  decides it or brings it to the Human Manager (RFC 0008, D-041-E).
+  decides it or brings it to the Human Manager; the same channel applies to every rule of the Guide that sends a
+  decision, a Do or a question to the Human Manager, §8, §14, §14.1 and §14.2 included (RFC 0008, D-041-E).
 - §6, **Review by samples** (MUST, MAY) (RFC 0007).
 - §7, **Omniscience**, descriptive, for the AI Manager only (RFC 0008, D24).
 - §7.1, **Cost of errors** (MUST) in tokens and **Raising the level of a role** (MUST for the open choice of the
   AI Coordinator; the raise is the AI Manager's) (RFC 0007, RFC 0008).
 - §8, **Iterations** (MUST, MUST NOT): proportionate and iterative Discovery and Design and planning; no automatic
-  round of correction; no stop for confirmations of form; the AI Manager decides another iteration (RFC 0008,
-  D29, D30, D33).
+  round of correction; no stop for confirmations of form; an iteration of Discovery closes on its own and the AI
+  Manager reopens it after the fact; at the end of an iteration of Design and planning, and after a negative proof
+  of concept, the AI Manager decides (RFC 0008, D29, D30, D33).
 - §8, **Complete design** (MUST): the Tools check the administration and data section and the user-verifiable
   acceptance criteria and report what is missing to the AI Manager; backlog review by the security and privacy
   reviewers once per iteration (RFC 0008, D38, D39).
@@ -107,11 +112,15 @@ SHOULD NOT 3 → 3, MAY 38 → 38 (per section in RFC 0007 and RFC 0008).
 - §4, AI Reviewer: no longer «in parallel» in «continuous monitoring»; the AI Coordinator MUST start it before
   the phase it watches, and it runs at the events and on the samples the Extended Framework suggests. An
   obligation is narrowed (RFC 0007, decision 4 of the review of the profiles).
-- §4, Internal accountability: the AI Manager answers to the Human Manager, who remains accountable (RFC 0008).
+- §4, Internal accountability: the AI Manager answers to the Human Manager through the Manager View, descriptively;
+  the Human Manager remains accountable; the sentence with MUST binds the AI Coordinator and the AI roles
+  (RFC 0008, D-041-H).
 - §5, E4 · Classifier: it decides whether a decision is a Do; a Do reaches the AI Manager (RFC 0008, D-041-E).
+- §5, Do: the list goes to the Human Manager through the AI Manager (RFC 0008, D-041-E).
 - §6, Seniority of the verifier: one SD level above the executor (was: at least the same level); the highest
   level in use verified by the Human Manager or another provider (RFC 0007, D15).
-- §7, Role tiers as a pyramid with the AI Manager at the top; SD table by role, SD4 the AI Manager; Unit Cost
+- §7, Role tiers as a pyramid with the AI Manager at the top; SD table by role, SD4 the AI Manager, SD5 «only
+  after a Do with a stated budget» (was: «by exception and with a recorded reason», RFC 0007, D11); Unit Cost
   includes review; Agent blinding with three positions; Retrospective through open choices to the AI Manager;
   Tolerance decided by the AI Manager (RFC 0007, RFC 0008).
 - §7.1, Catalogue per role with type, oracle and risk class per task, and the ladder of promotion; Fallback at the
@@ -124,8 +133,9 @@ SHOULD NOT 3 → 3, MAY 38 → 38 (per section in RFC 0007 and RFC 0008).
   out recorded; reviewers and judge unchanged (RFC 0008, D-041-B, D-041-G).
 - §8, Question round: through the AI Coordinator and the AI Manager (RFC 0008, D29).
 - §8, Convergence: Decisions proposed by the group and confirmed; iterations; content criteria; the judge's
-  inputs, its question and three outcomes; the Vision approved by the AI Manager on a convergent outcome, by the
-  Human Manager otherwise (RFC 0008, D35–D37, D-041-D).
+  inputs, its question and three outcomes; on «convergent» Discovery goes on and the AI Manager answers for the
+  Vision; «convergent with reservations» and «not convergent» go to the Human Manager (RFC 0008, D35–D37,
+  D-041-D).
 - §8.1, Discovery procedure (Iterate, Review, Judge) and Proof of concept and MVP, descriptive (RFC 0008).
 - §9, Product Backlog: acceptance criteria become the tester's tests (RFC 0008, D41).
 - §9, Manager View: written by the AI Manager; the state for the agents does not replace it (RFC 0008).
@@ -136,7 +146,11 @@ SHOULD NOT 3 → 3, MAY 38 → 38 (per section in RFC 0007 and RFC 0008).
 
 ### Removed
 
-- §7.1, Team participation: the obligation to join the team at the highest SD level of its tasks (RFC 0007, D12).
+- §7.1, Team participation: the obligation to join the team at the highest SD level of its tasks, and the MAY that
+  let the AI Coordinator give tasks of different levels to different agents when the saving exceeds the cost of
+  handing over the context (RFC 0007, D12).
+- §8, Discovery group: the obligation to include at least the Facilitator, the functional analyst, the Business
+  Analyst, the UX-UI designer and the User Personas (RFC 0008, D-041-B, D-041-G; the kit is behind, see above).
 - §7.1, Fallback at the level that the mandate sets, replaced by the level of the role (RFC 0007).
 - §4, AI Reviewer: «in parallel» and «continuous monitoring» (RFC 0007).
 - §7.1, the AI Coordinator's own choices on promotion, on lowering a task and on raising a role (RFC 0008, D26).
