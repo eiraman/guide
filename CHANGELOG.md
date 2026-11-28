@@ -33,6 +33,8 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
   the top of the Italian text and the note "Pending update to 1.0.0-rc.7+it.1" are replaced by the entry of
   that version in `translations/it/CHANGELOG.md`; glossary and notes on the source updated. The English text
   is not changed.
+- RFC 0008, key words: the cap on promotions is recorded as coming from RFC 0007 before it was released, not
+  from 1.0.0-rc.6 (CR-041).
 - `translations/it/`: the Italian translation is updated to the Guide 1.0.0-rc.6, version of the translation
   `1.0.0-rc.6+it.1` (CR-031, decisions D-031 and D-031-B). It translates the three sentences added to "Why
   Eiraman exists" and the paragraph "The method applies to itself" (§2), the paragraph "Measuring the method"
@@ -159,7 +161,7 @@ SHOULD NOT 3 → 3, MAY 38 → 38 (per section in RFC 0007 and RFC 0008).
 - §4, AI Reviewer: «in parallel» and «continuous monitoring» (RFC 0007).
 - §7.1, the AI Coordinator's own choices on promotion, on lowering a task and on raising a role (RFC 0008, D26).
 - Key words that bound the actor who is now the AI Manager become descriptive (RFC 0008, D-041-H): §7 Tolerance
-  (MAY); §7.1 the cap on promotions (MUST NOT, now a value of the mandate, context of the first law) and the
+  (MAY); §7.1 the cap on promotions (MUST NOT, added by RFC 0007 and never released; now a value of the mandate, context of the first law) and the
   lowering of a task or of a raised level (MAY); §14 Dialogue with the Human Manager (MUST NOT alter the content).
 
 ## [1.0.0-rc.6] - 2026-11-27
