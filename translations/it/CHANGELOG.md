@@ -23,6 +23,34 @@ the `guide` repository.
 
 ## [Unreleased]
 
+**Pending update to 1.0.0-rc.7+it.1.** The English Guide 1.0.0-rc.7 adds
+[RFC 0008](../../rfcs/0008-ai-manager-proportionate-discovery.md) (CR-035 to CR-041) to the text of RFC 0007
+that this translation already renders (commit `59402b6`). The Italian text is left unchanged; a translator
+must translate, keeping the key words and their counts section by section (RFC 0008, Impact):
+- §1, «Planning and many models» (the AI Manager among the roles);
+- §2, «Management applied to AI» (*Delegation*, *Design Thinking*, *Quality control*), the fourth difference
+  between people and machines (human language), and the new paragraph «The laws of the AI Manager»;
+- §3, «Human as a Manager acts up front» (last sentence);
+- §4, «Human Manager» (first two items), «AI Manager» in place of «Interpreter», the new paragraphs «Approvals in
+  the Human Manager's stead» and «Derogations of the AI Manager», «AI Coordinator» (opening and three new
+  items), «Process reviewer», «Internal accountability»;
+- §5, the new paragraph «Do through the AI Manager»;
+- §6, the new paragraph «Outcome of review»;
+- §7, «Role tiers» (Top), the SD table (SD4), «Agent blinding», the new paragraph «Omniscience», «Retrospective»,
+  «Tolerance»;
+- §7.1, «Promotion and reduction», «Raising the level of a role»;
+- §8, «Phases and decisions» (opening, Proof of concept, Design and planning), the new paragraph «Iterations»,
+  «Discovery group», «Question round» (through the AI Manager), «Convergence», the new paragraphs «Complete
+  design» and «A real proof of concept», «Governance cycle» (governance share);
+- §8.1, «Discovery procedure» (Iterate, Review, Judge), «Proof of concept and MVP»;
+- §9, «Product Backlog», «Definition of done», «Dissent or missing proof», the new paragraph «Closure by
+  derogation», «Manager View»;
+- §12, «Three layers of documentation» (Strategic), «Messages between agents», «Writing rules» (opening);
+- §13, «Minimum content» (the sentence on the AI Manager);
+- §14, «Dialogue with the Human Manager» (AI Manager in place of Interpreter);
+- the «Nota alla traduzione» (source commit and status) and the glossary: AI Manager, omniscience, derogation,
+  closure by derogation, open choice, iteration, the three outcomes of the judge.
+
 - §14, «Dialogo con il Manager umano»: traduzione del passaggio all'Interprete.
 
 - §4, Revisore AI: traduzione della nuova regola di avvio, a eventi e a campione.

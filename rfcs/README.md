@@ -34,4 +34,5 @@ A rejected Guide RFC may be resubmitted with new evidence after 6 months.
 | [0004](0004-running-above-qualified-level.md) | Running a class 1 project from level 0, by decision of the Human Manager; the Security Officer | Author (Guide) | accepted |
 | [0005](0005-classification-modes.md) | Security classification in two modes, and the question round of Discovery | Author (Guide) | accepted |
 | [0006](0006-security-measurement-self-feeding.md) | The managerial role in security, measuring the method against a baseline, and a method that feeds itself | Author (Guide) | accepted |
-| [0007](0007-digital-seniority-pyramid.md) | Digital Seniority as a pyramid, the Interpreter and the agent dialect | Author (Guide) | draft |
+| [0007](0007-digital-seniority-pyramid.md) | Digital Seniority as a pyramid, review by samples and the agent dialect (the Interpreter replaced by RFC 0008) | Author (Guide) | accepted |
+| [0008](0008-ai-manager-proportionate-discovery.md) | The AI Manager, closure by derogation, and a proportionate Discovery and Design | Author (Guide) | accepted |

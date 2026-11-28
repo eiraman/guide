@@ -11,7 +11,7 @@ The Eiraman Guide by Paolo Ungari and contributors.
 
 This repository holds the **Eiraman Guide**, the stable core of the method, with the community-maintained sections on Digital Seniority, test practices and adoption levels. Templates, indicative values, Role Profiles and tools live in separate repositories of the project.
 
-**Status:** version 1.0.0-rc.6, a release candidate, with RFC 0001, RFC 0003, RFC 0004, RFC 0005 and RFC 0006 (accepted). The Author ratified its editorial choices on 25 November 2026. Not yet in force; not measured (Guide §15, Measuring the method).
+**Status:** version 1.0.0-rc.7, a release candidate, with RFC 0001 and RFC 0003 to RFC 0008 (accepted). The Author ratified its editorial choices on 25 November 2026. Not yet in force; not measured (Guide §15, Measuring the method). The Italian translation renders the RFC 0007 text of this candidate; its update for RFC 0008 is pending.
 
 | File | Content |
 |---|---|
