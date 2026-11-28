@@ -82,7 +82,7 @@ A one-way door for adopters: a new mandatory role and changed approval and Disco
   | §14 | 27 / 58 / 0 / 1 / 9 | 27 / 58 / 0 / 1 / 9 | 26 / 58 / 0 / 1 / 9 |
   | Total | 68 / 366 / 3 / 7 / 38 | 73 / 388 / 3 / 7 / 40 | 75 / 414 / 3 / 7 / 38 |
 
-  The other sections are unchanged in count. Under D-041-H, some key words of 1.0.0-rc.6 that bound the actor who now is the AI Manager become descriptive: in §7, Tolerance (MAY); in §7.1, the cap on promotions (MUST NOT), the lowering of a task (MAY) and the lowering of a raised level (MAY); in §14, Dialogue with the Human Manager (MUST NOT alter the content, now a consequence of the first and second laws; the attachment of the risk profile binds the Tools). These are obligations removed from the text for one actor, recorded in the changelog under Removed.
+  The other sections are unchanged in count. Under D-041-H, some key words of 1.0.0-rc.6, or of RFC 0007 before it was released (the cap on promotions), that bound the actor who now is the AI Manager become descriptive: in §7, Tolerance (MAY); in §7.1, the cap on promotions (MUST NOT), the lowering of a task (MAY) and the lowering of a raised level (MAY); in §14, Dialogue with the Human Manager (MUST NOT alter the content, now a consequence of the first and second laws; the attachment of the risk profile binds the Tools). These are obligations removed from the text for one actor, recorded in the changelog under Removed.
 
 - **Rules new in 1.0.0-rc.7 and where they are in the kit `5818b13`** (paths in `role-profiles`):
 
