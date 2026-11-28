@@ -264,11 +264,42 @@ Termini entrati con la Guida 1.0.0-rc.6 (§2 e §15). La fonte **B** è il banco
 | by default | per impostazione predefinita | N |
 | feeds itself | si alimenta da sé | N |
 
-Termini entrati con la Guida 1.0.0-rc.7 (CR-033, RFC 0007; §2, §4, §6, §7, §12).
+Termini entrati con la Guida 1.0.0-rc.7 (RFC 0007 e RFC 0008; §2, §4, §5, §6, §7, §8, §9, §12, §13, §14). Per il Manager AI la fonte **P** è il suo Role Profile nel registro (`governo/manager-ai`), con il dialetto degli agenti (`_dialetto`).
 
 | Inglese | Italiano | Fonte |
 |---|---|---|
-| Interpreter | Interprete | N |
+| AI Manager | Manager AI | P, W |
+| representative (of the Human Manager) | rappresentante (del Manager umano) | P |
+| deputy / principal | vice / mandante | N |
+| laws of the AI Manager; first, second, third, fourth law | leggi del Manager AI; prima, seconda, terza, quarta legge | P |
+| in the Human Manager's stead, in their stead | in vece del Manager umano, in sua vece | P |
+| Approvals in the Human Manager's stead | Approvazioni in vece del Manager umano | N |
+| Do through the AI Manager | Do attraverso il Manager AI | N |
+| derogation | deroga | P |
+| to bring forward / postpone / repeat / leave out (una deroga) | anticipare / posticipare / ripetere / tralasciare | P («anticipa», «posticipa», «ripeti», «salta») |
+| omniscience | onniscienza | P |
+| position (di blinding) | posizione | N |
+| open choice | scelta aperta | P |
+| state of the project for the agents | stato del progetto per gli agenti | P |
+| anomaly | anomalia | P |
+| sub-optimally | in modo subottimale | P |
+| after the fact | a posteriori | N |
+| ordinary process | processo ordinario | N |
+| determined flows | flussi determinati | N |
+| counterweight | contrappeso | N |
+| scripts, cards (del metodo) | script, schede | P |
+| human language | linguaggio umano | N |
+| iteration | iterazione | P |
+| synthesis | sintesi | N |
+| outcome (del giudice): «convergent», «convergent with reservations», «not convergent» | esito: «convergente», «convergente con riserve», «non convergente» | P |
+| Decision proposed by the group | Decisione proposta dal gruppo | N |
+| confirmations of form | conferme di forma | N |
+| Complete design | Design completo | N |
+| A real proof of concept | Un proof of concept reale | N |
+| acceptance criterion (that a user can verify) | criterio di accettazione (che un utente può verificare) | P |
+| test on paper only | prova solo sulla carta | N |
+| functional tester | tester funzionale | P |
+| record (file, record, message) | registrazione | N |
 | agent dialect | dialetto degli agenti | N |
 | oracle (controllo deterministico, test o rubrica fissata in anticipo) | oracolo | N |
 | risk class | classe di rischio | N |
@@ -290,4 +321,6 @@ Termini entrati con la Guida 1.0.0-rc.7 (CR-033, RFC 0007; §2, §4, §6, §7, �
 - **Collaudo.** «Collaudo al banco» (*bench testing*, §15) misura il metodo; «collaudo di accettazione» (*acceptance testing*, §9.1) riguarda un progetto. Il §15 tiene distinti i due.
 - **Baseline.** Resta in inglese: il progetto usa già «la baseline» nei profili, negli strumenti e sul sito, e «riferimento» o «linea di base» si confonderebbero con altri usi.
 - **Fault.** Resta in inglese e con l'iniziale maiuscola, come nei documenti del banco di prova; la fonte scrive «fault» in minuscolo.
+- **Manager AI.** *AI Manager* si rende «Manager AI», come nel registro dei profili e sul sito, in parallelo a «Manager umano». Le frasi che descrivono come il Manager AI agisce sono descrittive nella fonte e restano descrittive in italiano (indicativo, «può» in minuscolo); le sole regole che lo riguardano sono le quattro leggi del §2.
+- **Deroga e tralasciare.** *Derogation* è «deroga»; *to leave out* (un'azione, un ruolo) è «tralasciare», mentre *to skip* (il proof of concept, §8) è «saltare».
 - **Attribuzione.** La riga di attribuzione «The Eiraman Guide by Paolo Ungari and contributors» resta in inglese, perché è la formula richiesta dalla licenza.

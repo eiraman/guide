@@ -13,7 +13,7 @@ difference; its changes are in the repository [CHANGELOG.md](../../CHANGELOG.md)
 
 **Version scheme.** The version of the translation is the version of the English Guide it translates,
 followed by the build metadata `+it.N`, where `N` is the revision of the translation of that source version,
-numbered from 1: `1.0.0-rc.6+it.1`. In [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) build
+numbered from 1: `1.0.0-rc.7+it.1`. In [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) build
 metadata does not change precedence, so the translation never ranks above or below its source; the order of the revisions `+it.N` is set by `N` by
 convention, not by SemVer precedence. A fix to the
 translation of the same source increments `N`; a translation of a new Guide version starts again at `+it.1`.
@@ -23,42 +23,69 @@ the `guide` repository.
 
 ## [Unreleased]
 
-**Pending update to 1.0.0-rc.7+it.1.** The English Guide 1.0.0-rc.7 adds
-[RFC 0008](../../rfcs/0008-ai-manager-proportionate-discovery.md) (CR-035 to CR-041) to the text of RFC 0007
-that this translation already renders (commit `59402b6`). The Italian text is left unchanged; a translator
-must translate, keeping the key words and their counts section by section (RFC 0008, Impact):
-- §1, «Planning and many models» (the AI Manager among the roles);
-- §2, «Management applied to AI» (*Delegation*, *Design Thinking*), the fourth difference
-  between people and machines (human language), and the new paragraph «The laws of the AI Manager»;
-- §3, «Human as a Manager acts up front» (last sentence);
-- §4, «Human Manager» (first two items), «AI Manager» in place of «Interpreter», the new paragraphs «Approvals in
-  the Human Manager's stead» and «Derogations of the AI Manager», «AI Coordinator» (opening and three new
-  items), «Process reviewer», «Internal accountability»;
-- §5, «Do» (opening), «E4 · Classifier» and the new paragraph «Do through the AI Manager»;
-- §7, «Role tiers» (Top), the SD table (SD4), «Agent blinding», the new paragraph «Omniscience», «Retrospective»,
-  «Tolerance»;
-- §7.1, «Promotion and reduction», «Raising the level of a role»;
-- §8, «Phases and decisions» (opening, Proof of concept, Design and planning), the new paragraph «Iterations»,
-  «Discovery group», «Question round» (through the AI Manager), «Convergence», the new paragraphs «Complete
-  design» and «A real proof of concept»;
-- §8.1, «Discovery procedure» (Iterate, Review, Judge), «Proof of concept and MVP»;
-- §9, «Product Backlog», «Manager View»;
-- §12, «Three layers of documentation» (Strategic), «Messages between agents», «Writing rules» (opening);
-- §13, «Minimum content» (the sentence on the AI Manager);
-- §14, «Dialogue with the Human Manager» (AI Manager in place of Interpreter; the Tools attach the risk profile);
-- the «Nota alla traduzione» (source commit and status) and the glossary: AI Manager, omniscience, derogation,
-  open choice, iteration, the three outcomes of the judge. Under D-041-H the sentences on the AI Manager are
-  descriptive and carry no key word: the translation renders them without DEVE, NON DEVE or PUÒ.
+## [1.0.0-rc.7+it.1] - 2026-11-28
 
-- §14, «Dialogo con il Manager umano»: traduzione del passaggio all'Interprete.
+Translation of The Eiraman Guide 1.0.0-rc.7 (commit `47b3021`, not tagged), which implements
+[RFC 0007](../../rfcs/0007-digital-seniority-pyramid.md) and
+[RFC 0008](../../rfcs/0008-ai-manager-proportionate-discovery.md). It starts from `1.0.0-rc.6+it.1`, whose text
+is kept wherever the source is unchanged. The translation was decided by the Human Manager (D-IT-1). Local
+candidate: not tagged, not pushed.
 
-- §4, Revisore AI: traduzione della nuova regola di avvio, a eventi e a campione.
+Key words as in the source, section by section: in the whole text 414 DEVE/DEVONO, 75 NON DEVE/NON DEVONO, 7
+DOVREBBE/DOVREBBERO, 3 NON DOVREBBE/NON DOVREBBERO and 38 PUÒ/POSSONO. The four laws of the AI Manager (§2) are
+introduced by DEVE; the other sentences on the AI Manager are descriptive in the source and are rendered
+without DEVE, NON DEVE or PUÒ.
 
-- §4, Interprete: traduzione della riga sui rapporti del Revisore AI e del Security Officer passati senza modifiche (decisione 4 della review dei profili, CR-033).
+### Added
+
+- **§2**: the paragraph «Le leggi del Manager AI», with the four laws and how they work together.
+- **§4**: the paragraphs «Approvazioni in vece del Manager umano» and «Deroghe del Manager AI»; three items of
+  «Coordinatore AI» (state for the agents, open choices, derogations).
+- **§5**: the paragraph «Do attraverso il Manager AI».
+- **§7**: the paragraph «Onniscienza».
+- **§8**: the paragraphs «Iterazioni», «Design completo» and «Un proof of concept reale».
+- **§13**: the sentence on the Role Profile of the AI Manager.
+- `GLOSSARY.it.md`: the terms of RFC 0008 (Manager AI, leggi, in vece del Manager umano, deroga, onniscienza,
+  scelta aperta, stato del progetto per gli agenti, iterazione, the three outcomes of the judge, Design
+  completo and the others), taken from the Role Profile of the AI Manager in the registry where it has them;
+  two notes on the choices (Manager AI; Deroga e tralasciare).
+- `SOURCE-NOTES.md`: points 26 to 39, on the texts of 1.0.0-rc.7.
 
 ### Changed
 
-- 2026-11-27: translation of the changes of CR-033 (RFC 0007) to the English Guide, proposed version 1.0.0-rc.7: Interpreter, pyramid of roles, review by samples, promotion rules, cost of errors, agent dialect. The translation becomes `1.0.0-rc.7+it.1`; new terms added to the glossary. Local candidate on the branch `cr-033-guida`, not published, not tagged.
+- **«Manager AI» in place of «Interprete»** everywhere: §4 (the paragraph is rewritten as in the source: the
+  five rules of the Interpreter leave, the description of how the laws lead the AI Manager to act enters; the
+  Tools attach the reports of the AI Reviewer and of the Security Officer), §7 (top of the pyramid, row SD4),
+  §12 (writing rules), §14 (Dialogue with the Human Manager).
+- **§1** «Pianificazione e più modelli»; **§2** *delega*, *Design Thinking* and the difference on communication
+  (human language); **§3** «Human as a Manager agisce in anticipo».
+- **§4** «Manager umano» (first two items), «Coordinatore AI» (opening), «Revisore di processo»,
+  «Accountability interna». **§5** «Do» (opening) and «E4 · Classificatore».
+- **§7** «Blinding degli agenti», «Retrospettiva», «Tolleranza». **§7.1** «Promozioni e riduzioni» (the first
+  item of the list becomes part of the paragraph), «Alzare il livello di un ruolo».
+- **§8** «Fasi e decisioni» (opening, Proof of concept, Design e planning), «Gruppo di Scoperta», «Giro di
+  domande», «Convergenza». **§8.1** «Procedura di Scoperta» (Iterare, Revisione, Giudizio), «Proof of concept e
+  MVP». **§9** «Product Backlog», «Vista del Manager». **§12** «Tre strati di documentazione» (Strategico),
+  «Messaggi tra agenti».
+- "Nota alla traduzione": source commit `47b3021`; the words on the proposed version and its branch leave.
+- `SOURCE-NOTES.md`: the source version in the heading and in point 18.
+- 2026-11-27, earlier step of this version: translation of the changes of RFC 0007 (CR-033) to the English
+  Guide: pyramid of roles, review by samples, promotion rules, cost of errors, agent dialect, the AI Reviewer
+  started before the phase it watches, at events and on samples. New terms added to the glossary. That step
+  rendered the role then called Interpreter («Interprete»), which RFC 0008 replaces with the AI Manager.
+
+### Removed
+
+- The notice «Avviso: traduzione da aggiornare» at the top of `EIRAMAN-GUIDE.it.md`, and the note "Pending
+  update to 1.0.0-rc.7+it.1" of this changelog with the three lines on the RFC 0007 step that followed it: the
+  update they announced is this entry.
+- The term «Interprete», from the text and from the glossary.
+
+**Not verified.** No independent review of this version of the translation and no native-speaker review by a
+second person have taken place; the translation was prepared with AI assistance (see the commit trailers).
+
+**Record on the earlier version, kept from [Unreleased].**
+
 - 2026-11-27: records the Author's native-speaker review of the curated translation `1.0.0-rc.6+it.1`; the
   "Not verified" point is closed under D-IT-1. The text is not changed: the version stays `1.0.0-rc.6+it.1` and
   nothing is tagged. The entry `[1.0.0-rc.6+it.1]` below is a released entry and is kept as published (CR-032, follow-up of the release Do-S35). The English text stays canonical and prevails in case

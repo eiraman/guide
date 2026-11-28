@@ -26,9 +26,13 @@ with no change of meaning. [HISTORY.md](HISTORY.md) keeps the narrative history 
 
 ### Changed
 
-- `translations/it/`: the Italian text translates the RFC 0007 text of 1.0.0-rc.7 (commit `59402b6`) and is left
-  unchanged; a note "Pending update to 1.0.0-rc.7+it.1" lists the sections changed by RFC 0008, to be
-  translated by a translator before the translation is released with the Guide.
+- `translations/it/`: the Italian translation is updated to the Guide 1.0.0-rc.7 (commit `47b3021`), version of
+  the translation `1.0.0-rc.7+it.1`: it translates the texts of RFC 0007 and RFC 0008, with «Manager AI» for
+  the AI Manager in place of the Interpreter, and the same key words as the source section by section (in the
+  whole text 414 DEVE/DEVONO, 75 NON DEVE/NON DEVONO, 7 DOVREBBE, 3 NON DOVREBBE, 38 PUÒ/POSSONO). The notice at
+  the top of the Italian text and the note "Pending update to 1.0.0-rc.7+it.1" are replaced by the entry of
+  that version in `translations/it/CHANGELOG.md`; glossary and notes on the source updated. The English text
+  is not changed.
 - `translations/it/`: the Italian translation is updated to the Guide 1.0.0-rc.6, version of the translation
   `1.0.0-rc.6+it.1` (CR-031, decisions D-031 and D-031-B). It translates the three sentences added to "Why
   Eiraman exists" and the paragraph "The method applies to itself" (§2), the paragraph "Measuring the method"
